@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redesigning Main Navigation — Ward de Groot</title>
-  <meta name="description" content="Improving how users find and discover Gynzy's features and setting up a scalable navigation.">
+  <title>Enhancing Teachers' Productivity — Ward de Groot</title>
+  <meta name="description" content="Redesigning navigation and reducing cognitive load to help teachers work faster and feel more in control.">
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%231a5a8a'/><text x='16' y='21' text-anchor='middle' fill='white' font-size='16' font-family='sans-serif' font-weight='bold'>W</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
 </head>
 <body>
   <script src="../js/gate.js"></script>
@@ -17,8 +17,8 @@
   <section class="project-hero">
     <div class="container">
       <p class="reveal" style="margin-bottom: var(--space-2);"><a href="../projects.html" style="color: var(--color-primary-light); font-size: 0.9rem;">&larr; Back to all projects</a></p>
-      <h1 class="project-hero__title reveal">Redesigning main navigation</h1>
-      <p class="project-hero__desc reveal">Improving how users find and discover Gynzy's features and setting up a scalable navigation creating space for new product capabilities.</p>
+      <h1 class="project-hero__title reveal">Enhancing teachers' productivity</h1>
+      <p class="project-hero__desc reveal">Gynzy's icon-only sidebar was confusing teachers and blocking the product from growing. I led a three-phase redesign that cut lesson access from 3 clicks to 1 — and gave the platform room to scale.</p>
     </div>
   </section>
 
@@ -31,15 +31,11 @@
       </div>
       <div class="project-meta__item">
         <h4>The team</h4>
-        <p>Product owner<br>3 developers</p>
+        <p>Product owner, 3 developers</p>
       </div>
       <div class="project-meta__item">
         <h4>Duration</h4>
-        <p>&plusmn; 3 months</p>
-      </div>
-      <div class="project-meta__item">
-        <h4>Tools</h4>
-        <p>Figma, Amplitude, Usability testing</p>
+        <p>&plusmn; 6 months (3 phases)</p>
       </div>
     </div>
   </section>
@@ -49,36 +45,81 @@
     <div class="container container--narrow">
 
       <div class="reveal">
-        <h2>The challenge</h2>
-        <p>Gynzy's navigation had grown organically over the years. Teachers struggled to find features, the information architecture was inconsistent, and the structure couldn't accommodate the new product capabilities being planned. We needed a navigation that was intuitive, scalable, and reduced cognitive load for busy teachers.</p>
+        <h2>The problem</h2>
+        <p>Gynzy's navigation had grown organically over the years into a left sidebar of unlabeled icons. Teachers couldn't figure out what the icons meant. The page they landed on after signing in wasn't even the top icon. Some icons led to features that weren't core to the product at all. And critically, there was zero room left to add new features without degrading the experience further.</p>
+        <p>Multiple development teams — including ours — recognized the scalability problem independently. Meanwhile, teachers were quietly struggling. This wasn't just a design issue; it was blocking the product from evolving.</p>
       </div>
 
-      <div class="reveal">
-        <h3>Research & discovery</h3>
-        <p>I started by analyzing usage data in Amplitude to understand which features teachers accessed most and where they dropped off. Combined with usability testing sessions and card sorting exercises, a clear picture emerged of how teachers mentally organized their tools and content.</p>
-      </div>
-
+      <!-- Placeholder for before/after visual -->
       <div class="comparison reveal">
         <div class="comparison__item">
           <div class="comparison__label">Before</div>
-          <img src="../images/nav-before.jpg" alt="Navigation before redesign"
-               onerror="this.style.background='var(--color-bg-subtle)';this.style.height='300px'">
+          <img src="../images/nav-before.jpg" alt="The old icon-only sidebar navigation"
+               onerror="this.style.background='var(--color-bg-subtle)';this.style.height='300px';this.style.display='block'">
         </div>
         <div class="comparison__item">
           <div class="comparison__label">After</div>
-          <img src="../images/nav-after.jpg" alt="Navigation after redesign"
-               onerror="this.style.background='var(--color-bg-subtle)';this.style.height='300px'">
+          <img src="../images/nav-after.jpg" alt="The redesigned navigation with labels and Start page"
+               onerror="this.style.background='var(--color-bg-subtle)';this.style.height='300px';this.style.display='block'">
         </div>
       </div>
 
       <div class="reveal">
-        <h3>Design process</h3>
-        <p>Through multiple iterations and prototype testing, we landed on a simplified navigation model that grouped features by teacher intent rather than product category. This made it faster for teachers to find what they needed and created clear extension points for future features.</p>
+        <h2>Making the case</h2>
+        <p>The data was there, but data alone wasn't enough to convince stakeholders that a full navigation overhaul was worth the investment. So I took a different approach: storytelling. I presented the experience through the eyes of a teacher who had never used Gynzy before — walking stakeholders through what they would see, think, and feel at every step. The confusion of unlabeled icons. The disorientation of landing on the wrong page. The frustration of not finding core features.</p>
+        <p>This shifted the conversation. Instead of debating whether the navigation was "good enough," we were aligned on the fact that it was actively hurting new and existing users.</p>
+        <div style="margin-top: var(--space-6);">
+          <iframe style="border: 1px solid rgba(0, 0, 0, 0.1); border-radius: var(--radius-md); width: 100%; aspect-ratio: 16/9;" src="https://embed.figma.com/deck/QqmPqn0cb8Bdm0WiX185UL/Enhancing-navigation-usability?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+          <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: var(--space-2);">The slide deck I used to present the case for overhauling navigation.</p>
+        </div>
       </div>
 
       <div class="reveal">
-        <h3>Impact</h3>
-        <p>The redesigned navigation led to measurable improvements in feature discovery and reduced the time teachers spent looking for content. It also created the architectural foundation needed for several new product initiatives that followed.</p>
+        <h2>Research & exploration</h2>
+        <p>I used Amplitude data to map which features teachers used most and which went largely untouched. Card sorting exercises with educational experts revealed how teachers actually think about their tools — which turned out to be quite different from how we'd organized them. Usability testing with early variations confirmed that simply relabeling the existing icons wouldn't be enough.</p>
+        <p>A key insight emerged: teachers didn't need a better toolbar. They needed a fundamentally different entry point into the product, and a navigation model that could grow with them.</p>
+      </div>
+
+      <div class="reveal">
+        <h2>A phased approach</h2>
+        <p>I quickly realized that the scope was too large for a single release, so I proposed breaking the work into three sequential phases. This let us ship improvements incrementally while building toward the bigger vision.</p>
+      </div>
+
+      <div class="reveal">
+        <h3>Phase 1 — Clean up & rebuild</h3>
+        <p>Remove non-core features from the sidebar and rewrite the Ember-based toolbar in Flutter. This was the foundation — reducing clutter and moving to a modern, maintainable codebase. Teachers immediately had fewer distractions, and the team had a solid base to build on.</p>
+      </div>
+
+      <!-- Phase 1 video — Ember to Flutter toolbar transition -->
+      <div class="reveal" style="margin: var(--space-8) 0;">
+        <video autoplay loop muted playsinline style="width: 100%; border-radius: var(--radius-md);">
+          <source src="../images/nav-phase1-toolbar.mp4" type="video/mp4">
+        </video>
+        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: var(--space-2);">The toolbar transition from Ember to Flutter — a cleaner, decluttered starting point.</p>
+      </div>
+
+      <div class="reveal">
+        <h3>Phase 2 — The Start page</h3>
+        <p>Introduce a dedicated Start page so teachers land somewhere logical when they sign in. Instead of being dropped into a random view, they now see their schedule and most relevant content immediately. This was the single biggest improvement for daily workflow — teachers could open a lesson in one click, down from a minimum of three.</p>
+      </div>
+
+      <!-- Placeholder for Start page visual -->
+      <div class="reveal" style="margin: var(--space-8) 0;">
+        <img src="../images/nav-startpage.jpg" alt="The new Start page — teachers land here and can open a lesson in one click"
+             style="width: 100%; border-radius: var(--radius-md);"
+             onerror="this.style.display='none'">
+      </div>
+
+      <div class="reveal">
+        <h3>Phase 3 — Secondary navigation</h3>
+        <p>Add a secondary navigation layer to create room for new features without mixing horizontal and vertical navigation patterns. Everything now lives on the left — primary and secondary — giving users a consistent mental model. This unlocked the space the product team needed to ship new capabilities without compromising the experience.</p>
+      </div>
+
+      <div class="reveal">
+        <h2>The outcome</h2>
+        <p>The most tangible result: opening a lesson went from at least 3 clicks to just 1 for most teachers. That might sound small, but teachers do this dozens of times a day. Across thousands of users, it adds up to a meaningful shift in how the product feels.</p>
+        <p>Beyond the numbers, the redesign gave Gynzy a navigation architecture that could actually scale. New features now have a clear home. The mixed Ember/Flutter codebase was consolidated. And the product team went from "we can't add anything" to having room to build.</p>
+        <p>Perhaps most importantly, I learned that the hardest part of a project like this isn't the design — it's building the conviction to do it properly instead of patching what's there.</p>
       </div>
 
     </div>
@@ -88,7 +129,7 @@
   <section class="section section--subtle" style="text-align: center;">
     <div class="container reveal">
       <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: var(--space-4);">Next project</p>
-      <h2><a href="cognitive-load.html" style="color: var(--color-primary);">Reducing loads of cognitive load &rarr;</a></h2>
+      <h2><a href="design-system.html" style="color: var(--color-primary);">Revamping Gynzy's Design System &rarr;</a></h2>
     </div>
   </section>
 

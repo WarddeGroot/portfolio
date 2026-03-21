@@ -6,7 +6,7 @@
   <title>CV — Ward de Groot</title>
   <meta name="description" content="Experience and skills of Ward de Groot — UX / Product Designer.">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%231a5a8a'/><text x='16' y='21' text-anchor='middle' fill='white' font-size='16' font-family='sans-serif' font-weight='bold'>W</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 </head>
 <body>
   <script src="js/gate.js"></script>
@@ -19,46 +19,6 @@
       <div class="cv-header reveal">
         <h1>Curriculum Vitae</h1>
         <p>UX designer with strong research skills, dedicated to creating user-friendly experiences that improve people's lives. My interests in psychology, strategy and technology drive my design choices.</p>
-      </div>
-
-      <!-- Career Map — visual overview of overlapping roles -->
-      <div class="career-map reveal" style="margin-bottom: var(--space-24);">
-        <h2 style="margin-bottom: var(--space-8);">My path</h2>
-        <p style="margin-bottom: var(--space-12);">Not a straight line — and that's the point.</p>
-
-        <div class="career-map__chart" role="img" aria-label="Visual career timeline showing overlapping roles from 2017 to present">
-          <!-- Year markers -->
-          <div class="career-map__years">
-            <span>2017</span><span>2018</span><span>2019</span><span>2020</span><span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>Now</span>
-          </div>
-
-          <!-- Swim lanes — each bar is positioned via CSS grid columns -->
-          <!-- Grid: 2017=1, 2018=2, ... Now=10. Each col = 1 year -->
-          <div class="career-map__lanes">
-            <div class="career-map__lane">
-              <span class="career-map__label">Design</span>
-              <div class="career-map__bar career-map__bar--primary" style="grid-column: 1 / 2;" title="Sparckel Intern — Sep–Dec 2017">Sparckel</div>
-              <div class="career-map__bar career-map__bar--primary career-map__bar--active" style="grid-column: 5 / 11;" title="UX Designer at Gynzy — Jan 2021–Present">Gynzy</div>
-            </div>
-
-            <div class="career-map__lane">
-              <span class="career-map__label">Entrepreneurship</span>
-              <div class="career-map__bar career-map__bar--accent" style="grid-column: 4 / 7;" title="WdG Research & Design — Sep 2020–Dec 2022">WdG R&D</div>
-              <div class="career-map__bar career-map__bar--accent" style="grid-column: 6 / 9;" title="Co-founder Vavino — Oct 2022–Jan 2025">Vavino</div>
-            </div>
-
-            <div class="career-map__lane">
-              <span class="career-map__label">Research</span>
-              <div class="career-map__bar career-map__bar--muted" style="grid-column: 3 / 4;" title="Research Assistant at UTS — Nov 2019–Feb 2020">UTS Sydney</div>
-            </div>
-
-            <div class="career-map__lane">
-              <span class="career-map__label">Education</span>
-              <div class="career-map__bar career-map__bar--subtle" style="grid-column: 1 / 4;" title="BSc Industrial Design — TU Eindhoven">BSc TU/e</div>
-              <div class="career-map__bar career-map__bar--subtle" style="grid-column: 3 / 5;" title="MSc Industrial Design — TU Eindhoven">MSc TU/e</div>
-            </div>
-          </div>
-        </div>
       </div>
 
       <!-- Image banner — slot for a personal/background photo -->
@@ -75,10 +35,21 @@
           <!-- Primary role — full width -->
           <div class="cv-card cv-card--featured">
             <div class="cv-card__content">
-              <span class="cv-card__date">Jan 2021 — Present</span>
-              <h3 class="cv-card__title">UX Designer</h3>
-              <p class="cv-card__company">Gynzy — 's-Hertogenbosch</p>
-              <p class="cv-card__desc">Making teachers' lives a little better every day. Conducting design research to gather deep insights into user behavior, translating qualitative and quantitative data into user-friendly interfaces, collaborating with subject-matter experts, developers and product owners, communicating design decisions grounded in psychology, and applying strategic UX practices.</p>
+              <div class="cv-card__header">
+                <div class="cv-card__logo"><img src="images/gynzy.svg" alt="Gynzy"></div>
+                <div class="cv-card__header-text">
+                  <span class="cv-card__date">Jan 2021 — Present</span>
+                  <h3 class="cv-card__title">UX Designer</h3>
+                  <p class="cv-card__company">Gynzy — 's-Hertogenbosch</p>
+                </div>
+              </div>
+              <ul class="cv-card__desc cv-card__bullets">
+                <li>Conducting design research to gather deep insights into user behavior</li>
+                <li>Translating qualitative and quantitative data into user-friendly interfaces</li>
+                <li>Collaborating with subject-matter experts, developers and product owners</li>
+                <li>Communicating design decisions grounded in psychology</li>
+                <li>Applying strategic UX practices</li>
+              </ul>
             </div>
             <div class="cv-card__image">
               <!-- Replace with a screenshot of Gynzy work, your desk, or similar -->
@@ -89,10 +60,19 @@
 
           <!-- Side-by-side roles -->
           <div class="cv-card">
-            <span class="cv-card__date">Oct 2022 — Jan 2025</span>
-            <h3 class="cv-card__title">Co-founder</h3>
-            <p class="cv-card__company">Vavino — Reusel</p>
-            <p class="cv-card__desc">Entrepreneurial experience making sustainable wines accessible and affordable. Designed the brand, website, and all online/offline channels. Organized and facilitated wine tastings.</p>
+            <div class="cv-card__header">
+              <div class="cv-card__logo"><img src="images/vavino.svg" alt="Vavino"></div>
+              <div class="cv-card__header-text">
+                <span class="cv-card__date">Oct 2022 — Jan 2025</span>
+                <h3 class="cv-card__title">Co-founder</h3>
+                <p class="cv-card__company">Vavino — Reusel</p>
+              </div>
+            </div>
+            <ul class="cv-card__desc cv-card__bullets">
+              <li>Making sustainable wines accessible and affordable</li>
+              <li>Designed the brand, website, and all online/offline channels</li>
+              <li>Organized and facilitated wine tastings</li>
+            </ul>
             <div class="cv-card__image cv-card__image--small">
               <img src="images/cv-vavino.jpg" alt="Vavino brand work"
                    onerror="this.parentElement.style.display='none'">
@@ -100,10 +80,20 @@
           </div>
 
           <div class="cv-card">
-            <span class="cv-card__date">Sep 2020 — Dec 2022</span>
-            <h3 class="cv-card__title">Founder</h3>
-            <p class="cv-card__company">WdG Research & Design</p>
-            <p class="cv-card__desc">Market research and design on a project basis. Logos and style guides for startups, user interviews for PhD research, and healthcare demand research for a municipality.</p>
+            <div class="cv-card__header">
+              <div class="cv-card__logo"><img src="images/wdg-logo.svg" alt="WdG"></div>
+              <div class="cv-card__header-text">
+                <span class="cv-card__date">Sep 2020 — Dec 2022</span>
+                <h3 class="cv-card__title">Founder</h3>
+                <p class="cv-card__company">WdG Research & Design</p>
+              </div>
+            </div>
+            <ul class="cv-card__desc cv-card__bullets">
+              <li>Market research and design on a project basis</li>
+              <li>Logos and style guides for startups</li>
+              <li>User interviews for PhD research</li>
+              <li>Healthcare demand research for a municipality</li>
+            </ul>
             <div class="cv-card__image cv-card__image--small">
               <img src="images/cv-wdg.jpg" alt="WdG Research & Design work"
                    onerror="this.parentElement.style.display='none'">
@@ -111,10 +101,19 @@
           </div>
 
           <div class="cv-card">
-            <span class="cv-card__date">Nov 2019 — Feb 2020</span>
-            <h3 class="cv-card__title">Research Assistant</h3>
-            <p class="cv-card__company">University of Technology Sydney</p>
-            <p class="cv-card__desc">Supporting the Materialising Memories research group. Organizing workshops, evaluating sessions and creating transcriptions.</p>
+            <div class="cv-card__header">
+              <div class="cv-card__logo"><img src="images/UTS.svg" alt="UTS"></div>
+              <div class="cv-card__header-text">
+                <span class="cv-card__date">Nov 2019 — Feb 2020</span>
+                <h3 class="cv-card__title">Research Assistant</h3>
+                <p class="cv-card__company">University of Technology Sydney</p>
+              </div>
+            </div>
+            <ul class="cv-card__desc cv-card__bullets">
+              <li>Supporting the Materialising Memories research group</li>
+              <li>Organizing workshops and evaluating sessions</li>
+              <li>Creating transcriptions</li>
+            </ul>
             <div class="cv-card__image cv-card__image--small">
               <img src="images/cv-sydney.jpg" alt="Research in Sydney"
                    onerror="this.parentElement.style.display='none'">
@@ -122,10 +121,20 @@
           </div>
 
           <div class="cv-card">
-            <span class="cv-card__date">Sep 2017 — Dec 2017</span>
-            <h3 class="cv-card__title">Industrial Design Intern</h3>
-            <p class="cv-card__company">Sparckel — HTC Eindhoven</p>
-            <p class="cv-card__desc">Designing biodynamic light fixtures. 3D modeling, rebranding from Vitaallicht to Sparckel, and conducting user interviews.</p>
+            <div class="cv-card__header">
+              <div class="cv-card__logo"><img src="images/sparckel.svg" alt="Sparckel"></div>
+              <div class="cv-card__header-text">
+                <span class="cv-card__date">Sep 2017 — Dec 2017</span>
+                <h3 class="cv-card__title">Industrial Design Intern</h3>
+                <p class="cv-card__company">Sparckel — HTC Eindhoven</p>
+              </div>
+            </div>
+            <ul class="cv-card__desc cv-card__bullets">
+              <li>Designing biodynamic light fixtures</li>
+              <li>3D modeling and prototyping</li>
+              <li>Rebranding from Vitaallicht to Sparckel</li>
+              <li>Conducting user interviews</li>
+            </ul>
             <div class="cv-card__image cv-card__image--small">
               <img src="images/cv-sparckel.jpg" alt="Sparckel design work"
                    onerror="this.parentElement.style.display='none'">
@@ -184,31 +193,65 @@
 
         <div class="cv-cards cv-cards--compact reveal-stagger">
           <div class="cv-card">
-            <span class="cv-card__date">Oct 2024</span>
-            <h3 class="cv-card__title">Craft + Lead a Strategic UX Vision</h3>
-            <p class="cv-card__company">Center Centre — Online Intensive</p>
-            <p class="cv-card__desc">Establishing strategic UX goals, researching current experiences, creating a UX vision, placing the vision in the product roadmap, and leading the organization to achieve it.</p>
+            <div class="cv-card__header">
+              <div class="cv-card__logo"><img src="images/centercentre.svg" alt="Center Centre"></div>
+              <div class="cv-card__header-text">
+                <span class="cv-card__date">Oct 2024</span>
+                <h3 class="cv-card__title">Craft + Lead a Strategic UX Vision</h3>
+                <p class="cv-card__company">Center Centre — Online Intensive</p>
+              </div>
+            </div>
+            <ul class="cv-card__desc cv-card__bullets">
+              <li>Establishing strategic UX goals and researching current experiences</li>
+              <li>Creating a UX vision and placing it in the product roadmap</li>
+              <li>Leading the organization to achieve the vision</li>
+            </ul>
           </div>
 
           <div class="cv-card">
-            <span class="cv-card__date">Aug 2023</span>
-            <h3 class="cv-card__title">Product Psychology Masterclass</h3>
-            <p class="cv-card__company">Growth.Design — Online</p>
-            <p class="cv-card__desc">Applying psychology to build better products. Understanding user behavior, finding gaps to improve every experience, creating good customer journeys, and making ethical decisions as a team.</p>
+            <div class="cv-card__header">
+              <div class="cv-card__logo"><img src="images/Product-psychology.svg" alt="Growth.Design"></div>
+              <div class="cv-card__header-text">
+                <span class="cv-card__date">Aug 2023</span>
+                <h3 class="cv-card__title">Product Psychology Masterclass</h3>
+                <p class="cv-card__company">Growth.Design — Online</p>
+              </div>
+            </div>
+            <ul class="cv-card__desc cv-card__bullets">
+              <li>Applying psychology to build better products</li>
+              <li>Understanding user behavior and finding gaps to improve every experience</li>
+              <li>Creating good customer journeys and making ethical decisions as a team</li>
+            </ul>
           </div>
 
           <div class="cv-card">
-            <span class="cv-card__date">2020</span>
-            <h3 class="cv-card__title">MSc Industrial Design</h3>
-            <p class="cv-card__company">Eindhoven University of Technology</p>
-            <p class="cv-card__desc">Research semester at the University of Technology Sydney, Australia. Design and research in dementia care.</p>
+            <div class="cv-card__header">
+              <div class="cv-card__logo"><img src="images/TU Eindhoven.svg" alt="TU Eindhoven"></div>
+              <div class="cv-card__header-text">
+                <span class="cv-card__date">2020</span>
+                <h3 class="cv-card__title">MSc Industrial Design</h3>
+                <p class="cv-card__company">Eindhoven University of Technology</p>
+              </div>
+            </div>
+            <ul class="cv-card__desc cv-card__bullets">
+              <li>Research semester at the University of Technology Sydney, Australia</li>
+              <li>Design and research in dementia care</li>
+            </ul>
           </div>
 
           <div class="cv-card">
-            <span class="cv-card__date">2020</span>
-            <h3 class="cv-card__title">BSc Industrial Design</h3>
-            <p class="cv-card__company">Eindhoven University of Technology</p>
-            <p class="cv-card__desc">Foundations of interaction design. Final project: designing biodynamic lighting for shared spaces.</p>
+            <div class="cv-card__header">
+              <div class="cv-card__logo"><img src="images/TU Eindhoven.svg" alt="TU Eindhoven"></div>
+              <div class="cv-card__header-text">
+                <span class="cv-card__date">2020</span>
+                <h3 class="cv-card__title">BSc Industrial Design</h3>
+                <p class="cv-card__company">Eindhoven University of Technology</p>
+              </div>
+            </div>
+            <ul class="cv-card__desc cv-card__bullets">
+              <li>Foundations of interaction design</li>
+              <li>Final project: designing biodynamic lighting for shared spaces</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -219,17 +262,29 @@
 
         <div class="cv-cards cv-cards--compact reveal-stagger">
           <div class="cv-card">
-            <span class="cv-card__date">May 2021</span>
-            <h3 class="cv-card__title">Exploring How a Multisensory Media Album Can Support Dementia Care Staff</h3>
-            <p class="cv-card__company">Dementia Lab 2021</p>
+            <div class="cv-card__header">
+              <div class="cv-card__logo"><img src="images/Springer.svg" alt="Springer"></div>
+              <div class="cv-card__header-text">
+                <span class="cv-card__date">May 2021</span>
+                <h3 class="cv-card__title">Exploring How a Multisensory Media Album Can Support Dementia Care Staff</h3>
+                <p class="cv-card__company">Dementia Lab 2021</p>
+              </div>
+            </div>
             <p class="cv-card__desc">de Groot, W., Kenning, G., van den Hoven, E., Eggen, B.</p>
+            <a href="https://link.springer.com/chapter/10.1007/978-3-030-70293-9_4" target="_blank" rel="noopener" class="cv-card__link">Link to article &rarr;</a>
           </div>
 
           <div class="cv-card">
-            <span class="cv-card__date">Oct 2019</span>
-            <h3 class="cv-card__title">Exploring How an Interactive Placemat Can Influence Eating Activities for People with Dementia</h3>
-            <p class="cv-card__company">Dementia Lab 2019</p>
+            <div class="cv-card__header">
+              <div class="cv-card__logo"><img src="images/Springer.svg" alt="Springer"></div>
+              <div class="cv-card__header-text">
+                <span class="cv-card__date">Oct 2019</span>
+                <h3 class="cv-card__title">Exploring How an Interactive Placemat Can Influence Eating Activities for People with Dementia</h3>
+                <p class="cv-card__company">Dementia Lab 2019</p>
+              </div>
+            </div>
             <p class="cv-card__desc">de Groot, W., Houben, M., Hengeveld, B.</p>
+            <a href="https://link.springer.com/chapter/10.1007/978-3-030-33540-3_9" target="_blank" rel="noopener" class="cv-card__link">Link to article &rarr;</a>
           </div>
         </div>
       </div>

@@ -1,0 +1,4 @@
+# Block all crawlers during draft/preview phase
+# Remove this file (or update rules) when ready to go public
+User-agent: *
+Disallow: /

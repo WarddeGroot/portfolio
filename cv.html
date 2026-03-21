@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Ward de Groot</title>
+  <meta name="description" content="Experience and skills of Ward de Groot — UX / Product Designer.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%231a5a8a'/><text x='16' y='21' text-anchor='middle' fill='white' font-size='16' font-family='sans-serif' font-weight='bold'>W</text></svg>">
+</head>
+<body>
+  <script src="js/gate.js"></script>
+
+  <div id="site-nav"></div>
+
+  <!-- CV Header -->
+  <section class="cv-section">
+    <div class="container">
+      <div class="cv-header reveal">
+        <h1>Curriculum Vitae</h1>
+        <p>UX designer with strong research skills, dedicated to creating user-friendly experiences that improve people's lives. My interests in psychology, strategy and technology drive my design choices.</p>
+      </div>
+
+      <!-- Career Map — visual overview of overlapping roles -->
+      <div class="career-map reveal" style="margin-bottom: var(--space-24);">
+        <h2 style="margin-bottom: var(--space-8);">My path</h2>
+        <p style="margin-bottom: var(--space-12);">Not a straight line — and that's the point.</p>
+
+        <div class="career-map__chart" role="img" aria-label="Visual career timeline showing overlapping roles from 2017 to present">
+          <!-- Year markers -->
+          <div class="career-map__years">
+            <span>2017</span><span>2018</span><span>2019</span><span>2020</span><span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>Now</span>
+          </div>
+
+          <!-- Swim lanes — each bar is positioned via CSS grid columns -->
+          <!-- Grid: 2017=1, 2018=2, ... Now=10. Each col = 1 year -->
+          <div class="career-map__lanes">
+            <div class="career-map__lane">
+              <span class="career-map__label">Design</span>
+              <div class="career-map__bar career-map__bar--primary" style="grid-column: 1 / 2;" title="Sparckel Intern — Sep–Dec 2017">Sparckel</div>
+              <div class="career-map__bar career-map__bar--primary career-map__bar--active" style="grid-column: 5 / 11;" title="UX Designer at Gynzy — Jan 2021–Present">Gynzy</div>
+            </div>
+
+            <div class="career-map__lane">
+              <span class="career-map__label">Entrepreneurship</span>
+              <div class="career-map__bar career-map__bar--accent" style="grid-column: 4 / 7;" title="WdG Research & Design — Sep 2020–Dec 2022">WdG R&D</div>
+              <div class="career-map__bar career-map__bar--accent" style="grid-column: 6 / 9;" title="Co-founder Vavino — Oct 2022–Jan 2025">Vavino</div>
+            </div>
+
+            <div class="career-map__lane">
+              <span class="career-map__label">Research</span>
+              <div class="career-map__bar career-map__bar--muted" style="grid-column: 3 / 4;" title="Research Assistant at UTS — Nov 2019–Feb 2020">UTS Sydney</div>
+            </div>
+
+            <div class="career-map__lane">
+              <span class="career-map__label">Education</span>
+              <div class="career-map__bar career-map__bar--subtle" style="grid-column: 1 / 4;" title="BSc Industrial Design — TU Eindhoven">BSc TU/e</div>
+              <div class="career-map__bar career-map__bar--subtle" style="grid-column: 3 / 5;" title="MSc Industrial Design — TU Eindhoven">MSc TU/e</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image banner — slot for a personal/background photo -->
+      <div class="cv-image-banner reveal" style="margin-bottom: var(--space-24);">
+        <img src="images/cv-banner.jpg" alt="Ward at work or in context"
+             onerror="this.parentElement.style.display='none'">
+      </div>
+
+      <!-- Experience — card-based, grouped by theme -->
+      <div style="margin-bottom: var(--space-24);">
+        <h2 class="reveal" style="margin-bottom: var(--space-12);">Experience</h2>
+
+        <div class="cv-cards reveal-stagger">
+          <!-- Primary role — full width -->
+          <div class="cv-card cv-card--featured">
+            <div class="cv-card__content">
+              <span class="cv-card__date">Jan 2021 — Present</span>
+              <h3 class="cv-card__title">UX Designer</h3>
+              <p class="cv-card__company">Gynzy — 's-Hertogenbosch</p>
+              <p class="cv-card__desc">Making teachers' lives a little better every day. Conducting design research to gather deep insights into user behavior, translating qualitative and quantitative data into user-friendly interfaces, collaborating with subject-matter experts, developers and product owners, communicating design decisions grounded in psychology, and applying strategic UX practices.</p>
+            </div>
+            <div class="cv-card__image">
+              <!-- Replace with a screenshot of Gynzy work, your desk, or similar -->
+              <img src="images/cv-gynzy.jpg" alt="Working at Gynzy"
+                   onerror="this.parentElement.style.display='none'">
+            </div>
+          </div>
+
+          <!-- Side-by-side roles -->
+          <div class="cv-card">
+            <span class="cv-card__date">Oct 2022 — Jan 2025</span>
+            <h3 class="cv-card__title">Co-founder</h3>
+            <p class="cv-card__company">Vavino — Reusel</p>
+            <p class="cv-card__desc">Entrepreneurial experience making sustainable wines accessible and affordable. Designed the brand, website, and all online/offline channels. Organized and facilitated wine tastings.</p>
+            <div class="cv-card__image cv-card__image--small">
+              <img src="images/cv-vavino.jpg" alt="Vavino brand work"
+                   onerror="this.parentElement.style.display='none'">
+            </div>
+          </div>
+
+          <div class="cv-card">
+            <span class="cv-card__date">Sep 2020 — Dec 2022</span>
+            <h3 class="cv-card__title">Founder</h3>
+            <p class="cv-card__company">WdG Research & Design</p>
+            <p class="cv-card__desc">Market research and design on a project basis. Logos and style guides for startups, user interviews for PhD research, and healthcare demand research for a municipality.</p>
+            <div class="cv-card__image cv-card__image--small">
+              <img src="images/cv-wdg.jpg" alt="WdG Research & Design work"
+                   onerror="this.parentElement.style.display='none'">
+            </div>
+          </div>
+
+          <div class="cv-card">
+            <span class="cv-card__date">Nov 2019 — Feb 2020</span>
+            <h3 class="cv-card__title">Research Assistant</h3>
+            <p class="cv-card__company">University of Technology Sydney</p>
+            <p class="cv-card__desc">Supporting the Materialising Memories research group. Organizing workshops, evaluating sessions and creating transcriptions.</p>
+            <div class="cv-card__image cv-card__image--small">
+              <img src="images/cv-sydney.jpg" alt="Research in Sydney"
+                   onerror="this.parentElement.style.display='none'">
+            </div>
+          </div>
+
+          <div class="cv-card">
+            <span class="cv-card__date">Sep 2017 — Dec 2017</span>
+            <h3 class="cv-card__title">Industrial Design Intern</h3>
+            <p class="cv-card__company">Sparckel — HTC Eindhoven</p>
+            <p class="cv-card__desc">Designing biodynamic light fixtures. 3D modeling, rebranding from Vitaallicht to Sparckel, and conducting user interviews.</p>
+            <div class="cv-card__image cv-card__image--small">
+              <img src="images/cv-sparckel.jpg" alt="Sparckel design work"
+                   onerror="this.parentElement.style.display='none'">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div style="margin-bottom: var(--space-24);">
+        <h2 class="reveal" style="margin-bottom: var(--space-12);">Skills & expertise</h2>
+
+        <div class="reveal" style="margin-bottom: var(--space-8);">
+          <h4 style="margin-bottom: var(--space-4); color: var(--color-text);">Design</h4>
+          <div class="skills-grid">
+            <span class="skill-tag">UX Design</span>
+            <span class="skill-tag">Interaction Design</span>
+            <span class="skill-tag">Design Systems</span>
+            <span class="skill-tag">Prototyping</span>
+            <span class="skill-tag">UX Strategy</span>
+            <span class="skill-tag">Information Architecture</span>
+            <span class="skill-tag">Visual Design</span>
+            <span class="skill-tag">Product Psychology</span>
+          </div>
+        </div>
+
+        <div class="reveal" style="margin-bottom: var(--space-8);">
+          <h4 style="margin-bottom: var(--space-4); color: var(--color-text);">Research & Data</h4>
+          <div class="skills-grid">
+            <span class="skill-tag">Usability Testing</span>
+            <span class="skill-tag">User Interviews</span>
+            <span class="skill-tag">Data Analysis</span>
+            <span class="skill-tag">Workshop Facilitation</span>
+            <span class="skill-tag">Card Sorting</span>
+            <span class="skill-tag">Market Research</span>
+          </div>
+        </div>
+
+        <div class="reveal" style="margin-bottom: var(--space-8);">
+          <h4 style="margin-bottom: var(--space-4); color: var(--color-text);">Tools</h4>
+          <div class="skills-grid">
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">Sketch</span>
+            <span class="skill-tag">Amplitude</span>
+            <span class="skill-tag">Framer</span>
+            <span class="skill-tag">NotebookLM</span>
+            <span class="skill-tag">OpenAI / Claude</span>
+            <span class="skill-tag">HTML / CSS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education & Certificates -->
+      <div style="margin-bottom: var(--space-24);">
+        <h2 class="reveal" style="margin-bottom: var(--space-12);">Education & certificates</h2>
+
+        <div class="cv-cards cv-cards--compact reveal-stagger">
+          <div class="cv-card">
+            <span class="cv-card__date">Oct 2024</span>
+            <h3 class="cv-card__title">Craft + Lead a Strategic UX Vision</h3>
+            <p class="cv-card__company">Center Centre — Online Intensive</p>
+            <p class="cv-card__desc">Establishing strategic UX goals, researching current experiences, creating a UX vision, placing the vision in the product roadmap, and leading the organization to achieve it.</p>
+          </div>
+
+          <div class="cv-card">
+            <span class="cv-card__date">Aug 2023</span>
+            <h3 class="cv-card__title">Product Psychology Masterclass</h3>
+            <p class="cv-card__company">Growth.Design — Online</p>
+            <p class="cv-card__desc">Applying psychology to build better products. Understanding user behavior, finding gaps to improve every experience, creating good customer journeys, and making ethical decisions as a team.</p>
+          </div>
+
+          <div class="cv-card">
+            <span class="cv-card__date">2020</span>
+            <h3 class="cv-card__title">MSc Industrial Design</h3>
+            <p class="cv-card__company">Eindhoven University of Technology</p>
+            <p class="cv-card__desc">Research semester at the University of Technology Sydney, Australia. Design and research in dementia care.</p>
+          </div>
+
+          <div class="cv-card">
+            <span class="cv-card__date">2020</span>
+            <h3 class="cv-card__title">BSc Industrial Design</h3>
+            <p class="cv-card__company">Eindhoven University of Technology</p>
+            <p class="cv-card__desc">Foundations of interaction design. Final project: designing biodynamic lighting for shared spaces.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Publications -->
+      <div style="margin-bottom: var(--space-24);">
+        <h2 class="reveal" style="margin-bottom: var(--space-12);">Publications</h2>
+
+        <div class="cv-cards cv-cards--compact reveal-stagger">
+          <div class="cv-card">
+            <span class="cv-card__date">May 2021</span>
+            <h3 class="cv-card__title">Exploring How a Multisensory Media Album Can Support Dementia Care Staff</h3>
+            <p class="cv-card__company">Dementia Lab 2021</p>
+            <p class="cv-card__desc">de Groot, W., Kenning, G., van den Hoven, E., Eggen, B.</p>
+          </div>
+
+          <div class="cv-card">
+            <span class="cv-card__date">Oct 2019</span>
+            <h3 class="cv-card__title">Exploring How an Interactive Placemat Can Influence Eating Activities for People with Dementia</h3>
+            <p class="cv-card__company">Dementia Lab 2019</p>
+            <p class="cv-card__desc">de Groot, W., Houben, M., Hengeveld, B.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

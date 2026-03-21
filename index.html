@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ward de Groot — UX / Product Designer</title>
+  <meta name="description" content="I craft meaningful experiences that improve people's lives. UX Designer, Product Designer, and Design Strategist.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%231a5a8a'/><text x='16' y='21' text-anchor='middle' fill='white' font-size='16' font-family='sans-serif' font-weight='bold'>W</text></svg>">
+</head>
+<body>
+  <script src="js/gate.js"></script>
+
+  <div id="site-nav"></div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__tags" aria-hidden="true">
+      <span class="tag">UX design</span>
+      <span class="tag">Design systems</span>
+      <span class="tag">Strategy</span>
+      <span class="tag">Interaction design</span>
+      <span class="tag">Prototyping</span>
+      <span class="tag">Data informed design</span>
+    </div>
+
+    <h1 class="hero__statement">I craft meaningful experiences that improve people's lives.</h1>
+
+    <div class="hero__card">
+      <!-- Replace src with your actual photo -->
+      <img src="images/avatar.jpg" alt="Ward de Groot" class="hero__avatar"
+           onerror="this.style.background='linear-gradient(135deg,#1a5a8a,#2980b9)';this.alt='WdG'">
+      <div class="hero__card-text">
+        <h3>Ward de Groot</h3>
+        <p>UX / Product Designer</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- My Work (featured) -->
+  <section class="section" id="work">
+    <div class="container">
+      <h2 class="reveal" style="text-align: center; margin-bottom: var(--space-16);">My work</h2>
+
+      <div class="projects-grid reveal-stagger">
+        <a href="projects/ux-vision.html" class="project-card">
+          <h3 class="project-card__title">Crafting & Leading a Strategic UX Vision</h3>
+          <p class="project-card__desc">Aligning teams to shift from doing tactical to strategic work</p>
+          <span class="project-card__link">
+            Read more
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+          </span>
+        </a>
+
+        <a href="projects/navigation.html" class="project-card">
+          <h3 class="project-card__title">Enhancing teachers' productivity.</h3>
+          <p class="project-card__desc">Fixing Gynzy's navigation problems</p>
+          <span class="project-card__link">
+            Read more
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+          </span>
+        </a>
+
+        <a href="projects/cognitive-load.html" class="project-card">
+          <h3 class="project-card__title">Reducing loads of cognitive load</h3>
+          <p class="project-card__desc">Ensuring a happy landing for teachers every day</p>
+          <span class="project-card__link">
+            Read more
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tools -->
+  <section class="section section--subtle">
+    <div class="container">
+      <div class="tools reveal">
+        <p class="tools__label">These tools help me craft meaningful experiences</p>
+        <div class="tools__grid">
+          <span class="tools__item">Figma</span>
+          <span class="tools__item">Sketch</span>
+          <span class="tools__item">Amplitude</span>
+          <span class="tools__item">NotebookLM</span>
+          <span class="tools__item">OpenAI</span>
+          <span class="tools__item">Claude</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

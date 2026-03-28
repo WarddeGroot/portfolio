@@ -15,7 +15,7 @@
     target.outerHTML = `
     <nav class="nav" role="navigation" aria-label="Main navigation">
       <div class="nav__inner">
-        <a href="${depth}index.html" class="nav__logo">
+        <a href="${depth}" class="nav__logo">
           <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="36" height="36" rx="10" fill="#1a5a8a"/>
             <g transform="translate(6, 6)">
@@ -24,7 +24,7 @@
           </svg>
         </a>
         <ul class="nav__links">
-          <li><a href="${depth}index.html" class="nav__link">Home</a></li>
+          <li><a href="${depth}" class="nav__link">Home</a></li>
           <li><a href="${depth}projects.html" class="nav__link">My work</a></li>
           <li><a href="${depth}about.html" class="nav__link">About me</a></li>
           <li><a href="${depth}cv.html" class="nav__link">CV</a></li>

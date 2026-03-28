@@ -396,12 +396,12 @@ document.addEventListener('DOMContentLoaded', () => {
   })();
 
   // --- Active nav link ---
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const currentPath = window.location.pathname.split('/').pop() || '';
   document.querySelectorAll('.nav__link').forEach(link => {
     const href = link.getAttribute('href').split('/').pop();
     if (href === currentPath ||
-        (currentPath === '' && href === 'index.html') ||
-        (currentPath === 'index.html' && href === 'index.html')) {
+        (currentPath === '' && (href === '' || href === 'index.html')) ||
+        (currentPath === 'index.html' && (href === '' || href === 'index.html'))) {
       link.classList.add('nav__link--active');
     }
   });

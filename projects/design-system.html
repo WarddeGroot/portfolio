@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Revamping Gynzy's Design System — Ward de Groot</title>
+  <title>Evolving a Design System to Scale — Ward de Groot</title>
   <meta name="description" content="From flat tokens to a scalable alias layer serving both teachers and students.">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
@@ -17,8 +17,8 @@
   <section class="project-hero">
     <div class="container">
       <p class="reveal" style="margin-bottom: var(--space-2);"><a href="../projects" style="color: var(--color-primary-light); font-size: 0.9rem;">&larr; Back to all projects</a></p>
-      <h1 class="project-hero__title reveal">Revamping Gynzy's Design System</h1>
-      <p class="project-hero__desc reveal">From flat tokens to a scalable alias layer serving both teachers and students — without duplicating components.</p>
+      <h1 class="project-hero__title reveal">Evolving a Design System to Scale</h1>
+      <p class="project-hero__desc reveal">Introducing an alias layer to serve both teachers and students from a single, scalable token architecture.</p>
     </div>
   </section>
 
@@ -57,35 +57,42 @@
 
       <div class="reveal">
         <h2 id="challenge">The challenge</h2>
-        <p>Gynzy's existing design system relied on primitives and tokens alone. As the product grew to serve both teachers and students — across desktop and tablet — this flat structure couldn't keep up. Components needed to adapt to different contexts without being rebuilt from scratch.</p>
+        <ul class="key-points">
+          <li>Gynzy's design system started in Sketch and was migrated to Figma — but the migration was a straight copy-paste, with no rethinking of structure or naming.</li>
+          <li>The design team refreshed the color palette because the old colors felt dull, but without a token architecture to support it, the update had to be applied manually everywhere.</li>
+          <li>Components were being recreated without shared rules — designers built what they needed in the moment, leading to inconsistency across the product.</li>
+          <li>As more work shifted to the student environment, the problem multiplied: every component essentially needed a teacher version and a student version.</li>
+        </ul>
       </div>
 
     </div>
 
-    <!-- Old vs New buttons — full width -->
+    <!-- Before: icons — full width -->
     <div class="full-width reveal">
-      <div class="comparison" style="max-width: var(--max-width); margin: 0 auto;">
+      <div style="max-width: var(--max-width); margin: 0 auto;">
         <div class="comparison__item">
-          <div class="comparison__label">Before — Inconsistent button styles</div>
-          <img src="../images/Old buttons.png" alt="Old button components with inconsistent styling">
-        </div>
-        <div class="comparison__item">
-          <div class="comparison__label">After — Unified button system</div>
-          <img src="../images/New buttons.png" alt="New button components with consistent design tokens">
+          <div class="comparison__label">Bulky icon set with heavy stroke weight</div>
+          <img src="../images/Monochrome icons old.png" alt="Old monochrome icons with heavier strokes">
         </div>
       </div>
     </div>
 
-    <!-- Old vs New monochrome icons — full width -->
+    <!-- Before: buttons — full width -->
     <div class="full-width reveal">
-      <div class="comparison" style="max-width: var(--max-width); margin: 0 auto;">
+      <div style="max-width: var(--max-width); margin: 0 auto;">
         <div class="comparison__item">
-          <div class="comparison__label">Before — Inconsistent monochrome icons</div>
-          <img src="../images/Monochrome icons old.png" alt="Old monochrome icons with inconsistent styling">
+          <div class="comparison__label">Outdated inner shadows, minimal roundness, oversized icons</div>
+          <img src="../images/Old buttons.png" alt="Old button components with inner shadows and small border radius">
         </div>
+      </div>
+    </div>
+
+    <!-- Before: color palette — full width -->
+    <div class="full-width reveal">
+      <div style="max-width: var(--max-width); margin: 0 auto;">
         <div class="comparison__item">
-          <div class="comparison__label">After — Unified icon set</div>
-          <img src="../images/Monochorme icons new.png" alt="New monochrome icons with consistent design">
+          <div class="comparison__label">Limited color range with dull tones</div>
+          <img src="../images/color palette-old.png" alt="Old color palette with fewer steps and muted tones">
         </div>
       </div>
     </div>
@@ -94,16 +101,35 @@
 
       <div class="reveal">
         <h2 id="solution">The solution</h2>
-        <h3>Introducing the alias layer</h3>
-        <p>Content coming soon — this case study is being written.</p>
+        <ul class="key-points">
+          <li>When the organization committed to Flutter, the migration created a natural moment to rethink the design system from the ground up.</li>
+          <li>Instead of maintaining separate component sets for teachers and students, I introduced an alias layer — a set of semantic tokens that map to different values depending on context.</li>
+          <li>The alias layer controls spacing, padding, typography, and sizing — so a single component adapts automatically to the teacher or student environment.</li>
+          <li>I also prepared the alias structure for whitelabel use, building in variable modes that could support different brand contexts in the future.</li>
+        </ul>
       </div>
 
     </div>
 
-    <!-- Teacher vs Student modal — stacked, full width -->
+    <!-- Primitive vs Alias token architecture — full width -->
     <div class="full-width reveal">
-      <div style="max-width: var(--max-width); margin: 0 auto;">
-        <div class="comparison__item" style="margin-bottom: var(--space-4);">
+      <div class="comparison" style="max-width: var(--max-width); margin: 0 auto;">
+        <div class="comparison__item">
+          <div class="comparison__label">Primitive tokens — Raw values, context-unaware</div>
+          <img src="../images/Primitive collection.png" alt="Figma variables panel showing primitive size tokens with single values">
+        </div>
+        <div class="comparison__item">
+          <div class="comparison__label">Alias tokens — Mapped per context (Teacher / Student)</div>
+          <img src="../images/Alias collection.png" alt="Figma variables panel showing alias tokens with different values for Teacher and Student modes">
+        </div>
+      </div>
+      <p style="max-width: var(--max-width); margin: var(--space-4) auto 0; font-size: 0.85rem; color: var(--color-text-muted);">Primitives define raw values. The alias layer maps the same token name to different primitives per context — so components don't need to be duplicated.</p>
+    </div>
+
+    <!-- Teacher vs Student modal — side by side, full width -->
+    <div class="full-width reveal">
+      <div class="comparison" style="max-width: var(--max-width); margin: 0 auto;">
+        <div class="comparison__item">
           <div class="comparison__label">Teacher context</div>
           <img src="../images/Teacher modal dialog - measurements.png" alt="Modal dialog with alias token annotations in the teacher context">
         </div>
@@ -111,42 +137,89 @@
           <div class="comparison__label">Student context</div>
           <img src="../images/Student modal dialog - measurements.png" alt="Modal dialog with alias token annotations in the student context">
         </div>
-        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: var(--space-4);">Same component, different context — the alias layer adapts styling for teachers and students without duplicating the component.</p>
       </div>
+      <p style="max-width: var(--max-width); margin: var(--space-4) auto 0; font-size: 0.85rem; color: var(--color-text-muted);">Same component, different context — the alias layer adapts spacing, typography, and sizing for teachers and students without duplicating the component.</p>
     </div>
 
     <div class="container container--narrow">
 
       <div class="reveal">
         <h2 id="implementation">Implementation</h2>
-        <p>Content coming soon — this case study is being written.</p>
+        <ul class="key-points">
+          <li>Worked closely with a developer to define how tokens would translate into Flutter's theming system.</li>
+          <li>Rolled out incrementally — migrating components one by one rather than doing a big-bang switch.</li>
+          <li>The developer handled the scaling logic between Flutter and the remaining Ember parts of the application.</li>
+          <li>Once AI tooling became available, I could add and update token values and create components more independently — speeding up the process significantly.</li>
+        </ul>
       </div>
-
-    </div>
-
-    <!-- Density overview — full width -->
-    <div class="full-width reveal">
-      <div style="max-width: var(--max-width); margin: 0 auto;">
-        <img src="../images/density-overview.png" alt="Component density and layout variations across different screen sizes and contexts" style="width: 100%; display: block;">
-        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: var(--space-4);">Density and layout changes across components — ensuring everything works from compact desktop views to spacious whiteboard displays.</p>
-      </div>
-    </div>
-
-    <div class="container container--narrow">
 
       <div class="reveal">
         <h2 id="results">Results</h2>
-        <p>Content coming soon.</p>
+        <ul class="key-points">
+          <li>New components can be created faster because the token structure does the heavy lifting.</li>
+          <li>The product looks and feels more consistent across both teacher and student contexts.</li>
+          <li>The visual language was refreshed — brighter and more intentional — without needing a separate redesign effort.</li>
+          <li>The alias layer is future-proof: whitelabel support is built in from the start.</li>
+        </ul>
       </div>
 
     </div>
 
-    <!-- Design system overview — full width -->
+    <!-- Before/After: icons -->
     <div class="full-width reveal">
-      <div style="max-width: var(--max-width); margin: 0 auto;">
-        <img src="../images/Design system visual.png" alt="Overview of Gynzy's design system — typography, color palette, components, and icons" style="width: 100%; display: block;">
-        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: var(--space-4);">The design system's scope — typography, color, components, and iconography all needed to scale across audiences.</p>
+      <div class="comparison" style="max-width: var(--max-width); margin: 0 auto;">
+        <div class="comparison__item">
+          <div class="comparison__label">Before — Bulkier, heavier stroke weight</div>
+          <img src="../images/Monochrome icons old.png" alt="Old monochrome icons with heavier strokes">
+        </div>
+        <div class="comparison__item">
+          <div class="comparison__label">After — Lighter, more elegant line work</div>
+          <img src="../images/Monochorme icons new.png" alt="New monochrome icons with refined, lighter strokes">
+        </div>
       </div>
+    </div>
+
+    <!-- Before/After: buttons -->
+    <div class="full-width reveal">
+      <div class="comparison" style="max-width: var(--max-width); margin: 0 auto;">
+        <div class="comparison__item">
+          <div class="comparison__label">Before — Outdated inner shadows, minimal roundness, oversized icons</div>
+          <img src="../images/Old buttons.png" alt="Old button components with inner shadows and small border radius">
+        </div>
+        <div class="comparison__item">
+          <div class="comparison__label">After — More roundness, no inner shadows, better icon-text balance</div>
+          <img src="../images/New buttons.png" alt="New button components with more roundness, clean styling, and balanced icon-text sizing">
+        </div>
+      </div>
+    </div>
+
+    <!-- Before/After: color palette -->
+    <div class="full-width reveal">
+      <div class="comparison" style="max-width: var(--max-width); margin: 0 auto;">
+        <div class="comparison__item">
+          <div class="comparison__label">Before — Limited color range with dull tones</div>
+          <img src="../images/color palette-old.png" alt="Old color palette with fewer steps and muted tones">
+        </div>
+        <div class="comparison__item">
+          <div class="comparison__label">After — Expanded palette with vibrant colors</div>
+          <img src="../images/color palette-new.png" alt="New color palette with more steps and brighter tones">
+        </div>
+      </div>
+    </div>
+
+    <!-- Before/After: orange & yellow close-up -->
+    <div class="full-width reveal">
+      <div class="comparison" style="max-width: var(--max-width); margin: 0 auto;">
+        <div class="comparison__item">
+          <div class="comparison__label">Before — Orange & yellow lacked vibrancy</div>
+          <img src="../images/color palette - old - orange&yellow.png" alt="Old orange and yellow swatches with muted tones">
+        </div>
+        <div class="comparison__item">
+          <div class="comparison__label">After — Brighter, more playful range</div>
+          <img src="../images/color palette - new - orange&yellow.png" alt="New orange and yellow swatches with vibrant tones">
+        </div>
+      </div>
+      <p style="max-width: var(--max-width); margin: var(--space-4) auto 0; font-size: 0.85rem; color: var(--color-text-muted);">For a product used by teachers and students, color matters. The old palette felt dull — the refresh brought the vibrancy the product needed.</p>
     </div>
 
   </section>

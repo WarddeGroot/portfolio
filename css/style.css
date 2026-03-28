@@ -709,7 +709,12 @@ p {
 }
 
 .project-content h2 {
+  margin-top: var(--space-16);
   margin-bottom: var(--space-6);
+}
+
+.project-content h2:first-child {
+  margin-top: 0;
 }
 
 .project-content h3 {

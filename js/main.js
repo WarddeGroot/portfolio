@@ -308,6 +308,93 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(animate);
   }
 
+  // --- Table of Contents scroll tracking ---
+  const tocLinks = document.querySelectorAll('.toc__link');
+  if (tocLinks.length > 0) {
+    const tocIds = Array.from(tocLinks).map(link =>
+      link.getAttribute('href').replace('#', '')
+    );
+    const tocSections = tocIds.map(id => document.getElementById(id)).filter(Boolean);
+
+    function getTopOffset(el) {
+      return el.getBoundingClientRect().top + window.scrollY;
+    }
+
+    function updateActiveToc() {
+      const scrollY = window.scrollY + 150;
+      let activeId = tocIds[0];
+
+      // Find which section we're in
+      for (let i = tocSections.length - 1; i >= 0; i--) {
+        if (getTopOffset(tocSections[i]) <= scrollY) {
+          activeId = tocSections[i].id;
+          break;
+        }
+      }
+
+      tocLinks.forEach((link) => {
+        const href = link.getAttribute('href').replace('#', '');
+        link.classList.toggle('toc__link--active', href === activeId);
+      });
+    }
+
+    window.addEventListener('scroll', updateActiveToc, { passive: true });
+    updateActiveToc();
+
+    // Smooth scroll on click
+    tocLinks.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const id = link.getAttribute('href').replace('#', '');
+        const target = document.getElementById(id);
+        if (target) {
+          const top = getTopOffset(target) - 100;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+  }
+
+  // --- Image Lightbox ---
+  (function initLightbox() {
+    // Create lightbox element
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox';
+    lightbox.innerHTML = '<div class="lightbox__backdrop"></div><img class="lightbox__img" src="" alt="">';
+    document.body.appendChild(lightbox);
+
+    const lbImg = lightbox.querySelector('.lightbox__img');
+    const lbBackdrop = lightbox.querySelector('.lightbox__backdrop');
+
+    function openLightbox(src, alt) {
+      lbImg.src = src;
+      lbImg.alt = alt || '';
+      // Force reflow so the opening animation plays
+      lightbox.offsetHeight;
+      lightbox.classList.add('lightbox--active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('lightbox--active');
+      document.body.style.overflow = '';
+    }
+
+    // Click any project/comparison image to open
+    document.querySelectorAll('.project-content img, .comparison__item img').forEach(img => {
+      img.addEventListener('click', () => openLightbox(img.src, img.alt));
+    });
+
+    // Close on backdrop or image click
+    lbBackdrop.addEventListener('click', closeLightbox);
+    lbImg.addEventListener('click', closeLightbox);
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  })();
+
   // --- Active nav link ---
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav__link').forEach(link => {

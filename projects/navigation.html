@@ -42,84 +42,201 @@
 
   <!-- Project Content -->
   <section class="project-content">
+
+    <!-- Table of Contents -->
+    <nav class="toc" id="toc" aria-label="Table of contents">
+      <ul class="toc__list">
+        <li><a href="#challenge" class="toc__link">The challenge</a></li>
+        <li><a href="#making-the-case" class="toc__link">Making the case</a></li>
+        <li><a href="#solution" class="toc__link">The solution</a></li>
+        <li><a href="#implementation" class="toc__link">Implementation</a></li>
+        <li><a href="#results" class="toc__link">Results</a></li>
+      </ul>
+    </nav>
+
     <div class="container container--narrow">
 
+      <!-- ==================== CHALLENGE ==================== -->
       <div class="reveal">
-        <h2>The problem</h2>
-        <p>Gynzy's navigation had grown organically over the years into a left sidebar of unlabeled icons. Teachers couldn't figure out what the icons meant. The page they landed on after signing in wasn't even the top icon. Some icons led to features that weren't core to the product at all. And critically, there was zero room left to add new features without degrading the experience further.</p>
-        <p>Multiple development teams — including ours — recognized the scalability problem independently. Meanwhile, teachers were quietly struggling. This wasn't just a design issue; it was blocking the product from evolving.</p>
+        <h2 id="challenge">The challenge</h2>
+        <ul class="key-points">
+          <li>Navigation was a left sidebar of unlabeled icons — teachers couldn't figure out what they meant</li>
+          <li>The landing page after sign-in wasn't even the top icon, causing immediate disorientation</li>
+          <li>Zero room left to add new features without degrading the experience further</li>
+          <li>Multiple development teams independently flagged the scalability problem</li>
+          <li>Ember and Flutter applications had different scaling behavior across devices</li>
+          <li>Teachers use desktops and interactive whiteboards — cursor and touch input both had to work</li>
+        </ul>
       </div>
 
-      <!-- Placeholder for before/after visual -->
-      <div class="comparison reveal">
+    </div>
+
+    <!-- Before/After — full width -->
+    <div class="full-width reveal">
+      <div class="comparison" style="max-width: var(--max-width); margin: 0 auto;">
         <div class="comparison__item">
-          <div class="comparison__label">Before</div>
-          <img src="../images/nav-before.jpg" alt="The old icon-only sidebar navigation"
-               onerror="this.style.background='var(--color-bg-subtle)';this.style.height='300px';this.style.display='block'">
+          <div class="comparison__label">Before — Icon-only sidebar in Ember</div>
+          <img src="../images/Sidebar - old.png" alt="The old category-based sidebar navigation in Ember">
         </div>
         <div class="comparison__item">
-          <div class="comparison__label">After</div>
-          <img src="../images/nav-after.jpg" alt="The redesigned navigation with labels and Start page"
-               onerror="this.style.background='var(--color-bg-subtle)';this.style.height='300px';this.style.display='block'">
+          <div class="comparison__label">After — Redesigned library navigation</div>
+          <img src="../images/Bibliotheek - alle inhoud - all collapsed.png" alt="The redesigned library with icon-based sidebar navigation">
         </div>
       </div>
+    </div>
 
+    <div class="container container--narrow">
+
+      <!-- ==================== MAKING THE CASE ==================== -->
       <div class="reveal">
-        <h2>Making the case</h2>
-        <p>The data was there, but data alone wasn't enough to convince stakeholders that a full navigation overhaul was worth the investment. So I took a different approach: storytelling. I presented the experience through the eyes of a teacher who had never used Gynzy before — walking stakeholders through what they would see, think, and feel at every step. The confusion of unlabeled icons. The disorientation of landing on the wrong page. The frustration of not finding core features.</p>
-        <p>This shifted the conversation. Instead of debating whether the navigation was "good enough," we were aligned on the fact that it was actively hurting new and existing users.</p>
+        <h2 id="making-the-case">Making the case</h2>
+        <p>Data alone wasn't enough to convince stakeholders. I presented the experience through the eyes of a first-time teacher — walking through the confusion step by step. That shifted the conversation from "is it good enough?" to "this is hurting users."</p>
         <div style="margin-top: var(--space-6);">
           <iframe style="border: 1px solid rgba(0, 0, 0, 0.1); border-radius: var(--radius-md); width: 100%; aspect-ratio: 16/9;" src="https://embed.figma.com/deck/QqmPqn0cb8Bdm0WiX185UL/Enhancing-navigation-usability?node-id=0-1&embed-host=share" allowfullscreen></iframe>
           <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: var(--space-2);">The slide deck I used to present the case for overhauling navigation.</p>
         </div>
       </div>
 
+      <!-- ==================== SOLUTION ==================== -->
       <div class="reveal">
-        <h2>Research & exploration</h2>
-        <p>I used Amplitude data to map which features teachers used most and which went largely untouched. Card sorting exercises with educational experts revealed how teachers actually think about their tools — which turned out to be quite different from how we'd organized them. Usability testing with early variations confirmed that simply relabeling the existing icons wouldn't be enough.</p>
-        <p>A key insight emerged: teachers didn't need a better toolbar. They needed a fundamentally different entry point into the product, and a navigation model that could grow with them.</p>
+        <h2 id="solution">The solution</h2>
       </div>
 
       <div class="reveal">
-        <h2>A phased approach</h2>
-        <p>I quickly realized that the scope was too large for a single release, so I proposed breaking the work into three sequential phases. This let us ship improvements incrementally while building toward the bigger vision.</p>
+        <h3>Research insights</h3>
+        <ul class="key-points">
+          <li>Amplitude data revealed which features teachers actually used vs. which went untouched</li>
+          <li>Card sorting with educational experts showed teachers think about tools very differently from how we'd organized them</li>
+          <li>Usability testing confirmed that simply relabeling icons wouldn't be enough</li>
+          <li>Key insight: teachers needed a fundamentally different entry point, not a better toolbar</li>
+        </ul>
+      </div>
+
+      <div class="reveal">
+        <h3>Design constraints</h3>
+        <ul class="key-points">
+          <li>Hover-to-expand menus worked with a mouse but fell apart on whiteboards teachers tap in front of a class</li>
+          <li>Responsive scaling had to work consistently from small laptops to large interactive displays</li>
+          <li>The Ember→Flutter migration meant reconciling two different rendering behaviors</li>
+        </ul>
+      </div>
+
+      <!-- ==================== IMPLEMENTATION ==================== -->
+      <div class="reveal">
+        <h2 id="implementation">Implementation</h2>
+        <p>The scope was too large for a single release, so I proposed three sequential phases — shipping improvements incrementally while building toward the bigger vision.</p>
       </div>
 
       <div class="reveal">
         <h3>Phase 1 — Clean up & rebuild</h3>
-        <p>Remove non-core features from the sidebar and rewrite the Ember-based toolbar in Flutter. This was the foundation — reducing clutter and moving to a modern, maintainable codebase. Teachers immediately had fewer distractions, and the team had a solid base to build on.</p>
+        <ul class="key-points">
+          <li>Removed non-core features from the sidebar</li>
+          <li>Rewrote the Ember-based toolbar in Flutter</li>
+          <li>Reduced clutter and established a maintainable codebase</li>
+        </ul>
       </div>
 
-      <!-- Phase 1 video — Ember to Flutter toolbar transition -->
-      <div class="reveal" style="margin: var(--space-8) 0;">
-        <video autoplay loop muted playsinline style="width: 100%; border-radius: var(--radius-md);">
+    </div>
+
+    <!-- Phase 1 video — full width -->
+    <div class="full-width reveal">
+      <div style="max-width: var(--max-width); margin: 0 auto;">
+        <video autoplay loop muted playsinline style="width: 100%;">
           <source src="../images/nav-phase1-toolbar.mp4" type="video/mp4">
         </video>
-        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: var(--space-2);">The toolbar transition from Ember to Flutter — a cleaner, decluttered starting point.</p>
+        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: var(--space-2);">The toolbar transition from Ember to Flutter.</p>
       </div>
+    </div>
+
+    <div class="container container--narrow">
 
       <div class="reveal">
         <h3>Phase 2 — The Start page</h3>
-        <p>Introduce a dedicated Start page so teachers land somewhere logical when they sign in. Instead of being dropped into a random view, they now see their schedule and most relevant content immediately. This was the single biggest improvement for daily workflow — teachers could open a lesson in one click, down from a minimum of three.</p>
+        <ul class="key-points">
+          <li>Introduced a dedicated landing page so teachers see their schedule immediately after sign-in</li>
+          <li>Evolved from a promotional first version to a personalized daily hub</li>
+          <li>Single biggest improvement: opening a lesson went from 3 clicks to 1</li>
+        </ul>
       </div>
 
-      <!-- Placeholder for Start page visual -->
-      <div class="reveal" style="margin: var(--space-8) 0;">
-        <img src="../images/nav-startpage.jpg" alt="The new Start page — teachers land here and can open a lesson in one click"
-             style="width: 100%; border-radius: var(--radius-md);"
-             onerror="this.style.display='none'">
+    </div>
+
+    <!-- Start page evolution — full width -->
+    <div class="full-width reveal">
+      <div class="comparison comparison--three" style="max-width: var(--max-width); margin: 0 auto;">
+        <div class="comparison__item">
+          <div class="comparison__label">First iteration — Promotional landing page</div>
+          <img src="../images/Startpagina - eerste versie.png" alt="First version of the Start page with promotional content">
+        </div>
+        <div class="comparison__item">
+          <div class="comparison__label">Live — Seasonal highlighted content</div>
+          <img src="../images/Startpagina - highlighted content.png" alt="Current Start page with seasonal highlighted content section">
+        </div>
+        <div class="comparison__item">
+          <div class="comparison__label">Future — Search bar & secondary nav</div>
+          <img src="../images/Startpagina - future.png" alt="Future Start page concept with search bar and secondary navigation">
+        </div>
       </div>
+    </div>
+
+    <div class="container container--narrow">
 
       <div class="reveal">
         <h3>Phase 3 — Secondary navigation</h3>
-        <p>Add a secondary navigation layer to create room for new features without mixing horizontal and vertical navigation patterns. Everything now lives on the left — primary and secondary — giving users a consistent mental model. This unlocked the space the product team needed to ship new capabilities without compromising the experience.</p>
+        <ul class="key-points">
+          <li>Added a secondary navigation layer — everything lives on the left, giving users a consistent mental model</li>
+          <li>Created room for new features without mixing horizontal and vertical patterns</li>
+        </ul>
       </div>
 
+    </div>
+
+    <!-- Sidebar explorations — full width -->
+    <div class="full-width reveal">
+      <div style="max-width: var(--max-width); margin: 0 auto;">
+        <div class="comparison">
+          <div class="comparison__item">
+            <div class="comparison__label">Collapsed — Category icons only</div>
+            <img src="../images/Sidebar iteration 1 - screen 02.png" alt="Sidebar exploration — secondary menu collapsed">
+          </div>
+          <div class="comparison__item">
+            <div class="comparison__label">Expanded — Full category list</div>
+            <img src="../images/Sidebar iteration 1 - screen 01.png" alt="Sidebar exploration — secondary menu expanded with category items">
+          </div>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: var(--space-4);">Early exploration of the secondary sidebar — a collapsible category menu that could expand in place.</p>
+      </div>
+    </div>
+
+    <!-- Secondary navigation in action — full width -->
+    <div class="full-width reveal">
+      <div style="max-width: var(--max-width); margin: 0 auto;">
+        <div class="comparison">
+          <div class="comparison__item">
+            <div class="comparison__label">Lesson folders — Tree navigation</div>
+            <img src="../images/Secondary navigation - Lesmap.png" alt="Secondary navigation showing a lesson folder tree structure">
+          </div>
+          <div class="comparison__item">
+            <div class="comparison__label">Curriculum — Subject hierarchy</div>
+            <img src="../images/Secondary navigation - Getalbegrip.png" alt="Secondary navigation showing curriculum categories for math concepts">
+          </div>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: var(--space-4);">The secondary navigation in tree-like views — folders and curriculum structures that need hierarchy without leaving the page.</p>
+      </div>
+    </div>
+
+    <div class="container container--narrow">
+
+      <!-- ==================== RESULTS ==================== -->
       <div class="reveal">
-        <h2>The outcome</h2>
-        <p>The most tangible result: opening a lesson went from at least 3 clicks to just 1 for most teachers. That might sound small, but teachers do this dozens of times a day. Across thousands of users, it adds up to a meaningful shift in how the product feels.</p>
-        <p>Beyond the numbers, the redesign gave Gynzy a navigation architecture that could actually scale. New features now have a clear home. The mixed Ember/Flutter codebase was consolidated. And the product team went from "we can't add anything" to having room to build.</p>
-        <p>Perhaps most importantly, I learned that the hardest part of a project like this isn't the design — it's building the conviction to do it properly instead of patching what's there.</p>
+        <h2 id="results">Results</h2>
+        <ul class="key-points">
+          <li>Lesson access went from 3+ clicks to 1 — multiplied across thousands of teachers using this dozens of times daily</li>
+          <li>Navigation architecture now scales — new features have a clear home</li>
+          <li>Mixed Ember/Flutter codebase consolidated into Flutter</li>
+          <li>Responsive scaling works consistently across all supported devices</li>
+          <li>Product team went from "we can't add anything" to having room to build</li>
+        </ul>
       </div>
 
     </div>

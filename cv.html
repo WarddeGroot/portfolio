@@ -15,6 +15,16 @@
 
   <!-- CV Header -->
   <section class="cv-section">
+
+    <!-- Table of Contents -->
+    <nav class="toc" id="toc" aria-label="Table of contents">
+      <ul class="toc__list">
+        <li><a href="#experience" class="toc__link">Experience</a></li>
+        <li><a href="#education" class="toc__link">Education</a></li>
+        <li><a href="#publications" class="toc__link">Publications</a></li>
+      </ul>
+    </nav>
+
     <div class="container">
       <div class="cv-header reveal">
         <h1>Curriculum Vitae</h1>
@@ -29,7 +39,7 @@
 
       <!-- Experience — card-based, grouped by theme -->
       <div style="margin-bottom: var(--space-24);">
-        <h2 class="reveal" style="margin-bottom: var(--space-12);">Experience</h2>
+        <h2 id="experience" class="reveal" style="margin-bottom: var(--space-12);">Experience</h2>
 
         <div class="cv-cards reveal-stagger">
           <!-- Primary role — full width -->
@@ -143,53 +153,11 @@
         </div>
       </div>
 
-      <!-- Skills -->
-      <div style="margin-bottom: var(--space-24);">
-        <h2 class="reveal" style="margin-bottom: var(--space-12);">Skills & expertise</h2>
-
-        <div class="reveal" style="margin-bottom: var(--space-8);">
-          <h4 style="margin-bottom: var(--space-4); color: var(--color-text);">Design</h4>
-          <div class="skills-grid">
-            <span class="skill-tag">UX Design</span>
-            <span class="skill-tag">Interaction Design</span>
-            <span class="skill-tag">Design Systems</span>
-            <span class="skill-tag">Prototyping</span>
-            <span class="skill-tag">UX Strategy</span>
-            <span class="skill-tag">Information Architecture</span>
-            <span class="skill-tag">Visual Design</span>
-            <span class="skill-tag">Product Psychology</span>
-          </div>
-        </div>
-
-        <div class="reveal" style="margin-bottom: var(--space-8);">
-          <h4 style="margin-bottom: var(--space-4); color: var(--color-text);">Research & Data</h4>
-          <div class="skills-grid">
-            <span class="skill-tag">Usability Testing</span>
-            <span class="skill-tag">User Interviews</span>
-            <span class="skill-tag">Data Analysis</span>
-            <span class="skill-tag">Workshop Facilitation</span>
-            <span class="skill-tag">Card Sorting</span>
-            <span class="skill-tag">Market Research</span>
-          </div>
-        </div>
-
-        <div class="reveal" style="margin-bottom: var(--space-8);">
-          <h4 style="margin-bottom: var(--space-4); color: var(--color-text);">Tools</h4>
-          <div class="skills-grid">
-            <span class="skill-tag">Figma</span>
-            <span class="skill-tag">Sketch</span>
-            <span class="skill-tag">Amplitude</span>
-            <span class="skill-tag">Framer</span>
-            <span class="skill-tag">NotebookLM</span>
-            <span class="skill-tag">OpenAI / Claude</span>
-            <span class="skill-tag">HTML / CSS</span>
-          </div>
-        </div>
-      </div>
+      <!-- Education & Certificates -->
 
       <!-- Education & Certificates -->
       <div style="margin-bottom: var(--space-24);">
-        <h2 class="reveal" style="margin-bottom: var(--space-12);">Education & certificates</h2>
+        <h2 id="education" class="reveal" style="margin-bottom: var(--space-12);">Education & certificates</h2>
 
         <div class="cv-cards cv-cards--compact reveal-stagger">
           <div class="cv-card">
@@ -258,7 +226,7 @@
 
       <!-- Publications -->
       <div style="margin-bottom: var(--space-24);">
-        <h2 class="reveal" style="margin-bottom: var(--space-12);">Publications</h2>
+        <h2 id="publications" class="reveal" style="margin-bottom: var(--space-12);">Publications</h2>
 
         <div class="cv-cards cv-cards--compact reveal-stagger">
           <div class="cv-card">

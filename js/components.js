@@ -15,7 +15,7 @@
     target.outerHTML = `
     <nav class="nav" role="navigation" aria-label="Main navigation">
       <div class="nav__inner">
-        <a href="${depth}" class="nav__logo">
+        <a href="${depth || './'}" class="nav__logo">
           <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="36" height="36" rx="10" fill="#1a5a8a"/>
             <g transform="translate(6, 6)">
@@ -24,10 +24,10 @@
           </svg>
         </a>
         <ul class="nav__links">
-          <li><a href="${depth}" class="nav__link">Home</a></li>
-          <li><a href="${depth}projects.html" class="nav__link">My work</a></li>
-          <li><a href="${depth}about.html" class="nav__link">About me</a></li>
-          <li><a href="${depth}cv.html" class="nav__link">CV</a></li>
+          <li><a href="${depth || './'}" class="nav__link">Home</a></li>
+          <li><a href="${depth}projects" class="nav__link">My work</a></li>
+          <li><a href="${depth}about" class="nav__link">About me</a></li>
+          <li><a href="${depth}cv" class="nav__link">CV</a></li>
         </ul>
         <a href="https://www.linkedin.com/in/warddegroot96/" target="_blank" rel="noopener" class="nav__cta">Get in touch</a>
         <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
@@ -50,7 +50,7 @@
       </div>
       <ul class="footer__links">
         <li><a href="https://www.linkedin.com/in/warddegroot96/" class="footer__link" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="${depth}cv.html" class="footer__link">CV</a></li>
+        <li><a href="${depth}cv" class="footer__link">CV</a></li>
       </ul>
       <p class="footer__updated">Last updated: March 2026</p>
       <p class="footer__copy">&copy; 2026 Ward de Groot. All rights reserved.</p>

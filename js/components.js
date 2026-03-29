@@ -45,7 +45,7 @@
     target.outerHTML = `
     <footer class="footer">
       <div class="prompt-counter">
-        <span class="prompt-counter__number" data-count="321">0</span>
+        <span class="prompt-counter__number" data-count="50">0</span>
         <span class="prompt-counter__label">prompts built<br>this portfolio</span>
       </div>
       <ul class="footer__links">

@@ -225,53 +225,72 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const isHome = currentPage === 'index.html' || currentPage === '' || currentPage === 'portfolio' || currentPage === 'portfolio/';
     if (isHome) {
+      let clickCount = 0;
       logo.addEventListener('click', (e) => {
         e.preventDefault();
-        fireConfetti(logo);
+        clickCount++;
+        // Use the SVG inside the logo, not the flex container
+        const logoSvg = logo.querySelector('svg');
+        fireConfetti(logoSvg || logo, clickCount);
       });
     }
   }
 
-  function fireConfetti(origin) {
+  function fireConfetti(origin, clickCount) {
     const rect = origin.getBoundingClientRect();
     const cx = rect.left + rect.width / 2;
     const cy = rect.top + rect.height / 2;
+
+    // Portfolio palette — blues, teals, and warm accents
     const colors = [
-      'oklch(55% 0.13 240)',  // primary blue
-      'oklch(65% 0.15 260)',  // lighter blue
-      'oklch(70% 0.12 200)',  // teal
-      'oklch(75% 0.10 280)',  // purple-ish
-      'oklch(80% 0.08 60)',   // warm accent
+      'oklch(42% 0.12 240)',  // primary
+      'oklch(55% 0.13 240)',  // primary-light
+      'oklch(65% 0.16 220)',  // bright teal
+      'oklch(72% 0.10 200)',  // soft teal
+      'oklch(58% 0.14 260)',  // blue-violet
+      'oklch(78% 0.06 80)',   // warm cream
     ];
-    const count = 30;
+
+    // More clicks = more confetti, up to a point
+    const count = Math.min(20 + clickCount * 8, 60);
     const pieces = [];
+
+    // Add a little pop scale to the logo
+    origin.style.transition = 'transform 0.15s cubic-bezier(0.22, 1.2, 0.36, 1)';
+    origin.style.transform = 'scale(1.2)';
+    setTimeout(() => {
+      origin.style.transform = 'scale(1)';
+      setTimeout(() => { origin.style.transition = ''; origin.style.transform = ''; }, 200);
+    }, 150);
 
     for (let i = 0; i < count; i++) {
       const el = document.createElement('div');
-      const size = Math.random() * 6 + 4;
+      const size = Math.random() * 7 + 3;
       const color = colors[Math.floor(Math.random() * colors.length)];
-      const angle = (Math.PI * 2 * i) / count + (Math.random() - 0.5) * 0.5;
-      const velocity = 60 + Math.random() * 80;
-      const spin = (Math.random() - 0.5) * 720;
+      // Bias upward: angle between -30° and 210° (mostly upward spread)
+      const angle = (-Math.PI * 0.17) + (Math.PI * 1.33 * i / count) + (Math.random() - 0.5) * 0.4;
+      const velocity = 80 + Math.random() * 120;
+      const spin = (Math.random() - 0.5) * 900;
+      const shape = Math.random();
 
       Object.assign(el.style, {
         position: 'fixed',
         left: cx + 'px',
         top: cy + 'px',
         width: size + 'px',
-        height: size + 'px',
+        height: shape > 0.6 ? size * 0.5 + 'px' : size + 'px',
         background: color,
-        borderRadius: Math.random() > 0.5 ? '50%' : '2px',
+        borderRadius: shape > 0.8 ? '50%' : shape > 0.4 ? '2px' : '1px',
         pointerEvents: 'none',
         zIndex: '9999',
       });
 
       document.body.appendChild(el);
-      pieces.push({ el, angle, velocity, spin, x: cx, y: cy, vy: 0, life: 1 });
+      pieces.push({ el, angle, velocity, spin, delay: Math.random() * 0.05 });
     }
 
     let start = null;
-    const duration = 1200;
+    const duration = 1600;
 
     function animate(ts) {
       if (!start) start = ts;
@@ -279,14 +298,16 @@ document.addEventListener('DOMContentLoaded', () => {
       const progress = Math.min(elapsed / duration, 1);
 
       pieces.forEach((p) => {
-        const t = progress;
+        const t = Math.max(0, progress - p.delay) / (1 - p.delay);
+        if (t <= 0) return;
         const dx = Math.cos(p.angle) * p.velocity * t;
-        const dy = Math.sin(p.angle) * p.velocity * t * -1 + 200 * t * t; // gravity
-        const fade = 1 - Math.pow(t, 2);
+        const dy = Math.sin(p.angle) * p.velocity * t * -1 + 280 * t * t; // gravity
+        const fade = t < 0.7 ? 1 : 1 - ((t - 0.7) / 0.3);
+        const wobble = Math.sin(t * 12) * 3 * (1 - t);
 
         Object.assign(p.el.style, {
-          transform: `translate(${dx}px, ${dy}px) rotate(${p.spin * t}deg)`,
-          opacity: fade,
+          transform: `translate(${dx + wobble}px, ${dy}px) rotate(${p.spin * t}deg)`,
+          opacity: Math.max(0, fade),
         });
       });
 

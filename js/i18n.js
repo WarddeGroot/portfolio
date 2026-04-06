@@ -13,13 +13,13 @@ const translations = {
   'nav.cta':            { en: 'Get in touch', nl: 'Neem contact op' },
 
   // ── Footer ──────────────────────────────────
-  'footer.prompts':     { en: 'prompts built<br>this portfolio', nl: 'prompts bouwden<br>dit portfolio' },
+  'footer.prompts':     { en: 'prompts built<br>this portfolio', nl: 'prompts gebruikt voor<br>dit portfolio' },
   'footer.updated':     { en: 'Last updated: April 2026', nl: 'Laatst bijgewerkt: april 2026' },
   'footer.copy':        { en: '&copy; 2026 Ward de Groot', nl: '&copy; 2026 Ward de Groot' },
 
   // ── Homepage ────────────────────────────────
   'home.title':         { en: 'Ward de Groot — UX / Product Designer', nl: 'Ward de Groot — UX / Product Designer' },
-  'home.meta':          { en: 'I craft meaningful experiences that improve people\'s lives. UX Designer, Product Designer, and Design Strategist.', nl: 'Ik ontwerp betekenisvolle ervaringen die het leven van mensen verbeteren. UX Designer, Product Designer en Design Strateeg.' },
+  'home.meta':          { en: 'Portfolio of Ward de Groot — UX / Product Designer who thinks in systems, not just screens.', nl: 'Portfolio van Ward de Groot — UX / Product Designer die denkt in systemen, niet alleen schermen.' },
 
   // Greeting (set dynamically in main.js)
   'home.greeting.morning':   { en: 'Good morning',   nl: 'Goedemorgen' },
@@ -41,17 +41,17 @@ const translations = {
   'home.tag.strategy':  { en: 'Strategy',               nl: 'Strategie' },
   'home.tag.ix':        { en: 'Interaction design',     nl: 'Interaction design' },
   'home.tag.proto':     { en: 'Prototyping',            nl: 'Prototyping' },
-  'home.tag.data':      { en: 'Data informed design',   nl: 'Data informed design' },
+  'home.tag.data':      { en: 'Data-informed design',   nl: 'Data-informed design' },
 
   // Section heading
   'home.workHeading':   { en: 'My work', nl: 'Mijn werk' },
 
   // ── Project cards (shared between home + projects page) ──
-  'card.nav.title':     { en: 'Enhancing teachers\' productivity', nl: 'De productiviteit van leerkrachten verbeteren' },
+  'card.nav.title':     { en: 'Enhancing teachers\' productivity', nl: 'Leerkrachten productiever maken' },
   'card.nav.desc':      { en: 'Redesigning navigation and reducing cognitive load for busy teachers', nl: 'Navigatie herontwerpen en cognitieve belasting verlagen voor drukke leerkrachten' },
-  'card.ds.title':      { en: 'Evolving a Design System to Scale', nl: 'Een Design System laten meegroeien' },
-  'card.ds.desc':       { en: 'Introducing an alias layer to serve both teachers and students from a single, scalable token architecture', nl: 'Een alias-laag introduceren om zowel leerkrachten als leerlingen te bedienen vanuit één schaalbare token-architectuur' },
-  'card.trainer.title': { en: 'From UX Vision to an Educational Trainer', nl: 'Van UX-visie naar een educatieve Trainer' },
+  'card.ds.title':      { en: 'Evolving a design system to scale', nl: 'Een design system laten meegroeien' },
+  'card.ds.desc':       { en: 'Rethinking Gynzy\'s design system so it could scale from one audience to two — without doubling the work', nl: 'Gynzy\'s design system herdenken zodat het kon meeschalen van één doelgroep naar twee — zonder het werk te verdubbelen' },
+  'card.trainer.title': { en: 'From UX vision to an educational trainer', nl: 'Van UX-visie naar een educatieve trainer' },
   'card.trainer.desc':  { en: 'How strategic thinking and ethnographic research led to a scalable platform for independent learning', nl: 'Hoe strategisch denken en etnografisch onderzoek leidden tot een schaalbaar platform voor zelfstandig leren' },
   'card.readMore':      { en: 'Read more', nl: 'Lees meer' },
 
@@ -59,7 +59,7 @@ const translations = {
   'projects.title':     { en: 'My Work — Ward de Groot', nl: 'Mijn werk — Ward de Groot' },
   'projects.meta':      { en: 'Selected projects in UX design, product strategy, and design systems by Ward de Groot.', nl: 'Geselecteerde projecten in UX design, productstrategie en design systems door Ward de Groot.' },
   'projects.heading':   { en: 'My work', nl: 'Mijn werk' },
-  'projects.subtitle':  { en: 'A selection of projects where I combined research, strategy, and hands-on design to make a real difference.', nl: 'Een selectie projecten waarin ik onderzoek, strategie en hands-on design combineerde om echt verschil te maken.' },
+  'projects.subtitle':  { en: 'A selection of projects where I combined research, strategy, and hands-on design to solve real problems for teachers and students.', nl: 'Een selectie projecten waarin ik onderzoek, strategie en hands-on design combineerde om echte problemen voor leerkrachten en leerlingen op te lossen.' },
 
   // ── About page ──────────────────────────────
   'about.title':        { en: 'About Me — Ward de Groot', nl: 'Over mij — Ward de Groot' },
@@ -67,7 +67,7 @@ const translations = {
   'about.heading':      { en: 'About me', nl: 'Over mij' },
 
   'about.intro.1':      { en: 'I\'m Ward — a UX Designer from Noord-Brabant with a soft spot for complex problems and the people behind them. I studied Industrial Design at Eindhoven University of Technology, where I got hooked on the intersection of psychology, strategy, and technology. That\'s still what drives me today.', nl: 'Ik ben Ward — UX Designer uit Noord-Brabant met een zwak voor complexe problemen en de mensen erachter. Ik heb Industrial Design gestudeerd aan de TU Eindhoven, waar ik gegrepen werd door het snijvlak van psychologie, strategie en technologie. Dat drijft me nog steeds.' },
-  'about.intro.2':      { en: 'At <strong style="color: var(--color-text);">Gynzy</strong>, I work on an educational platform used by thousands of teachers and students. My goal is simple: make their day a little easier, every single day. Whether that means facilitating a workshop, diving deep into research data, or quickly prototyping a solution — I go where the problem needs me.', nl: 'Bij <strong style="color: var(--color-text);">Gynzy</strong> werk ik aan een educatief platform dat door duizenden leerkrachten en leerlingen wordt gebruikt. Mijn doel is simpel: hun dag elke dag een stukje makkelijker maken. Of dat nou betekent dat ik een workshop faciliteer, diep in onderzoeksdata duik, of snel een oplossing prototype — ik sta waar het nodig is.' },
+  'about.intro.2':      { en: 'At <strong style="color: var(--color-text);">Gynzy</strong>, I work on an educational platform used by thousands of teachers and students. My goal is simple: improve their lives every single day. Whether that means facilitating a workshop, diving deep into research data, or quickly prototyping a solution — I adapt to what the situation needs.', nl: 'Bij <strong style="color: var(--color-text);">Gynzy</strong> werk ik aan een educatief platform dat door duizenden leerkrachten en leerlingen wordt gebruikt. Mijn doel is simpel: hun leven elke dag een stukje beter maken. Of dat nou betekent dat ik een workshop faciliteer, diep in onderzoeksdata duik, of snel een oplossing prototype — ik pas me aan op wat de situatie vraagt.' },
   'about.intro.3':      { en: 'Outside of Gynzy, I\'ve co-founded a sustainable wine company, published academic research in dementia care, and spent a research semester in Sydney. I\'m endlessly curious, pretty direct, and always up for a good conversation.', nl: 'Naast Gynzy heb ik een duurzaam wijnbedrijf mede-opgericht, academisch onderzoek gepubliceerd in dementiezorg, en een onderzoekssemester in Sydney doorgebracht. Ik ben eindeloos nieuwsgierig, vrij direct, en altijd in voor een goed gesprek.' },
 
   'about.howIWork':     { en: 'How I work', nl: 'Hoe ik werk' },
@@ -75,20 +75,20 @@ const translations = {
   'about.approach.title': { en: 'Whatever the situation asks for', nl: 'Wat de situatie ook vraagt' },
   'about.approach.desc':  { en: 'I don\'t have a fixed playbook. Some problems need deep research before you touch a single pixel. Others need a quick prototype by tomorrow. I read the room, adapt my approach, and go where the impact is. The one constant: I always start by understanding people.', nl: 'Ik heb geen vast draaiboek. Sommige problemen vragen om diepgaand onderzoek voordat je ook maar één pixel aanraakt. Andere om een snel prototype voor morgen. Ik lees de situatie, pas mijn aanpak aan, en ga waar de impact zit. De enige constante: ik begin altijd bij het begrijpen van mensen.' },
 
-  'about.data.title':    { en: 'Data informed, not data driven', nl: 'Data informed, not data driven' },
+  'about.data.title':    { en: 'Data-informed, not data-driven', nl: 'Data-informed, not data-driven' },
   'about.data.desc':     { en: 'Numbers tell part of the story. I combine quantitative insights with qualitative research — school visits, user interviews, usability tests — to form a complete picture. The best design decisions happen when you let both sides of that story inform each other.', nl: 'Cijfers vertellen een deel van het verhaal. Ik combineer kwantitatieve inzichten met kwalitatief onderzoek — schoolbezoeken, gebruikersinterviews, usability tests — om een compleet beeld te vormen. De beste ontwerpbeslissingen ontstaan wanneer je beide kanten van dat verhaal op elkaar laat inspelen.' },
 
-  'about.nextLevel.title': { en: 'Taking the product to the next level', nl: 'Het product naar een hoger niveau tillen' },
+  'about.nextLevel.title': { en: 'Thinking beyond individual screens', nl: 'Verder denken dan losse schermen' },
   'about.nextLevel.desc':  { en: 'I care about more than individual screens. I think in systems, patterns, and principles that structurally raise the bar for the entire product. Whether it\'s evolving a design system or shaping a UX vision — I want to leave things better than I found them.', nl: 'Ik kijk verder dan losse schermen. Ik denk in systemen, patronen en principes die het hele product structureel naar een hoger niveau tillen. Of het nu gaat om het doorontwikkelen van een design system of het vormgeven van een UX-visie — ik wil dingen beter achterlaten dan ik ze vind.' },
 
   'about.ai.title':      { en: 'Multiplying impact through AI and strategy', nl: 'Impact vermenigvuldigen met AI en strategie' },
-  'about.ai.desc':       { en: 'I use AI to amplify what my team can do — whether that\'s helping developers build components faster, setting up systems that scale beyond a single project, or rapidly prototyping ideas that would otherwise take weeks. Combined with a strategic perspective on where the product needs to go, this lets me create leverage: not just designing solutions, but enabling the people around me to move faster and smarter.', nl: 'Ik gebruik AI om te versterken wat mijn team kan — of het nu gaat om developers helpen sneller componenten te bouwen, systemen opzetten die verder reiken dan één project, of snel ideeën prototypen die anders weken zouden kosten. Gecombineerd met een strategische blik op waar het product naartoe moet, creëer ik hefboomwerking: niet alleen oplossingen ontwerpen, maar de mensen om me heen in staat stellen sneller en slimmer te werken.' },
+  'about.ai.desc':       { en: 'I use AI to amplify what my team can do — from prototyping ideas that would otherwise take weeks, to actually building components and features in code myself. Combined with a strategic perspective, this lets me create leverage: not just designing solutions, but shipping them.', nl: 'Ik gebruik AI om te versterken wat mijn team kan — van het prototypen van ideeën die anders weken zouden kosten, tot het zelf bouwen van componenten en features in code. Gecombineerd met een strategische blik levert dat iets op wat groter is dan mijn eigen output: niet alleen oplossingen ontwerpen, maar ze ook opleveren.' },
 
   // ── CV page ─────────────────────────────────
   'cv.title':            { en: 'CV — Ward de Groot', nl: 'CV — Ward de Groot' },
   'cv.meta':             { en: 'Experience and skills of Ward de Groot — UX / Product Designer.', nl: 'Ervaring en vaardigheden van Ward de Groot — UX / Product Designer.' },
   'cv.heading':          { en: 'Curriculum Vitae', nl: 'Curriculum Vitae' },
-  'cv.intro':            { en: 'UX designer with strong research skills, dedicated to creating user-friendly experiences that improve people\'s lives. My interests in psychology, strategy and technology drive my design choices.', nl: 'UX designer met sterke onderzoeksvaardigheden, gedreven om gebruiksvriendelijke ervaringen te creëren die het leven van mensen verbeteren. Mijn interesses in psychologie, strategie en technologie sturen mijn ontwerpkeuzes.' },
+  'cv.intro':            { en: 'UX / Product Designer with a research-driven approach. I think in systems, ground decisions in psychology, and build what I design. Currently at Gynzy, an educational platform used by thousands.', nl: 'UX / Product Designer met een onderzoeksgedreven aanpak. Ik denk in systemen, onderbouw beslissingen met psychologie, en bouw wat ik ontwerp. Momenteel bij Gynzy, een educatief platform dat door duizenden wordt gebruikt.' },
 
   // ToC
   'cv.toc.experience':   { en: 'Experience', nl: 'Ervaring' },
@@ -107,12 +107,12 @@ const translations = {
   'cv.gynzy.2':          { en: 'Translating qualitative and quantitative data into user-friendly interfaces', nl: 'Kwalitatieve en kwantitatieve data vertalen naar gebruiksvriendelijke interfaces' },
   'cv.gynzy.3':          { en: 'Collaborating with subject-matter experts, developers and product owners', nl: 'Samenwerken met vakexperts, developers en product owners' },
   'cv.gynzy.4':          { en: 'Communicating design decisions grounded in psychology', nl: 'Ontwerpbeslissingen communiceren onderbouwd met psychologie' },
-  'cv.gynzy.5':          { en: 'Applying strategic UX practices', nl: 'Strategische UX-methoden toepassen' },
+  'cv.gynzy.5':          { en: 'Shaping the product\'s UX vision, aligning stakeholders, and influencing the roadmap', nl: 'De UX-visie van het product vormgeven, stakeholders alignen, en de roadmap beïnvloeden' },
 
   // Vavino
   'cv.vavino.title':     { en: 'Co-founder', nl: 'Mede-oprichter' },
   'cv.vavino.company':   { en: 'Vavino — Reusel', nl: 'Vavino — Reusel' },
-  'cv.vavino.1':         { en: 'Making sustainable wines accessible and affordable', nl: 'Duurzame wijnen toegankelijk en betaalbaar maken' },
+  'cv.vavino.1':         { en: 'Made sustainable wines accessible and affordable', nl: 'Duurzame wijnen toegankelijk en betaalbaar gemaakt' },
   'cv.vavino.2':         { en: 'Designed the brand, website, and all online/offline channels', nl: 'Het merk, de website en alle online/offline kanalen ontworpen' },
   'cv.vavino.3':         { en: 'Organized and facilitated wine tastings', nl: 'Wijnproeverijen georganiseerd en gefaciliteerd' },
 
@@ -125,17 +125,17 @@ const translations = {
 
   // UTS
   'cv.uts.title':        { en: 'Research Assistant', nl: 'Research Assistant' },
-  'cv.uts.1':            { en: 'Supporting the Materialising Memories research group', nl: 'Ondersteunen van de onderzoeksgroep Materialising Memories' },
-  'cv.uts.2':            { en: 'Organizing workshops and evaluating sessions', nl: 'Workshops organiseren en sessies evalueren' },
-  'cv.uts.3':            { en: 'Creating transcriptions', nl: 'Transcripties maken' },
+  'cv.uts.1':            { en: 'Supported the Materialising Memories research group', nl: 'De onderzoeksgroep Materialising Memories ondersteund' },
+  'cv.uts.2':            { en: 'Organized workshops and evaluated sessions', nl: 'Workshops georganiseerd en sessies geëvalueerd' },
+  'cv.uts.3':            { en: 'Created transcriptions', nl: 'Transcripties gemaakt' },
 
   // Sparckel
   'cv.sparckel.title':   { en: 'Industrial Design Intern', nl: 'Stagiair Industrial Design' },
   'cv.sparckel.company': { en: 'Sparckel — HTC Eindhoven', nl: 'Sparckel — HTC Eindhoven' },
-  'cv.sparckel.1':       { en: 'Designing biodynamic light fixtures', nl: 'Biodynamische verlichtingsarmaturen ontwerpen' },
+  'cv.sparckel.1':       { en: 'Designed biodynamic light fixtures', nl: 'Biodynamische verlichtingsarmaturen ontworpen' },
   'cv.sparckel.2':       { en: '3D modeling and prototyping', nl: '3D-modelleren en prototypen' },
-  'cv.sparckel.3':       { en: 'Rebranding from Vitaallicht to Sparckel', nl: 'Rebranding van Vitaallicht naar Sparckel' },
-  'cv.sparckel.4':       { en: 'Conducting user interviews', nl: 'Gebruikersinterviews afnemen' },
+  'cv.sparckel.3':       { en: 'Rebranded from Vitaallicht to Sparckel', nl: 'Rebranding van Vitaallicht naar Sparckel' },
+  'cv.sparckel.4':       { en: 'Conducted user interviews', nl: 'Gebruikersinterviews afgenomen' },
 
   // Education
   'cv.centercentre.title': { en: 'Craft + Lead a Strategic UX Vision', nl: 'Craft + Lead a Strategic UX Vision' },
@@ -157,17 +157,17 @@ const translations = {
 
   'cv.bsc.title':        { en: 'BSc Industrial Design', nl: 'BSc Industrial Design' },
   'cv.bsc.company':      { en: 'Eindhoven University of Technology', nl: 'Technische Universiteit Eindhoven' },
-  'cv.bsc.1':            { en: 'Foundations of interaction design', nl: 'Grondslagen van interaction design' },
+  'cv.bsc.1':            { en: 'Interaction design, user research, and prototyping', nl: 'Interaction design, gebruikersonderzoek en prototyping' },
   'cv.bsc.2':            { en: 'Final project: designing biodynamic lighting for shared spaces', nl: 'Afstudeerproject: biodynamische verlichting ontwerpen voor gedeelde ruimtes' },
 
   // Publications
   'cv.pub.link':         { en: 'Link to article &rarr;', nl: 'Link naar artikel &rarr;' },
 
   // ── Case study: Navigation ──────────────────
-  'case.nav.title':       { en: 'Enhancing Teachers\' Productivity — Ward de Groot', nl: 'De productiviteit van leerkrachten verbeteren — Ward de Groot' },
+  'case.nav.title':       { en: 'Enhancing Teachers\' Productivity — Ward de Groot', nl: 'Leerkrachten productiever maken — Ward de Groot' },
   'case.nav.meta':        { en: 'Redesigning navigation and reducing cognitive load to help teachers work faster and feel more in control.', nl: 'Navigatie herontwerpen en cognitieve belasting verlagen zodat leerkrachten sneller werken en meer controle ervaren.' },
   'case.nav.back':        { en: '&larr; Back to all projects', nl: '&larr; Terug naar alle projecten' },
-  'case.nav.heading':     { en: 'Enhancing teachers\' productivity', nl: 'De productiviteit van leerkrachten verbeteren' },
+  'case.nav.heading':     { en: 'Enhancing teachers\' productivity', nl: 'Leerkrachten productiever maken' },
   'case.nav.desc':        { en: 'Gynzy\'s icon-only sidebar was confusing teachers and blocking the product from growing. I led a three-phase redesign that cut lesson access from 3 clicks to 1 — and gave the platform room to scale.', nl: 'Gynzy\'s sidebar met alleen iconen was verwarrend voor leerkrachten en blokkeerde de groei van het product. Ik leidde een herontwerp in drie fasen dat lestoegang terugbracht van 3 klikken naar 1 — en het platform ruimte gaf om te groeien.' },
 
   // Meta
@@ -191,7 +191,7 @@ const translations = {
   'case.nav.challenge.2':    { en: 'The landing page after sign-in wasn\'t even the top icon, causing immediate disorientation', nl: 'De landingspagina na inloggen was niet eens het bovenste icoon, wat direct voor verwarring zorgde' },
   'case.nav.challenge.3':    { en: 'Zero room left to add new features without degrading the experience further', nl: 'Geen ruimte meer om nieuwe features toe te voegen zonder de ervaring verder te verslechteren' },
   'case.nav.challenge.4':    { en: 'Multiple development teams independently flagged the scalability problem', nl: 'Meerdere ontwikkelteams kaarten onafhankelijk van elkaar het schaalbaarheids\u00ADprobleem aan' },
-  'case.nav.challenge.5':    { en: 'Ember and Flutter applications had different scaling behavior across devices', nl: 'Ember- en Flutter-applicaties schaalde verschillend op uiteenlopende apparaten' },
+  'case.nav.challenge.5':    { en: 'The Ember and Flutter applications had different scaling behavior across devices', nl: 'De Ember- en Flutter-applicaties schaalde verschillend op uiteenlopende apparaten' },
   'case.nav.challenge.6':    { en: 'Teachers use desktops and interactive whiteboards — cursor and touch input both had to work', nl: 'Leerkrachten gebruiken desktops en interactieve whiteboards — zowel muis- als touchinvoer moest werken' },
 
   'case.nav.makingTheCase':      { en: 'Making the case', nl: 'De overtuiging' },
@@ -252,11 +252,11 @@ const translations = {
   'case.nextProject':            { en: 'Next project', nl: 'Volgend project' },
 
   // ── Case study: Design System ───────────────
-  'case.ds.title':        { en: 'Evolving a Design System to Scale — Ward de Groot', nl: 'Een Design System laten meegroeien — Ward de Groot' },
+  'case.ds.title':        { en: 'Evolving a design system to scale — Ward de Groot', nl: 'Een design system laten meegroeien — Ward de Groot' },
   'case.ds.meta':         { en: 'From flat tokens to a scalable alias layer serving both teachers and students.', nl: 'Van platte tokens naar een schaalbare alias-laag voor zowel leerkrachten als leerlingen.' },
   'case.ds.back':         { en: '&larr; Back to all projects', nl: '&larr; Terug naar alle projecten' },
-  'case.ds.heading':      { en: 'Evolving a Design System to Scale', nl: 'Een Design System laten meegroeien' },
-  'case.ds.desc':         { en: 'Introducing an alias layer to serve both teachers and students from a single, scalable token architecture.', nl: 'Een alias-laag introduceren om zowel leerkrachten als leerlingen te bedienen vanuit één schaalbare token-architectuur.' },
+  'case.ds.heading':      { en: 'Evolving a design system to scale', nl: 'Een design system laten meegroeien' },
+  'case.ds.desc':         { en: 'Gynzy\'s design system wasn\'t built to serve two audiences. When the product expanded to students, I introduced an alias layer that let one set of components adapt to both contexts automatically.', nl: 'Gynzy\'s design system was niet gebouwd voor twee doelgroepen. Toen het product uitbreidde naar leerlingen, introduceerde ik een alias-laag waarmee één set componenten automatisch meeschaalt naar beide contexten.' },
 
   'case.ds.role':         { en: 'UX Designer / Researcher', nl: 'UX Designer / Researcher' },
   'case.ds.team':         { en: 'Design & Engineering', nl: 'Design & Engineering' },
@@ -295,7 +295,7 @@ const translations = {
 
   'case.ds.results':             { en: 'Results', nl: 'Resultaten' },
   'case.ds.results.1':           { en: 'New components can be created faster because the token structure does the heavy lifting.', nl: 'Nieuwe componenten kunnen sneller worden gemaakt omdat de tokenstructuur het zware werk doet.' },
-  'case.ds.results.2':           { en: 'The product looks and feels more consistent across both teacher and student contexts.', nl: 'Het product ziet er consistenter uit en voelt consistenter aan in zowel de leerkracht- als leerlingcontext.' },
+  'case.ds.results.2':           { en: 'A more consistent experience across teacher and student contexts, built from shared components instead of parallel versions.', nl: 'Een consistentere ervaring in zowel de leerkracht- als leerlingcontext, gebouwd vanuit gedeelde componenten in plaats van parallelle versies.' },
   'case.ds.results.3':           { en: 'The visual language was refreshed — brighter and more intentional — without needing a separate redesign effort.', nl: 'De visuele taal is opgefrist — helderder en bewuster — zonder een apart herontwerptraject.' },
   'case.ds.results.4':           { en: 'The alias layer is future-proof: whitelabel support is built in from the start.', nl: 'De alias-laag is toekomstbestendig: whitelabel-ondersteuning zit er vanaf het begin in.' },
 
@@ -316,7 +316,7 @@ const translations = {
   'case.ds.label.oldColors':     { en: 'Limited color range with dull tones', nl: 'Beperkt kleurbereik met doffe tinten' },
 
   // ── Case study: Trainer ─────────────────────
-  'case.trainer.title':     { en: 'From UX Vision to an Educational Trainer — Ward de Groot', nl: 'Van UX-visie naar een educatieve Trainer — Ward de Groot' },
+  'case.trainer.title':     { en: 'From UX vision to an educational trainer — Ward de Groot', nl: 'Van UX-visie naar een educatieve trainer — Ward de Groot' },
   'case.trainer.meta':      { en: 'How a strategic UX vision and ethnographic research led to a scalable platform for independent learning.', nl: 'Hoe een strategische UX-visie en etnografisch onderzoek leidden tot een schaalbaar platform voor zelfstandig leren.' },
   'case.trainer.back':      { en: '&larr; Back to all projects', nl: '&larr; Terug naar alle projecten' },
   'case.trainer.heading':   { en: 'From UX Vision to an Educational Trainer', nl: 'Van UX-visie naar een educatieve Trainer' },
@@ -341,7 +341,7 @@ const translations = {
   'case.trainer.discovery':      { en: 'The discovery', nl: 'De ontdekking' },
   'case.trainer.discovery.1':    { en: 'The school visits revealed something invisible in our own data: teachers were using all kinds of separate practice software alongside Gynzy, especially for recurring learning goals like multiplication tables and verb spelling.', nl: 'De schoolbezoeken onthulden iets dat onzichtbaar was in onze eigen data: leerkrachten gebruikten allerlei losse oefensoftware naast Gynzy, vooral voor terugkerende leerdoelen zoals tafels en werkwoordspelling.' },
   'case.trainer.discovery.2':    { en: 'Students needed a way to practice that was playful and motivating — independently, at their own level — beyond regular exercises.', nl: 'Leerlingen hadden een manier nodig om te oefenen die speels en motiverend was — zelfstandig, op hun eigen niveau — voorbij reguliere oefeningen.' },
-  'case.trainer.discovery.3':    { en: 'This insight would never have surfaced from feature requests or usage data alone. It\'s exactly why we do ethnographic research: you have to be in the classroom to see what your data can\'t show you.', nl: 'Dit inzicht was nooit naar boven gekomen uit feature requests of gebruiksdata alleen. Het is precies waarom we etnografisch onderzoek doen: je moet in de klas staan om te zien wat je data je niet kan laten zien.' },
+  'case.trainer.discovery.3':    { en: 'This insight would never have surfaced from feature requests or usage data alone. It\'s exactly why we do ethnographic research: you have to be in the classroom to see what your data can\'t show you.', nl: 'Dit inzicht was nooit naar boven gekomen uit feature requests of gebruiksdata alleen. Het is precies waarom we etnografisch onderzoek doen: je moet in de klas staan om te ontdekken wat je data je niet kan vertellen.' },
 
   'case.trainer.foundation':     { en: 'Designing the foundation', nl: 'De basis ontwerpen' },
   'case.trainer.foundation.1':   { en: 'Gynzy already had a popular classroom feature: the Alpaca Race, where the class splits into two teams and races by answering math facts as fast as possible. A proven concept — and a safe bet to develop further.', nl: 'Gynzy had al een populaire klassenfeature: de Alpacarace, waarbij de klas in twee teams splitst en racet door rekensommen zo snel mogelijk te beantwoorden. Een bewezen concept — en een veilige keuze om verder te ontwikkelen.' },
@@ -371,9 +371,9 @@ const translations = {
   'case.trainer.label.uniqueReach':   { en: 'Students using Trainer as their only form of independent practice', nl: 'Leerlingen die Trainer als enige vorm van zelfstandig oefenen gebruiken' },
 
   // Next project links
-  'case.nav.next':        { en: 'Evolving a Design System to Scale &rarr;', nl: 'Een Design System laten meegroeien &rarr;' },
-  'case.ds.next':         { en: 'From UX Vision to an Educational Trainer &rarr;', nl: 'Van UX-visie naar een educatieve Trainer &rarr;' },
-  'case.trainer.next':    { en: 'Enhancing teachers\' productivity &rarr;', nl: 'De productiviteit van leerkrachten verbeteren &rarr;' },
+  'case.nav.next':        { en: 'Evolving a design system to scale &rarr;', nl: 'Een design system laten meegroeien &rarr;' },
+  'case.ds.next':         { en: 'From UX vision to an educational trainer &rarr;', nl: 'Van UX-visie naar een educatieve trainer &rarr;' },
+  'case.trainer.next':    { en: 'Enhancing teachers\' productivity &rarr;', nl: 'Leerkrachten productiever maken &rarr;' },
 };
 
 

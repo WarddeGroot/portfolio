@@ -219,106 +219,195 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('touchend', onEnd);
   });
 
-  // --- Confetti easter egg on monogram click (only on homepage) ---
+  // --- Logo interaction: confetti on homepage, playful wiggle elsewhere ---
   const logo = document.querySelector('.nav__logo');
   if (logo) {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const isHome = currentPage === 'index.html' || currentPage === '' || currentPage === 'portfolio' || currentPage === 'portfolio/';
+    const logoSvg = logo.querySelector('svg');
+    const target = logoSvg || logo;
+
     if (isHome) {
-      let clickCount = 0;
-      logo.addEventListener('click', (e) => {
-        e.preventDefault();
-        clickCount++;
-        // Use the SVG inside the logo, not the flex container
-        const logoSvg = logo.querySelector('svg');
-        fireConfetti(logoSvg || logo, clickCount);
-      });
-    }
-  }
+      // --- Hold-to-charge confetti on homepage ---
+      let burstTimeout = null;
+      let level = 0;
+      let totalRotation = 0;
+      let activePieces = [];
+      let isHolding = false;
 
-  function fireConfetti(origin, clickCount) {
-    const rect = origin.getBoundingClientRect();
-    const cx = rect.left + rect.width / 2;
-    const cy = rect.top + rect.height / 2;
+      // 6 levels: slow build, big payoff on release
+      const levels = [
+        { at: 0,    scale: 1.04 },
+        { at: 500,  scale: 1.08 },
+        { at: 1000, scale: 1.14 },
+        { at: 1600, scale: 1.22 },
+        { at: 2300, scale: 1.32 },
+        { at: 3200, scale: 1.45 },
+      ];
 
-    // Portfolio palette — blues, teals, and warm accents
-    const colors = [
-      'oklch(42% 0.12 240)',  // primary
-      'oklch(55% 0.13 240)',  // primary-light
-      'oklch(65% 0.16 220)',  // bright teal
-      'oklch(72% 0.10 200)',  // soft teal
-      'oklch(58% 0.14 260)',  // blue-violet
-      'oklch(78% 0.06 80)',   // warm cream
-    ];
+      const colors = [
+        'oklch(42% 0.12 240)',  // primary
+        'oklch(55% 0.13 240)',  // primary-light
+        'oklch(65% 0.16 220)',  // bright teal
+        'oklch(72% 0.10 200)',  // soft teal
+        'oklch(58% 0.14 260)',  // blue-violet
+        'oklch(78% 0.06 80)',   // warm cream
+      ];
 
-    // More clicks = more confetti, up to a point
-    const count = Math.min(20 + clickCount * 8, 60);
-    const pieces = [];
-
-    // Add a little pop scale to the logo
-    origin.style.transition = 'transform 0.15s cubic-bezier(0.22, 1.2, 0.36, 1)';
-    origin.style.transform = 'scale(1.2)';
-    setTimeout(() => {
-      origin.style.transform = 'scale(1)';
-      setTimeout(() => { origin.style.transition = ''; origin.style.transform = ''; }, 200);
-    }, 150);
-
-    for (let i = 0; i < count; i++) {
-      const el = document.createElement('div');
-      const size = Math.random() * 7 + 3;
-      const color = colors[Math.floor(Math.random() * colors.length)];
-      // Bias upward: angle between -30° and 210° (mostly upward spread)
-      const angle = (-Math.PI * 0.17) + (Math.PI * 1.33 * i / count) + (Math.random() - 0.5) * 0.4;
-      const velocity = 80 + Math.random() * 120;
-      const spin = (Math.random() - 0.5) * 900;
-      const shape = Math.random();
-
-      Object.assign(el.style, {
-        position: 'fixed',
-        left: cx + 'px',
-        top: cy + 'px',
-        width: size + 'px',
-        height: shape > 0.6 ? size * 0.5 + 'px' : size + 'px',
-        background: color,
-        borderRadius: shape > 0.8 ? '50%' : shape > 0.4 ? '2px' : '1px',
-        pointerEvents: 'none',
-        zIndex: '9999',
-      });
-
-      document.body.appendChild(el);
-      pieces.push({ el, angle, velocity, spin, delay: Math.random() * 0.05 });
-    }
-
-    let start = null;
-    const duration = 1600;
-
-    function animate(ts) {
-      if (!start) start = ts;
-      const elapsed = ts - start;
-      const progress = Math.min(elapsed / duration, 1);
-
-      pieces.forEach((p) => {
-        const t = Math.max(0, progress - p.delay) / (1 - p.delay);
-        if (t <= 0) return;
-        const dx = Math.cos(p.angle) * p.velocity * t;
-        const dy = Math.sin(p.angle) * p.velocity * t * -1 + 280 * t * t; // gravity
-        const fade = t < 0.7 ? 1 : 1 - ((t - 0.7) / 0.3);
-        const wobble = Math.sin(t * 12) * 3 * (1 - t);
-
-        Object.assign(p.el.style, {
-          transform: `translate(${dx + wobble}px, ${dy}px) rotate(${p.spin * t}deg)`,
-          opacity: Math.max(0, fade),
-        });
-      });
-
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      } else {
-        pieces.forEach((p) => p.el.remove());
+      function getLevel(elapsed) {
+        let l = 0;
+        for (let i = levels.length - 1; i >= 0; i--) {
+          if (elapsed >= levels[i].at) { l = i; break; }
+        }
+        return l;
       }
-    }
 
-    requestAnimationFrame(animate);
+      function spawnBurst(count, velocity) {
+        const rect = target.getBoundingClientRect();
+        const cx = rect.left + rect.width / 2;
+        const cy = rect.top + rect.height / 2;
+
+        for (let i = 0; i < count; i++) {
+          const el = document.createElement('div');
+          const size = Math.random() * 7 + 3;
+          const color = colors[Math.floor(Math.random() * colors.length)];
+          const angle = (Math.PI * 2 * i / count) + (Math.random() - 0.5) * 0.6;
+          const vel = velocity * (0.7 + Math.random() * 0.6);
+          const spin = (Math.random() - 0.5) * 900;
+          const shape = Math.random();
+
+          Object.assign(el.style, {
+            position: 'fixed',
+            left: cx + 'px',
+            top: cy + 'px',
+            width: size + 'px',
+            height: shape > 0.6 ? size * 0.5 + 'px' : size + 'px',
+            background: color,
+            borderRadius: shape > 0.8 ? '50%' : shape > 0.4 ? '2px' : '1px',
+            pointerEvents: 'none',
+            zIndex: '9999',
+          });
+
+          document.body.appendChild(el);
+          activePieces.push({
+            el, angle, velocity: vel, spin,
+            delay: Math.random() * 0.06,
+            startTime: performance.now(),
+            duration: 1400 + level * 150,
+          });
+        }
+      }
+
+      function animatePieces() {
+        const now = performance.now();
+        activePieces = activePieces.filter((p) => {
+          const elapsed = now - p.startTime;
+          const progress = Math.min(elapsed / p.duration, 1);
+          const t = Math.max(0, progress - p.delay) / (1 - p.delay);
+          if (t <= 0) return true;
+
+          const dx = Math.cos(p.angle) * p.velocity * t;
+          const dy = Math.sin(p.angle) * p.velocity * t * -1 + 300 * t * t;
+          const fade = t < 0.65 ? 1 : 1 - ((t - 0.65) / 0.35);
+          const wobble = Math.sin(t * 14) * 4 * (1 - t);
+
+          Object.assign(p.el.style, {
+            transform: `translate(${dx + wobble}px, ${dy}px) rotate(${p.spin * t}deg)`,
+            opacity: Math.max(0, fade),
+          });
+
+          if (progress >= 1) { p.el.remove(); return false; }
+          return true;
+        });
+
+        if (activePieces.length > 0 || isHolding) {
+          requestAnimationFrame(animatePieces);
+        }
+      }
+
+      // While holding: only scale up + rotate at level changes, trickle a few particles
+      function scheduleTrickle(holdStart) {
+        if (!isHolding) return;
+        const elapsed = performance.now() - holdStart;
+        const newLevel = getLevel(elapsed);
+
+        if (newLevel > level) {
+          level = newLevel;
+          totalRotation += 360;
+          target.style.transition = 'transform 0.4s cubic-bezier(0.22, 1.2, 0.36, 1)';
+          target.style.transform = `scale(${levels[level].scale}) rotate(${totalRotation}deg)`;
+          // Small hint burst on level up (just 2-4 particles)
+          spawnBurst(2 + level, 30 + level * 10);
+        }
+
+        burstTimeout = setTimeout(() => scheduleTrickle(holdStart), 200);
+      }
+
+      function startHold(e) {
+        e.preventDefault();
+        if (isHolding) return;
+        isHolding = true;
+        level = 0;
+        totalRotation = 0;
+
+        target.style.transition = 'transform 0.3s cubic-bezier(0.22, 1.2, 0.36, 1)';
+        target.style.transform = `scale(${levels[0].scale})`;
+        requestAnimationFrame(animatePieces);
+
+        const holdStart = performance.now();
+        scheduleTrickle(holdStart);
+      }
+
+      function endHold() {
+        if (!isHolding) return;
+        isHolding = false;
+        clearTimeout(burstTimeout);
+
+        // THE PAYOFF: release confetti scales with how long you held
+        const burstCount = [8, 15, 25, 40, 60, 90][level];
+        const burstVelocity = [50, 70, 100, 140, 180, 230][level];
+        spawnBurst(burstCount, burstVelocity);
+
+        // Spring back
+        target.style.transition = 'transform 0.6s cubic-bezier(0.22, 1.2, 0.36, 1)';
+        target.style.transform = `scale(1) rotate(${totalRotation}deg)`;
+        setTimeout(() => {
+          target.style.transition = '';
+          target.style.transform = '';
+        }, 700);
+      }
+
+      logo.addEventListener('click', (e) => e.preventDefault());
+      logo.addEventListener('mousedown', startHold);
+      window.addEventListener('mouseup', endHold);
+      logo.addEventListener('touchstart', (e) => { startHold(e); }, { passive: false });
+      window.addEventListener('touchend', endHold);
+      window.addEventListener('touchcancel', endHold);
+
+    } else {
+      // --- Playful wiggle on non-homepage: hint there's something to discover ---
+      logo.addEventListener('click', (e) => {
+        // Let it navigate, but add a wiggle first
+        e.preventDefault();
+        target.style.transition = 'transform 0.15s ease-in-out';
+        target.style.transform = 'rotate(-12deg) scale(1.1)';
+        setTimeout(() => {
+          target.style.transform = 'rotate(10deg) scale(1.1)';
+          setTimeout(() => {
+            target.style.transform = 'rotate(-6deg)';
+            setTimeout(() => {
+              target.style.transform = 'rotate(0deg) scale(1)';
+              setTimeout(() => {
+                target.style.transition = '';
+                target.style.transform = '';
+                // Navigate home after the wiggle
+                window.location.href = logo.href;
+              }, 150);
+            }, 120);
+          }, 120);
+        }, 150);
+      });
+    }
   }
 
   // --- Table of Contents scroll tracking ---

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-title="case.ds.title" data-i18n-meta="case.ds.meta">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,9 +16,9 @@
   <!-- Project Hero -->
   <section class="project-hero">
     <div class="container">
-      <p class="reveal" style="margin-bottom: var(--space-2);"><a href="../projects" style="color: var(--color-primary-light); font-size: 0.9rem;">&larr; Back to all projects</a></p>
-      <h1 class="project-hero__title reveal">Evolving a Design System to Scale</h1>
-      <p class="project-hero__desc reveal">Introducing an alias layer to serve both teachers and students from a single, scalable token architecture.</p>
+      <p class="reveal" style="margin-bottom: var(--space-2);"><a href="../projects" style="color: var(--color-primary-light); font-size: 0.9rem;"><span data-i18n="case.ds.back">&larr; Back to all projects</span></a></p>
+      <h1 class="project-hero__title reveal" data-i18n="case.ds.heading">Evolving a Design System to Scale</h1>
+      <p class="project-hero__desc reveal" data-i18n="case.ds.desc">Introducing an alias layer to serve both teachers and students from a single, scalable token architecture.</p>
     </div>
   </section>
 
@@ -26,16 +26,16 @@
   <section class="container">
     <div class="project-meta reveal-stagger">
       <div class="project-meta__item">
-        <h4>My role</h4>
-        <p>UX Designer / Researcher</p>
+        <h4 data-i18n="case.meta.role">My role</h4>
+        <p data-i18n="case.ds.role">UX Designer / Researcher</p>
       </div>
       <div class="project-meta__item">
-        <h4>The team</h4>
-        <p>Design & Engineering</p>
+        <h4 data-i18n="case.meta.team">The team</h4>
+        <p data-i18n="case.ds.team">Design & Engineering</p>
       </div>
       <div class="project-meta__item">
-        <h4>Duration</h4>
-        <p>Ongoing</p>
+        <h4 data-i18n="case.meta.duration">Duration</h4>
+        <p data-i18n="case.ds.duration">Ongoing</p>
       </div>
     </div>
   </section>
@@ -46,22 +46,22 @@
     <!-- Table of Contents -->
     <nav class="toc" id="toc" aria-label="Table of contents">
       <ul class="toc__list">
-        <li><a href="#challenge" class="toc__link">The challenge</a></li>
-        <li><a href="#solution" class="toc__link">The solution</a></li>
-        <li><a href="#implementation" class="toc__link">Implementation</a></li>
-        <li><a href="#results" class="toc__link">Results</a></li>
+        <li><a href="#challenge" class="toc__link" data-i18n="case.ds.toc.challenge">The challenge</a></li>
+        <li><a href="#solution" class="toc__link" data-i18n="case.ds.toc.solution">The solution</a></li>
+        <li><a href="#implementation" class="toc__link" data-i18n="case.ds.toc.implementation">Implementation</a></li>
+        <li><a href="#results" class="toc__link" data-i18n="case.ds.toc.results">Results</a></li>
       </ul>
     </nav>
 
     <div class="container container--narrow">
 
       <div class="reveal">
-        <h2 id="challenge">The challenge</h2>
+        <h2 id="challenge" data-i18n="case.ds.challenge">The challenge</h2>
         <ul class="key-points">
-          <li>Gynzy's design system started in Sketch and was migrated to Figma — but the migration was a straight copy-paste, with no rethinking of structure or naming.</li>
-          <li>The design team refreshed the color palette because the old colors felt dull, but without a token architecture to support it, the update had to be applied manually everywhere.</li>
-          <li>Components were being recreated without shared rules — designers built what they needed in the moment, leading to inconsistency across the product.</li>
-          <li>As more work shifted to the student environment, the problem multiplied: every component essentially needed a teacher version and a student version.</li>
+          <li data-i18n="case.ds.challenge.1">Gynzy's design system started in Sketch and was migrated to Figma — but the migration was a straight copy-paste, with no rethinking of structure or naming.</li>
+          <li data-i18n="case.ds.challenge.2">The design team refreshed the color palette because the old colors felt dull, but without a token architecture to support it, the update had to be applied manually everywhere.</li>
+          <li data-i18n="case.ds.challenge.3">Components were being recreated without shared rules — designers built what they needed in the moment, leading to inconsistency across the product.</li>
+          <li data-i18n="case.ds.challenge.4">As more work shifted to the student environment, the problem multiplied: every component essentially needed a teacher version and a student version.</li>
         </ul>
       </div>
 
@@ -71,7 +71,7 @@
     <div class="full-width reveal">
       <div style="max-width: var(--max-width); margin: 0 auto;">
         <div class="comparison__item">
-          <div class="comparison__label">Bulky icon set with heavy stroke weight</div>
+          <div class="comparison__label" data-i18n="case.ds.label.bulkyIcons">Bulky icon set with heavy stroke weight</div>
           <img src="../images/Monochrome icons old.png" alt="Old monochrome icons with heavier strokes">
         </div>
       </div>
@@ -81,7 +81,7 @@
     <div class="full-width reveal">
       <div style="max-width: var(--max-width); margin: 0 auto;">
         <div class="comparison__item">
-          <div class="comparison__label">Outdated inner shadows, minimal roundness, oversized icons</div>
+          <div class="comparison__label" data-i18n="case.ds.label.oldButtons">Outdated inner shadows, minimal roundness, oversized icons</div>
           <img src="../images/Old buttons.png" alt="Old button components with inner shadows and small border radius">
         </div>
       </div>
@@ -91,7 +91,7 @@
     <div class="full-width reveal">
       <div style="max-width: var(--max-width); margin: 0 auto;">
         <div class="comparison__item">
-          <div class="comparison__label">Limited color range with dull tones</div>
+          <div class="comparison__label" data-i18n="case.ds.label.oldColors">Limited color range with dull tones</div>
           <img src="../images/color palette-old.png" alt="Old color palette with fewer steps and muted tones">
         </div>
       </div>
@@ -100,12 +100,12 @@
     <div class="container container--narrow">
 
       <div class="reveal">
-        <h2 id="solution">The solution</h2>
+        <h2 id="solution" data-i18n="case.ds.solution">The solution</h2>
         <ul class="key-points">
-          <li>When the organization committed to Flutter, the migration created a natural moment to rethink the design system from the ground up.</li>
-          <li>Instead of maintaining separate component sets for teachers and students, I introduced an alias layer — a set of semantic tokens that map to different values depending on context.</li>
-          <li>The alias layer controls spacing, padding, typography, and sizing — so a single component adapts automatically to the teacher or student environment.</li>
-          <li>I also prepared the alias structure for whitelabel use, building in variable modes that could support different brand contexts in the future.</li>
+          <li data-i18n="case.ds.solution.1">When the organization committed to Flutter, the migration created a natural moment to rethink the design system from the ground up.</li>
+          <li data-i18n="case.ds.solution.2">Instead of maintaining separate component sets for teachers and students, I introduced an alias layer — a set of semantic tokens that map to different values depending on context.</li>
+          <li data-i18n="case.ds.solution.3">The alias layer controls spacing, padding, typography, and sizing — so a single component adapts automatically to the teacher or student environment.</li>
+          <li data-i18n="case.ds.solution.4">I also prepared the alias structure for whitelabel use, building in variable modes that could support different brand contexts in the future.</li>
         </ul>
       </div>
 
@@ -115,51 +115,51 @@
     <div class="full-width reveal">
       <div class="comparison" style="max-width: var(--max-width); margin: 0 auto;">
         <div class="comparison__item">
-          <div class="comparison__label">Primitive tokens — Raw values, context-unaware</div>
+          <div class="comparison__label" data-i18n="case.ds.label.primitive">Primitive tokens — Raw values, context-unaware</div>
           <img src="../images/Primitive collection.png" alt="Figma variables panel showing primitive size tokens with single values">
         </div>
         <div class="comparison__item">
-          <div class="comparison__label">Alias tokens — Mapped per context (Teacher / Student)</div>
+          <div class="comparison__label" data-i18n="case.ds.label.alias">Alias tokens — Mapped per context (Teacher / Student)</div>
           <img src="../images/Alias collection.png" alt="Figma variables panel showing alias tokens with different values for Teacher and Student modes">
         </div>
       </div>
-      <p style="max-width: var(--max-width); margin: var(--space-4) auto 0; font-size: 0.85rem; color: var(--color-text-muted);">Primitives define raw values. The alias layer maps the same token name to different primitives per context — so components don't need to be duplicated.</p>
+      <p style="max-width: var(--max-width); margin: var(--space-4) auto 0; font-size: 0.85rem; color: var(--color-text-muted);" data-i18n="case.ds.label.tokenCaption">Primitives define raw values. The alias layer maps the same token name to different primitives per context — so components don't need to be duplicated.</p>
     </div>
 
     <!-- Teacher vs Student modal — side by side, full width -->
     <div class="full-width reveal">
       <div class="comparison" style="max-width: var(--max-width); margin: 0 auto;">
         <div class="comparison__item">
-          <div class="comparison__label">Teacher context</div>
+          <div class="comparison__label" data-i18n="case.ds.label.teacher">Teacher context</div>
           <img src="../images/Teacher modal dialog - measurements.png" alt="Modal dialog with alias token annotations in the teacher context">
         </div>
         <div class="comparison__item">
-          <div class="comparison__label">Student context</div>
+          <div class="comparison__label" data-i18n="case.ds.label.student">Student context</div>
           <img src="../images/Student modal dialog - measurements.png" alt="Modal dialog with alias token annotations in the student context">
         </div>
       </div>
-      <p style="max-width: var(--max-width); margin: var(--space-4) auto 0; font-size: 0.85rem; color: var(--color-text-muted);">Same component, different context — the alias layer adapts spacing, typography, and sizing for teachers and students without duplicating the component.</p>
+      <p style="max-width: var(--max-width); margin: var(--space-4) auto 0; font-size: 0.85rem; color: var(--color-text-muted);" data-i18n="case.ds.label.modalCaption">Same component, different context — the alias layer adapts spacing, typography, and sizing for teachers and students without duplicating the component.</p>
     </div>
 
     <div class="container container--narrow">
 
       <div class="reveal">
-        <h2 id="implementation">Implementation</h2>
+        <h2 id="implementation" data-i18n="case.ds.implementation">Implementation</h2>
         <ul class="key-points">
-          <li>Worked closely with a developer to define how tokens would translate into Flutter's theming system.</li>
-          <li>Rolled out incrementally — migrating components one by one rather than doing a big-bang switch.</li>
-          <li>The developer handled the scaling logic between Flutter and the remaining Ember parts of the application.</li>
-          <li>Once AI tooling became available, I could add and update token values and create components more independently — speeding up the process significantly.</li>
+          <li data-i18n="case.ds.implementation.1">Worked closely with a developer to define how tokens would translate into Flutter's theming system.</li>
+          <li data-i18n="case.ds.implementation.2">Rolled out incrementally — migrating components one by one rather than doing a big-bang switch.</li>
+          <li data-i18n="case.ds.implementation.3">The developer handled the scaling logic between Flutter and the remaining Ember parts of the application.</li>
+          <li data-i18n="case.ds.implementation.4">Once AI tooling became available, I could add and update token values and create components more independently — speeding up the process significantly.</li>
         </ul>
       </div>
 
       <div class="reveal">
-        <h2 id="results">Results</h2>
+        <h2 id="results" data-i18n="case.ds.results">Results</h2>
         <ul class="key-points">
-          <li>New components can be created faster because the token structure does the heavy lifting.</li>
-          <li>The product looks and feels more consistent across both teacher and student contexts.</li>
-          <li>The visual language was refreshed — brighter and more intentional — without needing a separate redesign effort.</li>
-          <li>The alias layer is future-proof: whitelabel support is built in from the start.</li>
+          <li data-i18n="case.ds.results.1">New components can be created faster because the token structure does the heavy lifting.</li>
+          <li data-i18n="case.ds.results.2">The product looks and feels more consistent across both teacher and student contexts.</li>
+          <li data-i18n="case.ds.results.3">The visual language was refreshed — brighter and more intentional — without needing a separate redesign effort.</li>
+          <li data-i18n="case.ds.results.4">The alias layer is future-proof: whitelabel support is built in from the start.</li>
         </ul>
       </div>
 
@@ -169,11 +169,11 @@
     <div class="full-width reveal">
       <div class="comparison" style="max-width: var(--max-width); margin: 0 auto;">
         <div class="comparison__item">
-          <div class="comparison__label">Before — Bulkier, heavier stroke weight</div>
+          <div class="comparison__label" data-i18n="case.ds.label.iconsBefore">Before — Bulkier, heavier stroke weight</div>
           <img src="../images/Monochrome icons old.png" alt="Old monochrome icons with heavier strokes">
         </div>
         <div class="comparison__item">
-          <div class="comparison__label">After — Lighter, more elegant line work</div>
+          <div class="comparison__label" data-i18n="case.ds.label.iconsAfter">After — Lighter, more elegant line work</div>
           <img src="../images/Monochorme icons new.png" alt="New monochrome icons with refined, lighter strokes">
         </div>
       </div>
@@ -183,11 +183,11 @@
     <div class="full-width reveal">
       <div class="comparison" style="max-width: var(--max-width); margin: 0 auto;">
         <div class="comparison__item">
-          <div class="comparison__label">Before — Outdated inner shadows, minimal roundness, oversized icons</div>
+          <div class="comparison__label" data-i18n="case.ds.label.buttonsBefore">Before — Outdated inner shadows, minimal roundness, oversized icons</div>
           <img src="../images/Old buttons.png" alt="Old button components with inner shadows and small border radius">
         </div>
         <div class="comparison__item">
-          <div class="comparison__label">After — More roundness, no inner shadows, better icon-text balance</div>
+          <div class="comparison__label" data-i18n="case.ds.label.buttonsAfter">After — More roundness, no inner shadows, better icon-text balance</div>
           <img src="../images/New buttons.png" alt="New button components with more roundness, clean styling, and balanced icon-text sizing">
         </div>
       </div>
@@ -197,11 +197,11 @@
     <div class="full-width reveal">
       <div class="comparison" style="max-width: var(--max-width); margin: 0 auto;">
         <div class="comparison__item">
-          <div class="comparison__label">Before — Limited color range with dull tones</div>
+          <div class="comparison__label" data-i18n="case.ds.label.colorBefore">Before — Limited color range with dull tones</div>
           <img src="../images/color palette-old.png" alt="Old color palette with fewer steps and muted tones">
         </div>
         <div class="comparison__item">
-          <div class="comparison__label">After — Expanded palette with vibrant colors</div>
+          <div class="comparison__label" data-i18n="case.ds.label.colorAfter">After — Expanded palette with vibrant colors</div>
           <img src="../images/color palette-new.png" alt="New color palette with more steps and brighter tones">
         </div>
       </div>
@@ -211,15 +211,15 @@
     <div class="full-width reveal">
       <div class="comparison" style="max-width: var(--max-width); margin: 0 auto;">
         <div class="comparison__item">
-          <div class="comparison__label">Before — Orange & yellow lacked vibrancy</div>
+          <div class="comparison__label" data-i18n="case.ds.label.owBefore">Before — Orange & yellow lacked vibrancy</div>
           <img src="../images/color palette - old - orange&yellow.png" alt="Old orange and yellow swatches with muted tones">
         </div>
         <div class="comparison__item">
-          <div class="comparison__label">After — Brighter, more playful range</div>
+          <div class="comparison__label" data-i18n="case.ds.label.owAfter">After — Brighter, more playful range</div>
           <img src="../images/color palette - new - orange&yellow.png" alt="New orange and yellow swatches with vibrant tones">
         </div>
       </div>
-      <p style="max-width: var(--max-width); margin: var(--space-4) auto 0; font-size: 0.85rem; color: var(--color-text-muted);">For a product used by teachers and students, color matters. The old palette felt dull — the refresh brought the vibrancy the product needed.</p>
+      <p style="max-width: var(--max-width); margin: var(--space-4) auto 0; font-size: 0.85rem; color: var(--color-text-muted);" data-i18n="case.ds.label.colorCaption">For a product used by teachers and students, color matters. The old palette felt dull — the refresh brought the vibrancy the product needed.</p>
     </div>
 
   </section>
@@ -227,14 +227,15 @@
   <!-- Next Project -->
   <section class="section section--subtle" style="text-align: center;">
     <div class="container reveal">
-      <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: var(--space-4);">Next project</p>
-      <h2><a href="trainer" style="color: var(--color-primary);">From UX Vision to an Educational Trainer &rarr;</a></h2>
+      <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: var(--space-4);" data-i18n="case.nextProject">Next project</p>
+      <h2><a href="trainer" style="color: var(--color-primary);" data-i18n="case.ds.next">From UX Vision to an Educational Trainer &rarr;</a></h2>
     </div>
   </section>
 
   <div id="site-footer"></div>
 
   <script src="../js/components.js"></script>
+  <script src="../js/i18n.js"></script>
   <script src="../js/main.js"></script>
 </body>
 </html>

@@ -84,16 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
     counterObserver.observe(counter.closest('.prompt-counter'));
   }
 
-  // --- Time-of-day greeting ---
-  const greetingEl = document.getElementById('greeting');
-  if (greetingEl) {
-    const hour = new Date().getHours();
-    let greeting;
-    if (hour < 12) greeting = 'Good morning';
-    else if (hour < 18) greeting = 'Good afternoon';
-    else greeting = 'Good evening';
-    greetingEl.textContent = greeting;
-  }
+  // --- Time-of-day greeting (handled by i18n.js for language support) ---
+  // Greeting is set via updateGreeting() in i18n.js
 
   // --- Rotating hero headline (fixed height to prevent layout shift) ---
   const heroStatement = document.getElementById('hero-statement');

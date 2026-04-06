@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-title="cv.title" data-i18n-meta="cv.meta">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,21 +19,21 @@
     <!-- Table of Contents -->
     <nav class="toc" id="toc" aria-label="Table of contents">
       <ul class="toc__list">
-        <li><a href="#experience" class="toc__link">Experience</a></li>
-        <li><a href="#education" class="toc__link">Education</a></li>
-        <li><a href="#publications" class="toc__link">Publications</a></li>
+        <li><a href="#experience" class="toc__link" data-i18n="cv.toc.experience">Experience</a></li>
+        <li><a href="#education" class="toc__link" data-i18n="cv.toc.education">Education</a></li>
+        <li><a href="#publications" class="toc__link" data-i18n="cv.toc.publications">Publications</a></li>
       </ul>
     </nav>
 
     <div class="container">
       <div class="cv-header reveal">
-        <h1>Curriculum Vitae</h1>
-        <p>UX designer with strong research skills, dedicated to creating user-friendly experiences that improve people's lives. My interests in psychology, strategy and technology drive my design choices.</p>
+        <h1 data-i18n="cv.heading">Curriculum Vitae</h1>
+        <p data-i18n="cv.intro">UX designer with strong research skills, dedicated to creating user-friendly experiences that improve people's lives. My interests in psychology, strategy and technology drive my design choices.</p>
       </div>
 
       <!-- Experience — card-based, grouped by theme -->
       <div style="margin-bottom: var(--space-24);">
-        <h2 id="experience" class="reveal" style="margin-bottom: var(--space-12);">Experience</h2>
+        <h2 id="experience" class="reveal" style="margin-bottom: var(--space-12);" data-i18n="cv.experience">Experience</h2>
 
         <div class="cv-cards reveal-stagger">
           <!-- Primary role — full width -->
@@ -43,16 +43,16 @@
                 <div class="cv-card__logo"><img src="images/gynzy.svg" alt="Gynzy"></div>
                 <div class="cv-card__header-text">
                   <span class="cv-card__date">Jan 2021 — Present</span>
-                  <h3 class="cv-card__title">UX Designer</h3>
-                  <p class="cv-card__company">Gynzy — 's-Hertogenbosch</p>
+                  <h3 class="cv-card__title" data-i18n="cv.gynzy.title">UX Designer</h3>
+                  <p class="cv-card__company" data-i18n="cv.gynzy.company">Gynzy — 's-Hertogenbosch</p>
                 </div>
               </div>
               <ul class="cv-card__desc cv-card__bullets">
-                <li>Conducting design research to gather deep insights into user behavior</li>
-                <li>Translating qualitative and quantitative data into user-friendly interfaces</li>
-                <li>Collaborating with subject-matter experts, developers and product owners</li>
-                <li>Communicating design decisions grounded in psychology</li>
-                <li>Applying strategic UX practices</li>
+                <li data-i18n="cv.gynzy.1">Conducting design research to gather deep insights into user behavior</li>
+                <li data-i18n="cv.gynzy.2">Translating qualitative and quantitative data into user-friendly interfaces</li>
+                <li data-i18n="cv.gynzy.3">Collaborating with subject-matter experts, developers and product owners</li>
+                <li data-i18n="cv.gynzy.4">Communicating design decisions grounded in psychology</li>
+                <li data-i18n="cv.gynzy.5">Applying strategic UX practices</li>
               </ul>
             </div>
           </div>
@@ -63,14 +63,14 @@
               <div class="cv-card__logo"><img src="images/vavino.svg" alt="Vavino"></div>
               <div class="cv-card__header-text">
                 <span class="cv-card__date">Oct 2022 — Jan 2025</span>
-                <h3 class="cv-card__title">Co-founder</h3>
-                <p class="cv-card__company">Vavino — Reusel</p>
+                <h3 class="cv-card__title" data-i18n="cv.vavino.title">Co-founder</h3>
+                <p class="cv-card__company" data-i18n="cv.vavino.company">Vavino — Reusel</p>
               </div>
             </div>
             <ul class="cv-card__desc cv-card__bullets">
-              <li>Making sustainable wines accessible and affordable</li>
-              <li>Designed the brand, website, and all online/offline channels</li>
-              <li>Organized and facilitated wine tastings</li>
+              <li data-i18n="cv.vavino.1">Making sustainable wines accessible and affordable</li>
+              <li data-i18n="cv.vavino.2">Designed the brand, website, and all online/offline channels</li>
+              <li data-i18n="cv.vavino.3">Organized and facilitated wine tastings</li>
             </ul>
           </div>
 
@@ -79,15 +79,15 @@
               <div class="cv-card__logo"><img src="images/wdg-logo.svg" alt="WdG"></div>
               <div class="cv-card__header-text">
                 <span class="cv-card__date">Sep 2020 — Dec 2022</span>
-                <h3 class="cv-card__title">Founder</h3>
+                <h3 class="cv-card__title" data-i18n="cv.wdg.title">Founder</h3>
                 <p class="cv-card__company">WdG Research & Design</p>
               </div>
             </div>
             <ul class="cv-card__desc cv-card__bullets">
-              <li>Market research and design on a project basis</li>
-              <li>Logos and style guides for startups</li>
-              <li>User interviews for PhD research</li>
-              <li>Healthcare demand research for a municipality</li>
+              <li data-i18n="cv.wdg.1">Market research and design on a project basis</li>
+              <li data-i18n="cv.wdg.2">Logos and style guides for startups</li>
+              <li data-i18n="cv.wdg.3">User interviews for PhD research</li>
+              <li data-i18n="cv.wdg.4">Healthcare demand research for a municipality</li>
             </ul>
           </div>
 
@@ -96,14 +96,14 @@
               <div class="cv-card__logo"><img src="images/UTS.svg" alt="UTS"></div>
               <div class="cv-card__header-text">
                 <span class="cv-card__date">Nov 2019 — Feb 2020</span>
-                <h3 class="cv-card__title">Research Assistant</h3>
+                <h3 class="cv-card__title" data-i18n="cv.uts.title">Research Assistant</h3>
                 <p class="cv-card__company">University of Technology Sydney</p>
               </div>
             </div>
             <ul class="cv-card__desc cv-card__bullets">
-              <li>Supporting the Materialising Memories research group</li>
-              <li>Organizing workshops and evaluating sessions</li>
-              <li>Creating transcriptions</li>
+              <li data-i18n="cv.uts.1">Supporting the Materialising Memories research group</li>
+              <li data-i18n="cv.uts.2">Organizing workshops and evaluating sessions</li>
+              <li data-i18n="cv.uts.3">Creating transcriptions</li>
             </ul>
           </div>
 
@@ -112,15 +112,15 @@
               <div class="cv-card__logo"><img src="images/sparckel.svg" alt="Sparckel"></div>
               <div class="cv-card__header-text">
                 <span class="cv-card__date">Sep 2017 — Dec 2017</span>
-                <h3 class="cv-card__title">Industrial Design Intern</h3>
-                <p class="cv-card__company">Sparckel — HTC Eindhoven</p>
+                <h3 class="cv-card__title" data-i18n="cv.sparckel.title">Industrial Design Intern</h3>
+                <p class="cv-card__company" data-i18n="cv.sparckel.company">Sparckel — HTC Eindhoven</p>
               </div>
             </div>
             <ul class="cv-card__desc cv-card__bullets">
-              <li>Designing biodynamic light fixtures</li>
-              <li>3D modeling and prototyping</li>
-              <li>Rebranding from Vitaallicht to Sparckel</li>
-              <li>Conducting user interviews</li>
+              <li data-i18n="cv.sparckel.1">Designing biodynamic light fixtures</li>
+              <li data-i18n="cv.sparckel.2">3D modeling and prototyping</li>
+              <li data-i18n="cv.sparckel.3">Rebranding from Vitaallicht to Sparckel</li>
+              <li data-i18n="cv.sparckel.4">Conducting user interviews</li>
             </ul>
           </div>
         </div>
@@ -128,7 +128,7 @@
 
       <!-- Education & Certificates -->
       <div style="margin-bottom: var(--space-24);">
-        <h2 id="education" class="reveal" style="margin-bottom: var(--space-12);">Education & certificates</h2>
+        <h2 id="education" class="reveal" style="margin-bottom: var(--space-12);" data-i18n="cv.education">Education & certificates</h2>
 
         <div class="cv-cards cv-cards--compact reveal-stagger">
           <div class="cv-card">
@@ -136,14 +136,14 @@
               <div class="cv-card__logo"><img src="images/centercentre.svg" alt="Center Centre"></div>
               <div class="cv-card__header-text">
                 <span class="cv-card__date">Oct 2024</span>
-                <h3 class="cv-card__title">Craft + Lead a Strategic UX Vision</h3>
-                <p class="cv-card__company">Center Centre — Online Intensive</p>
+                <h3 class="cv-card__title" data-i18n="cv.centercentre.title">Craft + Lead a Strategic UX Vision</h3>
+                <p class="cv-card__company" data-i18n="cv.centercentre.company">Center Centre — Online Intensive</p>
               </div>
             </div>
             <ul class="cv-card__desc cv-card__bullets">
-              <li>Establishing strategic UX goals and researching current experiences</li>
-              <li>Creating a UX vision and placing it in the product roadmap</li>
-              <li>Leading the organization to achieve the vision</li>
+              <li data-i18n="cv.centercentre.1">Establishing strategic UX goals and researching current experiences</li>
+              <li data-i18n="cv.centercentre.2">Creating a UX vision and placing it in the product roadmap</li>
+              <li data-i18n="cv.centercentre.3">Leading the organization to achieve the vision</li>
             </ul>
           </div>
 
@@ -152,14 +152,14 @@
               <div class="cv-card__logo"><img src="images/Product-psychology.svg" alt="Growth.Design"></div>
               <div class="cv-card__header-text">
                 <span class="cv-card__date">Aug 2023</span>
-                <h3 class="cv-card__title">Product Psychology Masterclass</h3>
-                <p class="cv-card__company">Growth.Design — Online</p>
+                <h3 class="cv-card__title" data-i18n="cv.psychology.title">Product Psychology Masterclass</h3>
+                <p class="cv-card__company" data-i18n="cv.psychology.company">Growth.Design — Online</p>
               </div>
             </div>
             <ul class="cv-card__desc cv-card__bullets">
-              <li>Applying psychology to build better products</li>
-              <li>Understanding user behavior and finding gaps to improve every experience</li>
-              <li>Creating good customer journeys and making ethical decisions as a team</li>
+              <li data-i18n="cv.psychology.1">Applying psychology to build better products</li>
+              <li data-i18n="cv.psychology.2">Understanding user behavior and finding gaps to improve every experience</li>
+              <li data-i18n="cv.psychology.3">Creating good customer journeys and making ethical decisions as a team</li>
             </ul>
           </div>
 
@@ -168,13 +168,13 @@
               <div class="cv-card__logo"><img src="images/TU Eindhoven.svg" alt="TU Eindhoven"></div>
               <div class="cv-card__header-text">
                 <span class="cv-card__date">2020</span>
-                <h3 class="cv-card__title">MSc Industrial Design</h3>
-                <p class="cv-card__company">Eindhoven University of Technology</p>
+                <h3 class="cv-card__title" data-i18n="cv.msc.title">MSc Industrial Design</h3>
+                <p class="cv-card__company" data-i18n="cv.msc.company">Eindhoven University of Technology</p>
               </div>
             </div>
             <ul class="cv-card__desc cv-card__bullets">
-              <li>Research semester at the University of Technology Sydney, Australia</li>
-              <li>Design and research in dementia care</li>
+              <li data-i18n="cv.msc.1">Research semester at the University of Technology Sydney, Australia</li>
+              <li data-i18n="cv.msc.2">Design and research in dementia care</li>
             </ul>
           </div>
 
@@ -183,13 +183,13 @@
               <div class="cv-card__logo"><img src="images/TU Eindhoven.svg" alt="TU Eindhoven"></div>
               <div class="cv-card__header-text">
                 <span class="cv-card__date">2018</span>
-                <h3 class="cv-card__title">BSc Industrial Design</h3>
-                <p class="cv-card__company">Eindhoven University of Technology</p>
+                <h3 class="cv-card__title" data-i18n="cv.bsc.title">BSc Industrial Design</h3>
+                <p class="cv-card__company" data-i18n="cv.bsc.company">Eindhoven University of Technology</p>
               </div>
             </div>
             <ul class="cv-card__desc cv-card__bullets">
-              <li>Foundations of interaction design</li>
-              <li>Final project: designing biodynamic lighting for shared spaces</li>
+              <li data-i18n="cv.bsc.1">Foundations of interaction design</li>
+              <li data-i18n="cv.bsc.2">Final project: designing biodynamic lighting for shared spaces</li>
             </ul>
           </div>
         </div>
@@ -197,7 +197,7 @@
 
       <!-- Publications -->
       <div style="margin-bottom: var(--space-24);">
-        <h2 id="publications" class="reveal" style="margin-bottom: var(--space-12);">Publications</h2>
+        <h2 id="publications" class="reveal" style="margin-bottom: var(--space-12);" data-i18n="cv.publications">Publications</h2>
 
         <div class="cv-cards cv-cards--compact reveal-stagger">
           <div class="cv-card">
@@ -210,7 +210,7 @@
               </div>
             </div>
             <p class="cv-card__desc">de Groot, W., Kenning, G., van den Hoven, E., Eggen, B.</p>
-            <a href="https://link.springer.com/chapter/10.1007/978-3-030-70293-9_4" target="_blank" rel="noopener" class="cv-card__link">Link to article &rarr;</a>
+            <a href="https://link.springer.com/chapter/10.1007/978-3-030-70293-9_4" target="_blank" rel="noopener" class="cv-card__link"><span data-i18n="cv.pub.link">Link to article &rarr;</span></a>
           </div>
 
           <div class="cv-card">
@@ -223,7 +223,7 @@
               </div>
             </div>
             <p class="cv-card__desc">de Groot, W., Houben, M., Hengeveld, B.</p>
-            <a href="https://link.springer.com/chapter/10.1007/978-3-030-33540-3_9" target="_blank" rel="noopener" class="cv-card__link">Link to article &rarr;</a>
+            <a href="https://link.springer.com/chapter/10.1007/978-3-030-33540-3_9" target="_blank" rel="noopener" class="cv-card__link"><span data-i18n="cv.pub.link">Link to article &rarr;</span></a>
           </div>
         </div>
       </div>
@@ -234,6 +234,7 @@
   <div id="site-footer"></div>
 
   <script src="js/components.js"></script>
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

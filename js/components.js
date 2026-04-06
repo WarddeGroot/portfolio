@@ -24,15 +24,34 @@
           </svg>
         </a>
         <ul class="nav__links">
-          <li><a href="${depth || './'}" class="nav__link">Home</a></li>
-          <li><a href="${depth}projects" class="nav__link">My work</a></li>
-          <li><a href="${depth}about" class="nav__link">About me</a></li>
-          <li><a href="${depth}cv" class="nav__link">CV</a></li>
+          <li><a href="${depth || './'}" class="nav__link" data-i18n="nav.home">Home</a></li>
+          <li><a href="${depth}projects" class="nav__link" data-i18n="nav.work">My work</a></li>
+          <li><a href="${depth}about" class="nav__link" data-i18n="nav.about">About me</a></li>
+          <li><a href="${depth}cv" class="nav__link" data-i18n="nav.cv">CV</a></li>
         </ul>
-        <a href="https://www.linkedin.com/in/warddegroot96/" target="_blank" rel="noopener" class="nav__cta">Get in touch</a>
-        <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+        <div class="nav__right">
+          <div class="lang-switch">
+            <button class="lang-switch__trigger" aria-label="Change language" aria-expanded="false">
+              <svg class="lang-switch__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z"/>
+              </svg>
+              <span class="lang-switch__current">EN</span>
+              <svg class="lang-switch__chevron" viewBox="0 0 10 6" fill="none" width="10" height="6">
+                <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="lang-switch__dropdown">
+              <button class="lang-switch__option lang-switch__option--active" data-lang="en">English</button>
+              <button class="lang-switch__option" data-lang="nl">Nederlands</button>
+            </div>
+          </div>
+          <a href="https://www.linkedin.com/in/warddegroot96/" target="_blank" rel="noopener" class="nav__cta" data-i18n="nav.cta">Get in touch</a>
+          <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
     </nav>`;
   }
@@ -48,7 +67,7 @@
         <div class="footer__left">
           <div class="prompt-counter">
             <span class="prompt-counter__number" data-count="50">0</span>
-            <span class="prompt-counter__label">prompts built<br>this portfolio</span>
+            <span class="prompt-counter__label" data-i18n="footer.prompts">prompts built<br>this portfolio</span>
           </div>
         </div>
         <div class="footer__center">
@@ -58,8 +77,8 @@
           </ul>
         </div>
         <div class="footer__right">
-          <p class="footer__updated">Last updated: April 2026</p>
-          <p class="footer__copy">&copy; 2026 Ward de Groot</p>
+          <p class="footer__updated" data-i18n="footer.updated">Last updated: April 2026</p>
+          <p class="footer__copy" data-i18n="footer.copy">&copy; 2026 Ward de Groot</p>
         </div>
       </div>
     </footer>`;

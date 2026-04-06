@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-title="case.nav.title" data-i18n-meta="case.nav.meta">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,9 +16,9 @@
   <!-- Project Hero -->
   <section class="project-hero">
     <div class="container">
-      <p class="reveal" style="margin-bottom: var(--space-2);"><a href="../projects" style="color: var(--color-primary-light); font-size: 0.9rem;">&larr; Back to all projects</a></p>
-      <h1 class="project-hero__title reveal">Enhancing teachers' productivity</h1>
-      <p class="project-hero__desc reveal">Gynzy's icon-only sidebar was confusing teachers and blocking the product from growing. I led a three-phase redesign that cut lesson access from 3 clicks to 1 — and gave the platform room to scale.</p>
+      <p class="reveal" style="margin-bottom: var(--space-2);"><a href="../projects" style="color: var(--color-primary-light); font-size: 0.9rem;"><span data-i18n="case.nav.back">&larr; Back to all projects</span></a></p>
+      <h1 class="project-hero__title reveal" data-i18n="case.nav.heading">Enhancing teachers' productivity</h1>
+      <p class="project-hero__desc reveal" data-i18n="case.nav.desc">Gynzy's icon-only sidebar was confusing teachers and blocking the product from growing. I led a three-phase redesign that cut lesson access from 3 clicks to 1 — and gave the platform room to scale.</p>
     </div>
   </section>
 
@@ -26,16 +26,16 @@
   <section class="container">
     <div class="project-meta reveal-stagger">
       <div class="project-meta__item">
-        <h4>My role</h4>
-        <p>UX Designer / Researcher</p>
+        <h4 data-i18n="case.meta.role">My role</h4>
+        <p data-i18n="case.nav.role">UX Designer / Researcher</p>
       </div>
       <div class="project-meta__item">
-        <h4>The team</h4>
-        <p>Product owner, 3 developers</p>
+        <h4 data-i18n="case.meta.team">The team</h4>
+        <p data-i18n="case.nav.team">Product owner, 3 developers</p>
       </div>
       <div class="project-meta__item">
-        <h4>Duration</h4>
-        <p>&plusmn; 6 months (3 phases)</p>
+        <h4 data-i18n="case.meta.duration">Duration</h4>
+        <p data-i18n="case.nav.duration">&plusmn; 6 months (3 phases)</p>
       </div>
     </div>
   </section>
@@ -46,11 +46,11 @@
     <!-- Table of Contents -->
     <nav class="toc" id="toc" aria-label="Table of contents">
       <ul class="toc__list">
-        <li><a href="#challenge" class="toc__link">The challenge</a></li>
-        <li><a href="#making-the-case" class="toc__link">Making the case</a></li>
-        <li><a href="#solution" class="toc__link">The solution</a></li>
-        <li><a href="#implementation" class="toc__link">Implementation</a></li>
-        <li><a href="#results" class="toc__link">Results</a></li>
+        <li><a href="#challenge" class="toc__link" data-i18n="case.nav.toc.challenge">The challenge</a></li>
+        <li><a href="#making-the-case" class="toc__link" data-i18n="case.nav.toc.makingTheCase">Making the case</a></li>
+        <li><a href="#solution" class="toc__link" data-i18n="case.nav.toc.solution">The solution</a></li>
+        <li><a href="#implementation" class="toc__link" data-i18n="case.nav.toc.implementation">Implementation</a></li>
+        <li><a href="#results" class="toc__link" data-i18n="case.nav.toc.results">Results</a></li>
       </ul>
     </nav>
 
@@ -58,14 +58,14 @@
 
       <!-- ==================== CHALLENGE ==================== -->
       <div class="reveal">
-        <h2 id="challenge">The challenge</h2>
+        <h2 id="challenge" data-i18n="case.nav.challenge">The challenge</h2>
         <ul class="key-points">
-          <li>Navigation was a left sidebar of unlabeled icons — teachers couldn't figure out what they meant</li>
-          <li>The landing page after sign-in wasn't even the top icon, causing immediate disorientation</li>
-          <li>Zero room left to add new features without degrading the experience further</li>
-          <li>Multiple development teams independently flagged the scalability problem</li>
-          <li>Ember and Flutter applications had different scaling behavior across devices</li>
-          <li>Teachers use desktops and interactive whiteboards — cursor and touch input both had to work</li>
+          <li data-i18n="case.nav.challenge.1">Navigation was a left sidebar of unlabeled icons — teachers couldn't figure out what they meant</li>
+          <li data-i18n="case.nav.challenge.2">The landing page after sign-in wasn't even the top icon, causing immediate disorientation</li>
+          <li data-i18n="case.nav.challenge.3">Zero room left to add new features without degrading the experience further</li>
+          <li data-i18n="case.nav.challenge.4">Multiple development teams independently flagged the scalability problem</li>
+          <li data-i18n="case.nav.challenge.5">Ember and Flutter applications had different scaling behavior across devices</li>
+          <li data-i18n="case.nav.challenge.6">Teachers use desktops and interactive whiteboards — cursor and touch input both had to work</li>
         </ul>
       </div>
 
@@ -75,11 +75,11 @@
     <div class="full-width reveal">
       <div class="comparison" style="max-width: var(--max-width); margin: 0 auto;">
         <div class="comparison__item">
-          <div class="comparison__label">Before — Icon-only sidebar in Ember</div>
+          <div class="comparison__label" data-i18n="case.nav.label.before">Before — Icon-only sidebar in Ember</div>
           <img src="../images/Sidebar - old.png" alt="The old category-based sidebar navigation in Ember">
         </div>
         <div class="comparison__item">
-          <div class="comparison__label">After — Redesigned library navigation</div>
+          <div class="comparison__label" data-i18n="case.nav.label.after">After — Redesigned library navigation</div>
           <img src="../images/Bibliotheek - alle inhoud - all collapsed.png" alt="The redesigned library with icon-based sidebar navigation">
         </div>
       </div>
@@ -89,50 +89,50 @@
 
       <!-- ==================== MAKING THE CASE ==================== -->
       <div class="reveal">
-        <h2 id="making-the-case">Making the case</h2>
-        <p>Data alone wasn't enough to convince stakeholders. I presented the experience through the eyes of a first-time teacher — walking through the confusion step by step. That shifted the conversation from "is it good enough?" to "this is hurting users."</p>
+        <h2 id="making-the-case" data-i18n="case.nav.makingTheCase">Making the case</h2>
+        <p data-i18n="case.nav.makingTheCase.desc">Data alone wasn't enough to convince stakeholders. I presented the experience through the eyes of a first-time teacher — walking through the confusion step by step. That shifted the conversation from "is it good enough?" to "this is hurting users."</p>
         <div style="margin-top: var(--space-6);">
           <iframe style="border: 1px solid rgba(0, 0, 0, 0.1); border-radius: var(--radius-md); width: 100%; aspect-ratio: 16/9;" src="https://embed.figma.com/deck/QqmPqn0cb8Bdm0WiX185UL/Enhancing-navigation-usability?node-id=0-1&embed-host=share" allowfullscreen></iframe>
-          <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: var(--space-2);">The slide deck I used to present the case for overhauling navigation.</p>
+          <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: var(--space-2);" data-i18n="case.nav.makingTheCase.caption">The slide deck I used to present the case for overhauling navigation.</p>
         </div>
       </div>
 
       <!-- ==================== SOLUTION ==================== -->
       <div class="reveal">
-        <h2 id="solution">The solution</h2>
+        <h2 id="solution" data-i18n="case.nav.solution">The solution</h2>
       </div>
 
       <div class="reveal">
-        <h3>Research insights</h3>
+        <h3 data-i18n="case.nav.research">Research insights</h3>
         <ul class="key-points">
-          <li>Amplitude data revealed which features teachers actually used vs. which went untouched</li>
-          <li>Card sorting with educational experts showed teachers think about tools very differently from how we'd organized them</li>
-          <li>Usability testing confirmed that simply relabeling icons wouldn't be enough</li>
-          <li>Key insight: teachers needed a fundamentally different entry point, not a better toolbar</li>
+          <li data-i18n="case.nav.research.1">Amplitude data revealed which features teachers actually used vs. which went untouched</li>
+          <li data-i18n="case.nav.research.2">Card sorting with educational experts showed teachers think about tools very differently from how we'd organized them</li>
+          <li data-i18n="case.nav.research.3">Usability testing confirmed that simply relabeling icons wouldn't be enough</li>
+          <li data-i18n="case.nav.research.4">Key insight: teachers needed a fundamentally different entry point, not a better toolbar</li>
         </ul>
       </div>
 
       <div class="reveal">
-        <h3>Design constraints</h3>
+        <h3 data-i18n="case.nav.constraints">Design constraints</h3>
         <ul class="key-points">
-          <li>Hover-to-expand menus worked with a mouse but fell apart on whiteboards teachers tap in front of a class</li>
-          <li>Responsive scaling had to work consistently from small laptops to large interactive displays</li>
-          <li>The Ember→Flutter migration meant reconciling two different rendering behaviors</li>
+          <li data-i18n="case.nav.constraints.1">Hover-to-expand menus worked with a mouse but fell apart on whiteboards teachers tap in front of a class</li>
+          <li data-i18n="case.nav.constraints.2">Responsive scaling had to work consistently from small laptops to large interactive displays</li>
+          <li data-i18n="case.nav.constraints.3">The Ember→Flutter migration meant reconciling two different rendering behaviors</li>
         </ul>
       </div>
 
       <!-- ==================== IMPLEMENTATION ==================== -->
       <div class="reveal">
-        <h2 id="implementation">Implementation</h2>
-        <p>The scope was too large for a single release, so I proposed three sequential phases — shipping improvements incrementally while building toward the bigger vision.</p>
+        <h2 id="implementation" data-i18n="case.nav.implementation">Implementation</h2>
+        <p data-i18n="case.nav.implementation.desc">The scope was too large for a single release, so I proposed three sequential phases — shipping improvements incrementally while building toward the bigger vision.</p>
       </div>
 
       <div class="reveal">
-        <h3>Phase 1 — Clean up & rebuild</h3>
+        <h3 data-i18n="case.nav.phase1">Phase 1 — Clean up & rebuild</h3>
         <ul class="key-points">
-          <li>Removed non-core features from the sidebar</li>
-          <li>Rewrote the Ember-based toolbar in Flutter</li>
-          <li>Reduced clutter and established a maintainable codebase</li>
+          <li data-i18n="case.nav.phase1.1">Removed non-core features from the sidebar</li>
+          <li data-i18n="case.nav.phase1.2">Rewrote the Ember-based toolbar in Flutter</li>
+          <li data-i18n="case.nav.phase1.3">Reduced clutter and established a maintainable codebase</li>
         </ul>
       </div>
 
@@ -144,18 +144,18 @@
         <video autoplay loop muted playsinline style="width: 100%;">
           <source src="../images/nav-phase1-toolbar.mp4" type="video/mp4">
         </video>
-        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: var(--space-2);">The toolbar transition from Ember to Flutter.</p>
+        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: var(--space-2);" data-i18n="case.nav.phase1.caption">The toolbar transition from Ember to Flutter.</p>
       </div>
     </div>
 
     <div class="container container--narrow">
 
       <div class="reveal">
-        <h3>Phase 2 — The Start page</h3>
+        <h3 data-i18n="case.nav.phase2">Phase 2 — The Start page</h3>
         <ul class="key-points">
-          <li>Introduced a dedicated landing page so teachers see their schedule immediately after sign-in</li>
-          <li>Evolved from a promotional first version to a personalized daily hub</li>
-          <li>Single biggest improvement: opening a lesson went from 3 clicks to 1</li>
+          <li data-i18n="case.nav.phase2.1">Introduced a dedicated landing page so teachers see their schedule immediately after sign-in</li>
+          <li data-i18n="case.nav.phase2.2">Evolved from a promotional first version to a personalized daily hub</li>
+          <li data-i18n="case.nav.phase2.3">Single biggest improvement: opening a lesson went from 3 clicks to 1</li>
         </ul>
       </div>
 
@@ -165,15 +165,15 @@
     <div class="full-width reveal">
       <div class="comparison comparison--three" style="max-width: var(--max-width); margin: 0 auto;">
         <div class="comparison__item">
-          <div class="comparison__label">First iteration — Promotional landing page</div>
+          <div class="comparison__label" data-i18n="case.nav.label.startV1">First iteration — Promotional landing page</div>
           <img src="../images/Startpagina - eerste versie.png" alt="First version of the Start page with promotional content">
         </div>
         <div class="comparison__item">
-          <div class="comparison__label">Live — Seasonal highlighted content</div>
+          <div class="comparison__label" data-i18n="case.nav.label.startLive">Live — Seasonal highlighted content</div>
           <img src="../images/Startpagina - highlighted content.png" alt="Current Start page with seasonal highlighted content section">
         </div>
         <div class="comparison__item">
-          <div class="comparison__label">Future — Search bar & secondary nav</div>
+          <div class="comparison__label" data-i18n="case.nav.label.startFuture">Future — Search bar & secondary nav</div>
           <img src="../images/Startpagina - future.png" alt="Future Start page concept with search bar and secondary navigation">
         </div>
       </div>
@@ -182,10 +182,10 @@
     <div class="container container--narrow">
 
       <div class="reveal">
-        <h3>Phase 3 — Secondary navigation</h3>
+        <h3 data-i18n="case.nav.phase3">Phase 3 — Secondary navigation</h3>
         <ul class="key-points">
-          <li>Added a secondary navigation layer — everything lives on the left, giving users a consistent mental model</li>
-          <li>Created room for new features without mixing horizontal and vertical patterns</li>
+          <li data-i18n="case.nav.phase3.1">Added a secondary navigation layer — everything lives on the left, giving users a consistent mental model</li>
+          <li data-i18n="case.nav.phase3.2">Created room for new features without mixing horizontal and vertical patterns</li>
         </ul>
       </div>
 
@@ -196,15 +196,15 @@
       <div style="max-width: var(--max-width); margin: 0 auto;">
         <div class="comparison">
           <div class="comparison__item">
-            <div class="comparison__label">Collapsed — Category icons only</div>
+            <div class="comparison__label" data-i18n="case.nav.label.collapsed">Collapsed — Category icons only</div>
             <img src="../images/Sidebar iteration 1 - screen 02.png" alt="Sidebar exploration — secondary menu collapsed">
           </div>
           <div class="comparison__item">
-            <div class="comparison__label">Expanded — Full category list</div>
+            <div class="comparison__label" data-i18n="case.nav.label.expanded">Expanded — Full category list</div>
             <img src="../images/Sidebar iteration 1 - screen 01.png" alt="Sidebar exploration — secondary menu expanded with category items">
           </div>
         </div>
-        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: var(--space-4);">Early exploration of the secondary sidebar — a collapsible category menu that could expand in place.</p>
+        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: var(--space-4);" data-i18n="case.nav.label.sidebarCaption">Early exploration of the secondary sidebar — a collapsible category menu that could expand in place.</p>
       </div>
     </div>
 
@@ -213,15 +213,15 @@
       <div style="max-width: var(--max-width); margin: 0 auto;">
         <div class="comparison">
           <div class="comparison__item">
-            <div class="comparison__label">Lesson folders — Tree navigation</div>
+            <div class="comparison__label" data-i18n="case.nav.label.lessonFolder">Lesson folders — Tree navigation</div>
             <img src="../images/Secondary navigation - Lesmap.png" alt="Secondary navigation showing a lesson folder tree structure">
           </div>
           <div class="comparison__item">
-            <div class="comparison__label">Curriculum — Subject hierarchy</div>
+            <div class="comparison__label" data-i18n="case.nav.label.curriculum">Curriculum — Subject hierarchy</div>
             <img src="../images/Secondary navigation - Getalbegrip.png" alt="Secondary navigation showing curriculum categories for math concepts">
           </div>
         </div>
-        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: var(--space-4);">The secondary navigation in tree-like views — folders and curriculum structures that need hierarchy without leaving the page.</p>
+        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: var(--space-4);" data-i18n="case.nav.label.treeCaption">The secondary navigation in tree-like views — folders and curriculum structures that need hierarchy without leaving the page.</p>
       </div>
     </div>
 
@@ -229,13 +229,13 @@
 
       <!-- ==================== RESULTS ==================== -->
       <div class="reveal">
-        <h2 id="results">Results</h2>
+        <h2 id="results" data-i18n="case.nav.results">Results</h2>
         <ul class="key-points">
-          <li>Lesson access went from 3+ clicks to 1 — multiplied across thousands of teachers using this dozens of times daily</li>
-          <li>Navigation architecture now scales — new features have a clear home</li>
-          <li>Mixed Ember/Flutter codebase consolidated into Flutter</li>
-          <li>Responsive scaling works consistently across all supported devices</li>
-          <li>Product team went from "we can't add anything" to having room to build</li>
+          <li data-i18n="case.nav.results.1">Lesson access went from 3+ clicks to 1 — multiplied across thousands of teachers using this dozens of times daily</li>
+          <li data-i18n="case.nav.results.2">Navigation architecture now scales — new features have a clear home</li>
+          <li data-i18n="case.nav.results.3">Mixed Ember/Flutter codebase consolidated into Flutter</li>
+          <li data-i18n="case.nav.results.4">Responsive scaling works consistently across all supported devices</li>
+          <li data-i18n="case.nav.results.5">Product team went from "we can't add anything" to having room to build</li>
         </ul>
       </div>
 
@@ -245,14 +245,15 @@
   <!-- Next Project -->
   <section class="section section--subtle" style="text-align: center;">
     <div class="container reveal">
-      <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: var(--space-4);">Next project</p>
-      <h2><a href="design-system" style="color: var(--color-primary);">Evolving a Design System to Scale &rarr;</a></h2>
+      <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: var(--space-4);" data-i18n="case.nextProject">Next project</p>
+      <h2><a href="design-system" style="color: var(--color-primary);" data-i18n="case.nav.next">Evolving a Design System to Scale &rarr;</a></h2>
     </div>
   </section>
 
   <div id="site-footer"></div>
 
   <script src="../js/components.js"></script>
+  <script src="../js/i18n.js"></script>
   <script src="../js/main.js"></script>
 </body>
 </html>

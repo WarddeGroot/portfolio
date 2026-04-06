@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-i18n-title="projects.title" data-i18n-meta="projects.meta">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,8 +16,8 @@
   <!-- Page Header -->
   <section class="project-hero">
     <div class="container">
-      <h1 class="reveal">My work</h1>
-      <p class="reveal" style="margin-top: var(--space-4); max-width: 640px;">A selection of projects where I combined research, strategy, and hands-on design to make a real difference.</p>
+      <h1 class="reveal" data-i18n="projects.heading">My work</h1>
+      <p class="reveal" style="margin-top: var(--space-4); max-width: 640px;" data-i18n="projects.subtitle">A selection of projects where I combined research, strategy, and hands-on design to make a real difference.</p>
     </div>
   </section>
 
@@ -30,10 +30,10 @@
           <div class="project-card__image">
             <img src="images/Secondary navigation visual.png" alt="Enhancing teachers' productivity">
           </div>
-          <h3 class="project-card__title">Enhancing teachers' productivity</h3>
-          <p class="project-card__desc">Redesigning navigation and reducing cognitive load for busy teachers</p>
+          <h3 class="project-card__title" data-i18n="card.nav.title">Enhancing teachers' productivity</h3>
+          <p class="project-card__desc" data-i18n="card.nav.desc">Redesigning navigation and reducing cognitive load for busy teachers</p>
           <span class="project-card__link">
-            Read more
+            <span data-i18n="card.readMore">Read more</span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
           </span>
         </a>
@@ -42,10 +42,10 @@
           <div class="project-card__image">
             <img src="images/Design system visual.png" alt="Design system revamp">
           </div>
-          <h3 class="project-card__title">Evolving a Design System to Scale</h3>
-          <p class="project-card__desc">Introducing an alias layer to serve both teachers and students from a single, scalable token architecture</p>
+          <h3 class="project-card__title" data-i18n="card.ds.title">Evolving a Design System to Scale</h3>
+          <p class="project-card__desc" data-i18n="card.ds.desc">Introducing an alias layer to serve both teachers and students from a single, scalable token architecture</p>
           <span class="project-card__link">
-            Read more
+            <span data-i18n="card.readMore">Read more</span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
           </span>
         </a>
@@ -54,10 +54,10 @@
           <div class="project-card__image">
             <img src="images/Trainer visual.png" alt="Educational trainer">
           </div>
-          <h3 class="project-card__title">From UX Vision to an Educational Trainer</h3>
-          <p class="project-card__desc">How strategic thinking and ethnographic research led to a scalable platform for independent learning</p>
+          <h3 class="project-card__title" data-i18n="card.trainer.title">From UX Vision to an Educational Trainer</h3>
+          <p class="project-card__desc" data-i18n="card.trainer.desc">How strategic thinking and ethnographic research led to a scalable platform for independent learning</p>
           <span class="project-card__link">
-            Read more
+            <span data-i18n="card.readMore">Read more</span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
           </span>
         </a>
@@ -69,6 +69,7 @@
   <div id="site-footer"></div>
 
   <script src="js/components.js"></script>
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

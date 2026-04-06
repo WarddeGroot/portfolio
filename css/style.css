@@ -898,6 +898,15 @@ p {
   font-size: 1.05rem;
 }
 
+/* How I work section */
+.section--subtle h3 {
+  margin-bottom: var(--space-3);
+}
+
+.section--subtle p {
+  font-size: 1.05rem;
+}
+
 /* --- CV Page --- */
 .cv-section {
   padding-top: calc(var(--space-32) + 60px);
@@ -1250,16 +1259,41 @@ p {
 
 /* --- Footer --- */
 .footer {
-  padding: var(--space-16) 0;
+  padding: var(--space-12) 0;
   border-top: 1px solid var(--color-border);
-  text-align: center;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__left,
+.footer__center,
+.footer__right {
+  flex: 1;
+}
+
+.footer__left {
+  display: flex;
+  align-items: center;
+}
+
+.footer__center {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .footer__links {
   display: flex;
-  justify-content: center;
-  gap: var(--space-8);
-  margin-bottom: var(--space-6);
+  gap: var(--space-6);
   list-style: none;
 }
 
@@ -1276,15 +1310,12 @@ p {
 
 /* Prompt counter */
 .prompt-counter {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
   gap: var(--space-3);
-  margin-bottom: var(--space-8);
-  padding: var(--space-4) var(--space-8);
+  padding: var(--space-3) var(--space-6);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-full);
-  display: inline-flex;
 }
 
 .prompt-counter__number {
@@ -1306,7 +1337,7 @@ p {
 .footer__updated {
   font-size: 0.8rem;
   color: var(--color-text-muted);
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-1);
 }
 
 .footer__copy {
@@ -1467,6 +1498,19 @@ p {
 
   .section {
     padding: var(--space-16) 0;
+  }
+
+  .footer__inner {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-6);
+  }
+
+  .footer__left,
+  .footer__center,
+  .footer__right {
+    flex: none;
+    align-items: center;
   }
 }
 

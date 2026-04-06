@@ -44,16 +44,24 @@
 
     target.outerHTML = `
     <footer class="footer">
-      <div class="prompt-counter">
-        <span class="prompt-counter__number" data-count="50">0</span>
-        <span class="prompt-counter__label">prompts built<br>this portfolio</span>
+      <div class="container footer__inner">
+        <div class="footer__left">
+          <div class="prompt-counter">
+            <span class="prompt-counter__number" data-count="50">0</span>
+            <span class="prompt-counter__label">prompts built<br>this portfolio</span>
+          </div>
+        </div>
+        <div class="footer__center">
+          <ul class="footer__links">
+            <li><a href="https://www.linkedin.com/in/warddegroot96/" class="footer__link" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="${depth}cv" class="footer__link">CV</a></li>
+          </ul>
+        </div>
+        <div class="footer__right">
+          <p class="footer__updated">Last updated: April 2026</p>
+          <p class="footer__copy">&copy; 2026 Ward de Groot</p>
+        </div>
       </div>
-      <ul class="footer__links">
-        <li><a href="https://www.linkedin.com/in/warddegroot96/" class="footer__link" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="${depth}cv" class="footer__link">CV</a></li>
-      </ul>
-      <p class="footer__updated">Last updated: March 2026</p>
-      <p class="footer__copy">&copy; 2026 Ward de Groot. All rights reserved.</p>
     </footer>`;
   }
 

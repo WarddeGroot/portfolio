@@ -15,7 +15,7 @@
     target.outerHTML = `
     <nav class="nav" role="navigation" aria-label="Main navigation">
       <div class="nav__inner">
-        <a href="${depth || './'}" class="nav__logo">
+        <a href="${depth || './'}" class="nav__logo" aria-label="Ward de Groot, home">
           <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="36" height="36" rx="10" fill="#1a5a8a"/>
             <g transform="translate(6, 6)">

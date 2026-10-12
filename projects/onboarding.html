@@ -48,6 +48,7 @@
       <ul class="toc__list">
         <li><a href="#moment" class="toc__link" data-i18n="case.onb.toc.moment">The moment</a></li>
         <li><a href="#goals" class="toc__link" data-i18n="case.onb.toc.goals">The goals</a></li>
+        <li><a href="#approach" class="toc__link" data-i18n="case.onb.toc.approach">The approach</a></li>
         <li><a href="#flow" class="toc__link" data-i18n="case.onb.toc.flow">The flow</a></li>
         <li><a href="#building" class="toc__link" data-i18n="case.onb.toc.building">Building with AI</a></li>
         <li><a href="#results" class="toc__link" data-i18n="case.onb.toc.results">Results</a></li>
@@ -75,6 +76,41 @@
           <li data-i18n="case.onb.goals.2"><strong>Reach the right teachers:</strong> approach teachers in a more personal way when we launch future features</li>
           <li data-i18n="case.onb.goals.3"><strong>Raise data quality:</strong> fewer duplicate accounts, more schools connected to Basispoort</li>
           <li data-i18n="case.onb.goals.4"><strong>Keep it light:</strong> teachers are busy in the first weeks, so every step had to be quick and skippable</li>
+        </ul>
+      </div>
+
+      <!-- ==================== APPROACH ==================== -->
+      <div class="reveal">
+        <h2 id="approach" data-i18n="case.onb.approach">The approach</h2>
+        <p data-i18n="case.onb.approach.desc">We knew there was a lot to do before the start of the school year. So instead of starting with screens, I started with the question of who we were designing for.</p>
+      </div>
+
+      <div class="reveal">
+        <h3 data-i18n="case.onb.data">Starting with data</h3>
+        <ul class="key-points">
+          <li data-i18n="case.onb.data.1">I mapped the segments within the product and looked at which indicators best predict activity in Gynzy</li>
+          <li data-i18n="case.onb.data.2">Only very few teachers had filled in their grade and method, while we consider exactly that information essential for personalizing Gynzy, now and in the future</li>
+          <li data-i18n="case.onb.data.3">In the weeks before the school year starts, teachers already log in to set up all their systems again, Gynzy included. They have the time for it then. If they don't do it at that moment, chances are they never will</li>
+        </ul>
+      </div>
+
+      <div class="reveal">
+        <h3 data-i18n="case.onb.segments">Choosing who to serve first</h3>
+        <ul class="key-points">
+          <li data-i18n="case.onb.segments.1">We split users by role (administrator or not), whether they're connected to a school, and whether that school has a Basispoort link</li>
+          <li data-i18n="case.onb.segments.2">Teachers at a school with a Basispoort link turned out to be the most active, and they keep using Gynzy. That made them the most important group to reach</li>
+          <li data-i18n="case.onb.segments.3">Next came teachers who had set up a school, but no Basispoort link yet</li>
+          <li data-i18n="case.onb.segments.4">Teachers without a school were deliberately left out. The flow for adding a school already existed elsewhere, but not yet in Flutter, and we could still point them to it during the year</li>
+        </ul>
+      </div>
+
+      <div class="reveal">
+        <h3 data-i18n="case.onb.hard">Where it got hard</h3>
+        <ul class="key-points">
+          <li data-i18n="case.onb.hard.1">Designing the screens was the easy part. The real challenge was untangling all the segments, at the speed the start of the school year demanded</li>
+          <li data-i18n="case.onb.hard.2">Merging accounts took the most time. The flow also had to work in another part of the app, so it had to be set up in a scalable way</li>
+          <li data-i18n="case.onb.hard.3">The matching logic was tricky: teachers with the same email domain at the same school, or with the same first or last name. We had to tell them apart without leaking other people's accounts into the UI</li>
+          <li data-i18n="case.onb.hard.4">That flow came with lots of edge cases, and we had to course-correct several times along the way</li>
         </ul>
       </div>
 
@@ -187,7 +223,7 @@
       <!-- ==================== BUILDING WITH AI ==================== -->
       <div class="reveal">
         <h2 id="building" data-i18n="case.onb.building">Building the UI with AI</h2>
-        <p data-i18n="case.onb.building.desc">Besides designing the flow, I built almost all of its UI components myself, using AI. Instead of handing over designs and waiting for implementation, I could take a component from design to working code and iterate on the real thing.</p>
+        <p data-i18n="case.onb.building.desc">To take work off the development team's plate under that time pressure, I built almost all of the UI components I designed myself, using AI. Instead of handing over designs and waiting for implementation, I could take a component from design to working code and iterate on the real thing.</p>
         <ul class="key-points">
           <li data-i18n="case.onb.building.1">Less back-and-forth between design and development, and more developer time for the logic behind the flow</li>
           <li data-i18n="case.onb.building.2">Design details ended up in the product as intended, because I built them</li>

@@ -93,7 +93,15 @@ const translations = {
   'cv.intro':            { en: 'UX / Product Designer with a research-driven approach. I think in systems, ground decisions in psychology, and build what I design. Currently at Gynzy, an educational platform used by thousands.', nl: 'UX / Product Designer met een onderzoeksgedreven aanpak. Ik denk in systemen, onderbouw beslissingen met psychologie, en bouw wat ik ontwerp. Momenteel bij Gynzy, een educatief platform dat door duizenden wordt gebruikt.' },
 
   // ToC
-  'cv.gynzy.date':       { en: 'Jan 2021 – Present', nl: 'Jan 2021 – heden' },
+  'cv.gynzy.date': { en: 'Jan 2021 – Present', nl: 'jan 2021 – heden' },
+  'cv.date.oct-2022-jan-2025': { en: 'Oct 2022 – Jan 2025', nl: 'okt 2022 – jan 2025' },
+  'cv.date.sep-2020-dec-2022': { en: 'Sep 2020 – Dec 2022', nl: 'sep 2020 – dec 2022' },
+  'cv.date.nov-2019-feb-2020': { en: 'Nov 2019 – Feb 2020', nl: 'nov 2019 – feb 2020' },
+  'cv.date.sep-2017-dec-2017': { en: 'Sep 2017 – Dec 2017', nl: 'sep 2017 – dec 2017' },
+  'cv.date.oct-2024': { en: 'Oct 2024', nl: 'okt 2024' },
+  'cv.date.aug-2023': { en: 'Aug 2023', nl: 'aug 2023' },
+  'cv.date.may-2021': { en: 'May 2021', nl: 'mei 2021' },
+  'cv.date.oct-2019': { en: 'Oct 2019', nl: 'okt 2019' },
   'cv.toc.experience':   { en: 'Experience', nl: 'Ervaring' },
   'cv.toc.education':    { en: 'Education', nl: 'Opleiding' },
   'cv.toc.publications': { en: 'Publications', nl: 'Publicaties' },

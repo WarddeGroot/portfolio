@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" data-i18n-title="case.onb.title" data-i18n-meta="case.onb.meta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Back-to-school onboarding | Ward de Groot</title>
+  <meta name="description" content="Turning the start of the school year into a short onboarding flow that personalizes Gynzy for every teacher and raises data quality.">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+</head>
+<body>
+
+
+  <div id="site-nav"></div>
+
+  <!-- Project Hero -->
+  <section class="project-hero">
+    <div class="container">
+      <p class="reveal" style="margin-bottom: var(--space-2);"><a href="../projects" style="color: var(--color-primary-light); font-size: 0.9rem;"><span data-i18n="case.onb.back">&larr; Back to all projects</span></a></p>
+      <h1 class="project-hero__title reveal" data-i18n="case.onb.heading">Back-to-school onboarding</h1>
+      <p class="project-hero__desc reveal" data-i18n="case.onb.desc">After the summer break, every teacher sets up Gynzy for a new school year. I turned that moment into a short onboarding flow that tells us who we're designing for, nudges schools to connect Basispoort, and cleans up duplicate accounts along the way.</p>
+    </div>
+  </section>
+
+  <!-- Project Meta -->
+  <section class="container">
+    <div class="project-meta reveal-stagger">
+      <div class="project-meta__item">
+        <h4 data-i18n="case.meta.role">My role</h4>
+        <p data-i18n="case.onb.role">UX Designer, UI built with AI</p>
+      </div>
+      <div class="project-meta__item">
+        <h4 data-i18n="case.meta.team">The team</h4>
+        <p data-i18n="case.onb.team">Team Deep</p>
+      </div>
+      <div class="project-meta__item">
+        <h4 data-i18n="case.meta.duration">Duration</h4>
+        <p data-i18n="case.onb.duration">Start of school year 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Content -->
+  <section class="project-content">
+
+    <!-- Table of Contents -->
+    <nav class="toc" id="toc" aria-label="Table of contents">
+      <ul class="toc__list">
+        <li><a href="#moment" class="toc__link" data-i18n="case.onb.toc.moment">The moment</a></li>
+        <li><a href="#goals" class="toc__link" data-i18n="case.onb.toc.goals">The goals</a></li>
+        <li><a href="#flow" class="toc__link" data-i18n="case.onb.toc.flow">The flow</a></li>
+        <li><a href="#building" class="toc__link" data-i18n="case.onb.toc.building">Building with AI</a></li>
+        <li><a href="#results" class="toc__link" data-i18n="case.onb.toc.results">Results</a></li>
+        <li><a href="#next-steps" class="toc__link" data-i18n="case.onb.toc.next">Next steps</a></li>
+      </ul>
+    </nav>
+
+    <div class="container container--narrow">
+
+      <!-- ==================== THE MOMENT ==================== -->
+      <div class="reveal">
+        <h2 id="moment" data-i18n="case.onb.moment">Why the start of the school year matters</h2>
+        <ul class="key-points">
+          <li data-i18n="case.onb.moment.1">After the summer break, teachers return to a new class, sometimes a new grade, and set up Gynzy for the rest of the year. It's the one moment where almost every teacher is open to configuring things.</li>
+          <li data-i18n="case.onb.moment.2">At the same time, we knew surprisingly little about our users. We didn't reliably know which grade a teacher taught, or which math and spelling method their school used.</li>
+          <li data-i18n="case.onb.moment.3">That made it hard to personalize the Start page, to target new features at the right teachers, and to trust our own data.</li>
+        </ul>
+      </div>
+
+      <!-- ==================== GOALS ==================== -->
+      <div class="reveal">
+        <h2 id="goals" data-i18n="case.onb.goals">The goals</h2>
+        <ul class="key-points">
+          <li data-i18n="case.onb.goals.1"><strong>Personalize:</strong> serve teachers better on the Start page, based on their grade and methods</li>
+          <li data-i18n="case.onb.goals.2"><strong>Reach the right teachers:</strong> approach teachers in a more personal way when we launch future features</li>
+          <li data-i18n="case.onb.goals.3"><strong>Raise data quality:</strong> fewer duplicate accounts, more schools connected to Basispoort</li>
+          <li data-i18n="case.onb.goals.4"><strong>Keep it light:</strong> teachers are busy in the first weeks, so every step had to be quick and skippable</li>
+        </ul>
+      </div>
+
+      <!-- ==================== THE FLOW ==================== -->
+      <div class="reveal">
+        <h2 id="flow" data-i18n="case.onb.flow">The flow</h2>
+        <p data-i18n="case.onb.flow.desc">Instead of a long form, I designed a series of short steps. Each one asks a single question, and the flow adapts to who you are: a regular teacher sees different steps than a school administrator.</p>
+      </div>
+
+      <div class="reveal">
+        <h3 data-i18n="case.onb.step1">1. Which grade do you teach this year?</h3>
+        <ul class="key-points">
+          <li data-i18n="case.onb.step1.1">Teachers often switch grades between school years, so we ask again every year instead of relying on old data</li>
+          <li data-i18n="case.onb.step1.2">The grade directly shapes which content we can highlight on the Start page</li>
+        </ul>
+      </div>
+
+      <div class="reveal">
+        <h3 data-i18n="case.onb.step2">2. Which methods do you use for math and spelling?</h3>
+        <ul class="key-points">
+          <li data-i18n="case.onb.step2.1">Dutch schools work with a variety of teaching methods. Knowing which one a teacher uses lets us align content and features with their daily lessons</li>
+          <li data-i18n="case.onb.step2.2">It also tells us which methods matter most to our users, valuable input for the product roadmap</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- TODO: screenshots of grade + method steps
+    <div class="full-width reveal">
+      <div class="comparison" style="max-width: var(--max-width); margin: 0 auto;">
+        <div class="comparison__item">
+          <div class="comparison__label" data-i18n="case.onb.label.grade">Step: choose your grade</div>
+          <img src="../images/Onboarding - leerjaar.png" alt="Onboarding step asking which grade the teacher teaches this year">
+        </div>
+        <div class="comparison__item">
+          <div class="comparison__label" data-i18n="case.onb.label.methods">Step: choose your methods</div>
+          <img src="../images/Onboarding - methodes.png" alt="Onboarding step asking which math and spelling methods the school uses">
+        </div>
+      </div>
+    </div>
+    -->
+
+    <div class="container container--narrow">
+
+      <div class="reveal">
+        <h3 data-i18n="case.onb.step3">3. Connecting Basispoort</h3>
+        <p data-i18n="case.onb.basispoort.what">Basispoort is the platform Dutch primary schools use to connect educational software to their student administration system. Once a school links Gynzy to Basispoort, classes, students and teachers are synced automatically, and everyone can sign in with a single account. Without that link, teachers have to create and maintain classes by hand, which leads to outdated groups and duplicate accounts.</p>
+        <p data-i18n="case.onb.basispoort.problem">The catch: only a school administrator can set up the link. Most teachers aren't administrators, so the step had to work differently depending on who you are.</p>
+        <ul class="key-points">
+          <li data-i18n="case.onb.basispoort.admin"><strong>Administrators</strong> get a clear explanation of what the link brings them and are nudged to set it up right away</li>
+          <li data-i18n="case.onb.basispoort.teacher"><strong>Teachers without admin rights</strong> get a ready-made email to their administrator, explaining why and how to connect Basispoort. One click and it's on its way, so the teacher doesn't have to figure out what to write</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- TODO: screenshots of admin vs. teacher Basispoort step
+    <div class="full-width reveal">
+      <div class="comparison" style="max-width: var(--max-width); margin: 0 auto;">
+        <div class="comparison__item">
+          <div class="comparison__label" data-i18n="case.onb.label.admin">Administrator: connect Basispoort</div>
+          <img src="../images/Onboarding - basispoort beheerder.png" alt="Onboarding step encouraging an administrator to connect Basispoort">
+        </div>
+        <div class="comparison__item">
+          <div class="comparison__label" data-i18n="case.onb.label.teacher">Teacher: email your administrator</div>
+          <img src="../images/Onboarding - basispoort leerkracht.png" alt="Onboarding step with a ready-made email to the school administrator">
+        </div>
+      </div>
+    </div>
+    -->
+
+    <div class="container container--narrow">
+
+      <div class="reveal">
+        <h3 data-i18n="case.onb.step4">4. Merging duplicate accounts</h3>
+        <ul class="key-points">
+          <li data-i18n="case.onb.merge.1">Some teachers ended up with two accounts: one created by a sync, and one they had made themselves earlier. Their lessons and settings were split across both</li>
+          <li data-i18n="case.onb.merge.2">When we detect a possible duplicate, the flow offers to merge the accounts, so the teacher continues with one account and all their work in one place</li>
+          <li data-i18n="case.onb.merge.3">For us, every merge means cleaner data and fewer support questions</li>
+        </ul>
+      </div>
+
+      <!-- ==================== BUILDING WITH AI ==================== -->
+      <div class="reveal">
+        <h2 id="building" data-i18n="case.onb.building">Building the UI with AI</h2>
+        <p data-i18n="case.onb.building.desc">Besides designing the flow, I built almost all of its UI components myself, using AI. Instead of handing over designs and waiting for implementation, I could take a component from design to working code and iterate on the real thing.</p>
+        <ul class="key-points">
+          <li data-i18n="case.onb.building.1">Less back-and-forth between design and development, and more developer time for the logic behind the flow</li>
+          <li data-i18n="case.onb.building.2">Design details ended up in the product as intended, because I built them</li>
+          <li data-i18n="case.onb.building.3">It changed my role: from delivering screens to delivering working components</li>
+        </ul>
+      </div>
+
+      <!-- ==================== RESULTS ==================== -->
+      <div class="reveal">
+        <h2 id="results" data-i18n="case.onb.results">Results</h2>
+        <ul class="key-points">
+          <li data-i18n="case.onb.results.1">In August and September 2026, more than 86,000 teachers started the onboarding.</li>
+          <li data-i18n="case.onb.results.2">86.5% saved their grade. For over 74,000 teachers, we now know which grade they teach this school year.</li>
+          <li data-i18n="case.onb.results.3">More than 58,000 teachers (68%) completed the full flow, including their math and spelling method.</li>
+          <li data-i18n="case.onb.results.4">The three peaks follow the staggered regional summer holidays: every time a region went back to school, thousands of teachers started the flow on the first days. Proof that the timing was right.</li>
+          <li data-i18n="case.onb.results.5">The biggest drop-off happens after the grade step. That's exactly where the next iteration comes in: letting teachers finish later from their Start page.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Data: funnel + starts over time -->
+    <div class="full-width reveal">
+      <div style="max-width: var(--max-width); margin: 0 auto;">
+        <div class="comparison__label" data-i18n="case.onb.label.funnel">Number of teachers per step</div>
+        <img src="../images/Start schooljaar - aantal leerkrachten per stap.png" alt="Bar chart: 86,035 teachers started the onboarding, 74,462 saved their grade (86.5%), 58,429 completed it (67.9%) and 58,323 saved their method (67.8%)">
+      </div>
+    </div>
+
+    <div class="full-width reveal">
+      <div style="max-width: var(--max-width); margin: 0 auto;">
+        <div class="comparison__label" data-i18n="case.onb.label.overTime">Teachers starting and completing the onboarding per day</div>
+        <img src="../images/Start schooljaar - Aantal leerkrachten gestart over tijd.png" alt="Line chart of daily starts and completions from August to September 2026, with three peaks of over 5,000 starts in mid, late and end of August">
+        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: var(--space-2);" data-i18n="case.onb.label.overTimeCaption">Three peaks, one for each holiday region returning to school. The dips are weekends.</p>
+      </div>
+    </div>
+
+    <div class="container container--narrow">
+
+      <!-- ==================== NEXT STEPS ==================== -->
+      <div class="reveal">
+        <h2 id="next-steps" data-i18n="case.onb.next">Next steps</h2>
+        <ul class="key-points">
+          <li data-i18n="case.onb.next.1"><strong>Finish later:</strong> teachers who skip steps can complete them on their Start page, so a busy first week doesn't mean missing out</li>
+          <li data-i18n="case.onb.next.2"><strong>Add your school:</strong> a new step where teachers can add their school, closing another gap in our data</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Next Project -->
+  <section class="section section--subtle" style="text-align: center;">
+    <div class="container reveal">
+      <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: var(--space-4);" data-i18n="case.nextProject">Next project</p>
+      <h2><a href="navigation" style="color: var(--color-primary);" data-i18n="case.onb.nextProject">Enhancing teachers' productivity &rarr;</a></h2>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+
+  <script src="../js/components.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/main.js"></script>
+  <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "b7b4219062b84fdfabd26b8ac3537e8b"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>

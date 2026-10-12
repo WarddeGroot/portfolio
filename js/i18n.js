@@ -53,6 +53,8 @@ const translations = {
   'card.ds.desc':       { en: 'Rethinking Gynzy\'s design system so it could scale from one audience to two, without doubling the work', nl: 'Gynzy\'s design system herdenken zodat het kon meegroeien van één doelgroep naar twee, zonder dubbel werk' },
   'card.trainer.title': { en: 'From UX vision to an educational trainer', nl: 'Van UX-visie naar een educatieve trainer' },
   'card.trainer.desc':  { en: 'How strategic thinking and ethnographic research led to a scalable platform for independent learning', nl: 'Hoe strategisch denken en etnografisch onderzoek leidden tot een schaalbaar platform voor zelfstandig leren' },
+  'card.onb.title':     { en: 'Back-to-school onboarding', nl: 'Onboarding bij de start van het schooljaar' },
+  'card.onb.desc':      { en: 'Using the start of the school year to personalize Gynzy for every teacher and clean up our data', nl: 'De start van het schooljaar benutten om Gynzy persoonlijker te maken voor elke leerkracht en onze data op te schonen' },
   'card.readMore':      { en: 'Read more', nl: 'Lees meer' },
 
   // ── Projects page ───────────────────────────
@@ -370,10 +372,86 @@ const translations = {
   'case.trainer.label.totalSessions': { en: 'Total completed trainer sessions (week over week)', nl: 'Totaal voltooide trainersessies (week over week)' },
   'case.trainer.label.uniqueReach':   { en: 'Students using Trainer as their only form of independent practice', nl: 'Leerlingen die Trainer als enige vorm van zelfstandig oefenen gebruiken' },
 
+  // ── Case: Back-to-school onboarding ─────────
+  'case.onb.title':       { en: 'Back-to-school onboarding | Ward de Groot', nl: 'Onboarding bij de start van het schooljaar | Ward de Groot' },
+  'case.onb.meta':        { en: 'Turning the start of the school year into a short onboarding flow that personalizes Gynzy for every teacher and raises data quality.', nl: 'De start van het schooljaar omgezet in een korte onboarding die Gynzy persoonlijker maakt voor elke leerkracht en de datakwaliteit verhoogt.' },
+  'case.onb.back':        { en: '&larr; Back to all projects', nl: '&larr; Terug naar alle projecten' },
+  'case.onb.heading':     { en: 'Back-to-school onboarding', nl: 'Onboarding bij de start van het schooljaar' },
+  'case.onb.desc':        { en: 'After the summer break, every teacher sets up Gynzy for a new school year. I turned that moment into a short onboarding flow that tells us who we\'re designing for, nudges schools to connect Basispoort, and cleans up duplicate accounts along the way.', nl: 'Na de zomervakantie richt elke leerkracht Gynzy opnieuw in voor het nieuwe schooljaar. Dat moment heb ik omgezet in een korte onboarding. Zo weten we voor wie we ontwerpen, sporen we scholen aan om Basispoort te koppelen en ruimen we meteen dubbele accounts op.' },
+  'case.onb.role':        { en: 'UX Designer, UI built with AI', nl: 'UX Designer, UI gebouwd met AI' },
+  'case.onb.team':        { en: 'Team Deep', nl: 'Team Deep' },
+  'case.onb.duration':    { en: 'Start of school year 2026', nl: 'Start schooljaar 2026' },
+
+  'case.onb.toc.moment':   { en: 'The moment', nl: 'Het moment' },
+  'case.onb.toc.goals':    { en: 'The goals', nl: 'De doelen' },
+  'case.onb.toc.flow':     { en: 'The flow', nl: 'De flow' },
+  'case.onb.toc.building': { en: 'Building with AI', nl: 'Bouwen met AI' },
+  'case.onb.toc.results':  { en: 'Results', nl: 'Resultaten' },
+  'case.onb.toc.next':     { en: 'Next steps', nl: 'Vervolgstappen' },
+
+  'case.onb.moment':      { en: 'Why the start of the school year matters', nl: 'Waarom de start van het schooljaar zo belangrijk is' },
+  'case.onb.moment.1':    { en: 'After the summer break, teachers return to a new class, sometimes a new grade, and set up Gynzy for the rest of the year. It\'s the one moment where almost every teacher is open to configuring things.', nl: 'Na de zomervakantie komen leerkrachten terug bij een nieuwe klas, soms zelfs een nieuw leerjaar, en richten ze Gynzy in voor de rest van het jaar. Het is hét moment waarop bijna elke leerkracht openstaat om dingen in te stellen.' },
+  'case.onb.moment.2':    { en: 'At the same time, we knew surprisingly little about our users. We didn\'t reliably know which grade a teacher taught, or which math and spelling method their school used.', nl: 'Tegelijk wisten we verrassend weinig over onze gebruikers. We wisten niet betrouwbaar welk leerjaar een leerkracht lesgaf, of welke reken- en spellingmethode de school gebruikte.' },
+  'case.onb.moment.3':    { en: 'That made it hard to personalize the Start page, to target new features at the right teachers, and to trust our own data.', nl: 'Daardoor was het lastig om de Startpagina te personaliseren, nieuwe features bij de juiste leerkrachten te krijgen en op onze eigen data te vertrouwen.' },
+
+  'case.onb.goals':       { en: 'The goals', nl: 'De doelen' },
+  'case.onb.goals.1':     { en: '<strong>Personalize:</strong> serve teachers better on the Start page, based on their grade and methods', nl: '<strong>Personaliseren:</strong> leerkrachten beter bedienen op de Startpagina, op basis van hun leerjaar en methodes' },
+  'case.onb.goals.2':     { en: '<strong>Reach the right teachers:</strong> approach teachers in a more personal way when we launch future features', nl: '<strong>De juiste leerkrachten bereiken:</strong> leerkrachten persoonlijker benaderen bij toekomstige features' },
+  'case.onb.goals.3':     { en: '<strong>Raise data quality:</strong> fewer duplicate accounts, more schools connected to Basispoort', nl: '<strong>Datakwaliteit verhogen:</strong> minder dubbele accounts en meer scholen gekoppeld aan Basispoort' },
+  'case.onb.goals.4':     { en: '<strong>Keep it light:</strong> teachers are busy in the first weeks, so every step had to be quick and skippable', nl: '<strong>Licht houden:</strong> leerkrachten hebben het druk in de eerste weken, dus elke stap moest snel en over te slaan zijn' },
+
+  'case.onb.flow':        { en: 'The flow', nl: 'De flow' },
+  'case.onb.flow.desc':   { en: 'Instead of a long form, I designed a series of short steps. Each one asks a single question, and the flow adapts to who you are: a regular teacher sees different steps than a school administrator.', nl: 'In plaats van een lang formulier ontwierp ik een reeks korte stappen. Elke stap stelt één vraag, en de flow past zich aan wie je bent: een leerkracht ziet andere stappen dan een beheerder.' },
+
+  'case.onb.step1':       { en: '1. Which grade do you teach this year?', nl: '1. Welk leerjaar geef je dit jaar les?' },
+  'case.onb.step1.1':     { en: 'Teachers often switch grades between school years, so we ask again every year instead of relying on old data', nl: 'Leerkrachten wisselen vaak van leerjaar, dus we vragen het elk jaar opnieuw in plaats van op oude data te vertrouwen' },
+  'case.onb.step1.2':     { en: 'The grade directly shapes which content we can highlight on the Start page', nl: 'Het leerjaar bepaalt direct welke content we op de Startpagina kunnen uitlichten' },
+
+  'case.onb.step2':       { en: '2. Which methods do you use for math and spelling?', nl: '2. Welke methode gebruik je voor rekenen en spelling?' },
+  'case.onb.step2.1':     { en: 'Dutch schools work with a variety of teaching methods. Knowing which one a teacher uses lets us align content and features with their daily lessons', nl: 'Scholen werken met allerlei verschillende methodes. Als we weten welke een leerkracht gebruikt, kunnen we content en features laten aansluiten op de dagelijkse lessen' },
+  'case.onb.step2.2':     { en: 'It also tells us which methods matter most to our users, valuable input for the product roadmap', nl: 'Het laat ook zien welke methodes het belangrijkst zijn voor onze gebruikers. Waardevolle input voor de roadmap' },
+
+  'case.onb.step3':       { en: '3. Connecting Basispoort', nl: '3. Basispoort koppelen' },
+  'case.onb.basispoort.what':    { en: 'Basispoort is the platform Dutch primary schools use to connect educational software to their student administration system. Once a school links Gynzy to Basispoort, classes, students and teachers are synced automatically, and everyone can sign in with a single account. Without that link, teachers have to create and maintain classes by hand, which leads to outdated groups and duplicate accounts.', nl: 'Basispoort is het platform waarmee basisscholen hun educatieve software koppelen aan hun leerlingadministratie. Zodra een school Gynzy aan Basispoort koppelt, worden groepen, leerlingen en leerkrachten automatisch gesynchroniseerd en logt iedereen in met één account. Zonder die koppeling moeten leerkrachten groepen handmatig aanmaken en bijhouden. Dat leidt tot verouderde groepen en dubbele accounts.' },
+  'case.onb.basispoort.problem': { en: 'The catch: only a school administrator can set up the link. Most teachers aren\'t administrators, so the step had to work differently depending on who you are.', nl: 'Het addertje: alleen een beheerder kan de koppeling leggen. De meeste leerkrachten zijn geen beheerder, dus de stap moest anders werken afhankelijk van wie je bent.' },
+  'case.onb.basispoort.admin':   { en: '<strong>Administrators</strong> get a clear explanation of what the link brings them and are nudged to set it up right away', nl: '<strong>Beheerders</strong> krijgen een heldere uitleg over wat de koppeling ze oplevert en worden aangespoord om hem direct te leggen' },
+  'case.onb.basispoort.teacher': { en: '<strong>Teachers without admin rights</strong> get a ready-made email to their administrator, explaining why and how to connect Basispoort. One click and it\'s on its way, so the teacher doesn\'t have to figure out what to write', nl: '<strong>Leerkrachten zonder beheerrechten</strong> krijgen een kant-en-klare mail aan hun beheerder, met uitleg over waarom en hoe je Basispoort koppelt. Eén klik en hij is verstuurd, zonder dat de leerkracht zelf hoeft te bedenken wat erin moet' },
+
+  'case.onb.step4':       { en: '4. Merging duplicate accounts', nl: '4. Dubbele accounts samenvoegen' },
+  'case.onb.merge.1':     { en: 'Some teachers ended up with two accounts: one created by a sync, and one they had made themselves earlier. Their lessons and settings were split across both', nl: 'Sommige leerkrachten hadden twee accounts: één aangemaakt door een sync en één die ze eerder zelf hadden aangemaakt. Hun lessen en instellingen waren over beide verdeeld' },
+  'case.onb.merge.2':     { en: 'When we detect a possible duplicate, the flow offers to merge the accounts, so the teacher continues with one account and all their work in one place', nl: 'Als we een mogelijk dubbel account herkennen, biedt de flow aan om de accounts samen te voegen. Zo gaat de leerkracht verder met één account en staat al het werk op één plek' },
+  'case.onb.merge.3':     { en: 'For us, every merge means cleaner data and fewer support questions', nl: 'Voor ons betekent elke samenvoeging schonere data en minder supportvragen' },
+
+  'case.onb.label.grade':   { en: 'Step: choose your grade', nl: 'Stap: kies je leerjaar' },
+  'case.onb.label.methods': { en: 'Step: choose your methods', nl: 'Stap: kies je methodes' },
+  'case.onb.label.admin':   { en: 'Administrator: connect Basispoort', nl: 'Beheerder: koppel Basispoort' },
+  'case.onb.label.teacher': { en: 'Teacher: email your administrator', nl: 'Leerkracht: mail je beheerder' },
+
+  'case.onb.building':      { en: 'Building the UI with AI', nl: 'De UI bouwen met AI' },
+  'case.onb.building.desc': { en: 'Besides designing the flow, I built almost all of its UI components myself, using AI. Instead of handing over designs and waiting for implementation, I could take a component from design to working code and iterate on the real thing.', nl: 'Naast het ontwerpen van de flow bouwde ik bijna alle UI-componenten zelf, met behulp van AI. In plaats van ontwerpen over te dragen en op de implementatie te wachten, bracht ik een component zelf van ontwerp naar werkende code en itereerde ik op het echte product.' },
+  'case.onb.building.1':    { en: 'Less back-and-forth between design and development, and more developer time for the logic behind the flow', nl: 'Minder heen-en-weer tussen design en development, en meer developertijd voor de logica achter de flow' },
+  'case.onb.building.2':    { en: 'Design details ended up in the product as intended, because I built them', nl: 'Ontwerpdetails kwamen in het product zoals bedoeld, omdat ik ze zelf bouwde' },
+  'case.onb.building.3':    { en: 'It changed my role: from delivering screens to delivering working components', nl: 'Het veranderde mijn rol: van schermen opleveren naar werkende componenten opleveren' },
+
+  'case.onb.results':       { en: 'Results', nl: 'Resultaten' },
+  'case.onb.results.1':     { en: 'In August and September 2026, more than 86,000 teachers started the onboarding.', nl: 'In augustus en september 2026 startten ruim 86.000 leerkrachten de onboarding.' },
+  'case.onb.results.2':     { en: '86.5% saved their grade. For over 74,000 teachers, we now know which grade they teach this school year.', nl: '86,5% sloeg zijn leerjaar op. Van ruim 74.000 leerkrachten weten we nu welk leerjaar ze dit schooljaar lesgeven.' },
+  'case.onb.results.3':     { en: 'More than 58,000 teachers (68%) completed the full flow, including their math and spelling method.', nl: 'Ruim 58.000 leerkrachten (68%) rondden de hele flow af, inclusief hun reken- en spellingmethode.' },
+  'case.onb.results.4':     { en: 'The three peaks follow the staggered regional summer holidays: every time a region went back to school, thousands of teachers started the flow on the first days. Proof that the timing was right.', nl: 'De drie pieken volgen de zomervakantie per regio: telkens als een regio weer naar school ging, startten duizenden leerkrachten in de eerste dagen de flow. Het bewijs dat de timing klopte.' },
+  'case.onb.results.5':     { en: 'The biggest drop-off happens after the grade step. That\'s exactly where the next iteration comes in: letting teachers finish later from their Start page.', nl: 'De grootste uitval zit na de leerjaarstap. Precies daar haakt de volgende iteratie op in: leerkrachten de flow later laten afronden vanaf hun Startpagina.' },
+  'case.onb.label.funnel':   { en: 'Number of teachers per step', nl: 'Aantal leerkrachten per stap' },
+  'case.onb.label.overTime': { en: 'Teachers starting and completing the onboarding per day', nl: 'Leerkrachten die de onboarding per dag startten en afrondden' },
+  'case.onb.label.overTimeCaption': { en: 'Three peaks, one for each holiday region returning to school. The dips are weekends.', nl: 'Drie pieken, één per vakantieregio die weer naar school ging. De dalen zijn weekenden.' },
+
+  'case.onb.next':          { en: 'Next steps', nl: 'Vervolgstappen' },
+  'case.onb.next.1':        { en: '<strong>Finish later:</strong> teachers who skip steps can complete them on their Start page, so a busy first week doesn\'t mean missing out', nl: '<strong>Later afronden:</strong> leerkrachten die stappen overslaan, kunnen ze alsnog voltooien op hun Startpagina. Een drukke eerste week betekent dus niet dat ze iets missen' },
+  'case.onb.next.2':        { en: '<strong>Add your school:</strong> a new step where teachers can add their school, closing another gap in our data', nl: '<strong>School toevoegen:</strong> een nieuwe stap waarin leerkrachten hun school kunnen toevoegen, zodat er weer een gat in onze data dichtgaat' },
+
   // Next project links
   'case.nav.next':        { en: 'Evolving a design system to scale &rarr;', nl: 'Een design system laten meegroeien &rarr;' },
   'case.ds.next':         { en: 'From UX vision to an educational trainer &rarr;', nl: 'Van UX-visie naar een educatieve trainer &rarr;' },
-  'case.trainer.next':    { en: 'Enhancing teachers\' productivity &rarr;', nl: 'Leerkrachten productiever maken &rarr;' },
+  'case.trainer.next':    { en: 'Back-to-school onboarding &rarr;', nl: 'Onboarding bij de start van het schooljaar &rarr;' },
+  'case.onb.nextProject': { en: 'Enhancing teachers\' productivity &rarr;', nl: 'Leerkrachten productiever maken &rarr;' },
 };
 
 

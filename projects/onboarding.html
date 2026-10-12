@@ -81,19 +81,86 @@
       <!-- ==================== THE FLOW ==================== -->
       <div class="reveal">
         <h2 id="flow" data-i18n="case.onb.flow">The flow</h2>
-        <p data-i18n="case.onb.flow.desc">Instead of a long form, I designed a series of short steps. Each one asks a single question, and the flow adapts to who you are: a regular teacher sees different steps than a school administrator.</p>
+        <p data-i18n="case.onb.flow.desc">Instead of a long form, I designed a series of short steps. Each one asks a single question, and the flow adapts to the teacher's situation: steps without anything to show drop out, and a school without a Basispoort link gets a different step than a school that already has one.</p>
       </div>
 
+    </div>
+
+    <div class="full-width reveal">
+      <div style="max-width: var(--max-width); margin: 0 auto;">
+        <div class="comparison__label" data-i18n="case.onb.label.welcome">The starting point: a personal welcome after the summer break</div>
+        <img src="../images/Onboarding - welkom.png" alt="Welcome screen with three illustrated teachers holding a 'Welkom terug!' banner and a 'Start mijn schooljaar' button">
+      </div>
+    </div>
+
+    <div class="container container--narrow">
+
       <div class="reveal">
-        <h3 data-i18n="case.onb.step1">1. Which grade do you teach this year?</h3>
+        <h3 data-i18n="case.onb.step1">1. Merging duplicate accounts</h3>
+        <ul class="key-points">
+          <li data-i18n="case.onb.merge.1">Some teachers ended up with two accounts: one created by a sync, and one they had made themselves earlier. Their lessons and settings were split across both</li>
+          <li data-i18n="case.onb.merge.2">When we detect possible duplicates, the flow shows them side by side, including how many lessons each account holds. The teacher picks which ones are theirs and confirms each one via email, so nobody can claim someone else's account</li>
+          <li data-i18n="case.onb.merge.3">For us, every merge means cleaner data and fewer support questions</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="full-width reveal">
+      <div class="comparison" style="max-width: var(--max-width); margin: 0 auto;">
+        <div class="comparison__item">
+          <div class="comparison__label" data-i18n="case.onb.label.accounts">Spotting possible duplicates</div>
+          <img src="../images/Onboarding - accounts samenvoegen.png" alt="Step showing the signed-in account and two other accounts that may belong to the same teacher, with their number of lessons">
+        </div>
+        <div class="comparison__item">
+          <div class="comparison__label" data-i18n="case.onb.label.confirm">Confirming via email</div>
+          <img src="../images/Onboarding - accounts bevestigen.png" alt="Step asking the teacher to confirm each account through a confirmation email, with an option to resend">
+        </div>
+      </div>
+    </div>
+
+    <div class="container container--narrow">
+
+      <div class="reveal">
+        <h3 data-i18n="case.onb.step2">2. Connecting Basispoort</h3>
+        <p data-i18n="case.onb.basispoort.what">Basispoort is the platform Dutch primary schools use to connect educational software to their student administration system. Once a school links Gynzy to Basispoort, classes, students and teachers are synced automatically, and everyone can sign in with a single account. Without that link, teachers have to create and maintain classes by hand, which leads to outdated groups and duplicate accounts.</p>
+        <p data-i18n="case.onb.basispoort.problem">The catch: only a school administrator can set up the link. Most teachers aren't administrators, so the step had to work differently depending on who you are.</p>
+        <ul class="key-points">
+          <li data-i18n="case.onb.basispoort.benefits"><strong>Not linked yet?</strong> The step explains in three short points what the link brings: all groups and students in Gynzy automatically, changes visible right away, and no costs</li>
+          <li data-i18n="case.onb.basispoort.admin"><strong>Administrators</strong> get a clear explanation of what the link brings them and are nudged to set it up right away</li>
+          <li data-i18n="case.onb.basispoort.teacher"><strong>Teachers without admin rights</strong> get a ready-made message for their administrator, explaining why and how to connect Basispoort, with a link to the step-by-step guide. One click copies it, so the teacher doesn't have to figure out what to write</li>
+          <li data-i18n="case.onb.basispoort.linked"><strong>Already linked?</strong> Then this step turns into a quick check of the groups we pulled in from Basispoort</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="full-width reveal">
+      <div class="comparison" style="max-width: var(--max-width); margin: 0 auto;">
+        <div class="comparison__item">
+          <div class="comparison__label" data-i18n="case.onb.label.teacherLas">Basispoort not linked yet</div>
+          <img src="../images/Onboarding - basispoort.png" alt="Step explaining that Basispoort isn't linked yet, listing three benefits and an option to ask the administrator">
+        </div>
+        <div class="comparison__item">
+          <div class="comparison__label" data-i18n="case.onb.label.teacher">A ready-made message for the administrator</div>
+          <img src="../images/Onboarding - basispoort bericht beheerder.png" alt="Step with a pre-written message to the school administrator about connecting Basispoort, and a button to copy it">
+        </div>
+      </div>
+    </div>
+
+    <div class="container container--narrow">
+
+      <div class="reveal">
+        <h3 data-i18n="case.onb.step3">3. Which grades do you teach this year?</h3>
         <ul class="key-points">
           <li data-i18n="case.onb.step1.1">Teachers often switch grades between school years, so we ask again every year instead of relying on old data</li>
           <li data-i18n="case.onb.step1.2">The grade directly shapes which content we can highlight on the Start page</li>
+          <li data-i18n="case.onb.step1.3">Combination classes are common in Dutch schools, so teachers can pick more than one grade</li>
         </ul>
       </div>
 
       <div class="reveal">
-        <h3 data-i18n="case.onb.step2">2. Which methods do you use for math and spelling?</h3>
+        <h3 data-i18n="case.onb.step4">4. Which methods do you use for math and spelling?</h3>
         <ul class="key-points">
           <li data-i18n="case.onb.step2.1">Dutch schools work with a variety of teaching methods. Knowing which one a teacher uses lets us align content and features with their daily lessons</li>
           <li data-i18n="case.onb.step2.2">It also tells us which methods matter most to our users, valuable input for the product roadmap</li>
@@ -102,60 +169,20 @@
 
     </div>
 
-    <!-- TODO: screenshots of grade + method steps
     <div class="full-width reveal">
       <div class="comparison" style="max-width: var(--max-width); margin: 0 auto;">
         <div class="comparison__item">
-          <div class="comparison__label" data-i18n="case.onb.label.grade">Step: choose your grade</div>
-          <img src="../images/Onboarding - leerjaar.png" alt="Onboarding step asking which grade the teacher teaches this year">
+          <div class="comparison__label" data-i18n="case.onb.label.grade">Choosing grades, more than one if needed</div>
+          <img src="../images/Onboarding - leerjaar.png" alt="Step asking which grades the teacher teaches this year, with grades 5 and 6 selected">
         </div>
         <div class="comparison__item">
-          <div class="comparison__label" data-i18n="case.onb.label.methods">Step: choose your methods</div>
-          <img src="../images/Onboarding - methodes.png" alt="Onboarding step asking which math and spelling methods the school uses">
+          <div class="comparison__label" data-i18n="case.onb.label.methods">Setting the math and spelling method</div>
+          <img src="../images/Onboarding - methodes.png" alt="Step showing the chosen math and spelling methods, with a button to get started">
         </div>
       </div>
     </div>
-    -->
 
     <div class="container container--narrow">
-
-      <div class="reveal">
-        <h3 data-i18n="case.onb.step3">3. Connecting Basispoort</h3>
-        <p data-i18n="case.onb.basispoort.what">Basispoort is the platform Dutch primary schools use to connect educational software to their student administration system. Once a school links Gynzy to Basispoort, classes, students and teachers are synced automatically, and everyone can sign in with a single account. Without that link, teachers have to create and maintain classes by hand, which leads to outdated groups and duplicate accounts.</p>
-        <p data-i18n="case.onb.basispoort.problem">The catch: only a school administrator can set up the link. Most teachers aren't administrators, so the step had to work differently depending on who you are.</p>
-        <ul class="key-points">
-          <li data-i18n="case.onb.basispoort.admin"><strong>Administrators</strong> get a clear explanation of what the link brings them and are nudged to set it up right away</li>
-          <li data-i18n="case.onb.basispoort.teacher"><strong>Teachers without admin rights</strong> get a ready-made email to their administrator, explaining why and how to connect Basispoort. One click and it's on its way, so the teacher doesn't have to figure out what to write</li>
-        </ul>
-      </div>
-
-    </div>
-
-    <!-- TODO: screenshots of admin vs. teacher Basispoort step
-    <div class="full-width reveal">
-      <div class="comparison" style="max-width: var(--max-width); margin: 0 auto;">
-        <div class="comparison__item">
-          <div class="comparison__label" data-i18n="case.onb.label.admin">Administrator: connect Basispoort</div>
-          <img src="../images/Onboarding - basispoort beheerder.png" alt="Onboarding step encouraging an administrator to connect Basispoort">
-        </div>
-        <div class="comparison__item">
-          <div class="comparison__label" data-i18n="case.onb.label.teacher">Teacher: email your administrator</div>
-          <img src="../images/Onboarding - basispoort leerkracht.png" alt="Onboarding step with a ready-made email to the school administrator">
-        </div>
-      </div>
-    </div>
-    -->
-
-    <div class="container container--narrow">
-
-      <div class="reveal">
-        <h3 data-i18n="case.onb.step4">4. Merging duplicate accounts</h3>
-        <ul class="key-points">
-          <li data-i18n="case.onb.merge.1">Some teachers ended up with two accounts: one created by a sync, and one they had made themselves earlier. Their lessons and settings were split across both</li>
-          <li data-i18n="case.onb.merge.2">When we detect a possible duplicate, the flow offers to merge the accounts, so the teacher continues with one account and all their work in one place</li>
-          <li data-i18n="case.onb.merge.3">For us, every merge means cleaner data and fewer support questions</li>
-        </ul>
-      </div>
 
       <!-- ==================== BUILDING WITH AI ==================== -->
       <div class="reveal">

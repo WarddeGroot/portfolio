@@ -1806,3 +1806,27 @@ p {
   font-size: 0.75rem;
   color: var(--color-primary);
 }
+
+/* Flow diagram: continuous connector line */
+.flow-diagram__row {
+  position: relative;
+}
+
+.flow-diagram__row::before {
+  content: "";
+  position: absolute;
+  left: calc(1.25rem - 1px);
+  top: 2.5rem;
+  bottom: 0;
+  width: 2px;
+  background: var(--color-border-hover);
+}
+
+.flow-diagram__row:last-child::before {
+  display: none;
+}
+
+.flow-diagram__badge {
+  position: relative;
+  z-index: 1;
+}

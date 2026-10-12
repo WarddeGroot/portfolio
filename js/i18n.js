@@ -446,6 +446,7 @@ const translations = {
   'case.onb.label.accounts': { en: 'Spotting possible duplicates', nl: 'Mogelijke dubbele accounts herkennen' },
   'case.onb.label.confirm': { en: 'Confirming via email', nl: 'Bevestigen via mail' },
   'case.onb.label.teacherLas': { en: 'Basispoort not linked yet', nl: 'Basispoort nog niet gekoppeld' },
+  'case.onb.label.groups': { en: 'Already linked: a quick check of the groups pulled in from Basispoort', nl: 'Al gekoppeld: een snelle controle van de groepen uit Basispoort' },
   'case.onb.label.grade': { en: 'Choosing grades, more than one if needed', nl: 'Leerjaren kiezen, meerdere als dat nodig is' },
   'case.onb.label.methods': { en: 'Setting the math and spelling method', nl: 'De reken- en spellingmethode instellen' },
   'case.onb.label.teacher': { en: 'A ready-made message for the administrator', nl: 'Een kant-en-klaar bericht voor de beheerder' },

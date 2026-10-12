@@ -14,7 +14,7 @@ const translations = {
 
   // ── Footer ──────────────────────────────────
   'footer.prompts':     { en: 'prompts built<br>this portfolio', nl: 'prompts gebruikt voor<br>dit portfolio' },
-  'footer.updated':     { en: 'Last updated: April 2026', nl: 'Laatst bijgewerkt: april 2026' },
+  'footer.updated':     { en: 'Last updated: October 2026', nl: 'Laatst bijgewerkt: oktober 2026' },
   'footer.copy':        { en: '&copy; 2026 Ward de Groot', nl: '&copy; 2026 Ward de Groot' },
 
   // ── Homepage ────────────────────────────────

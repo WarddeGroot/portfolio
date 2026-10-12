@@ -66,7 +66,7 @@
       <div class="container footer__inner">
         <div class="footer__left">
           <div class="prompt-counter">
-            <span class="prompt-counter__number" data-count="50">0</span>
+            <span class="prompt-counter__number" data-count="73">0</span>
             <span class="prompt-counter__label" data-i18n="footer.prompts">prompts built<br>this portfolio</span>
           </div>
         </div>
@@ -77,7 +77,7 @@
           </ul>
         </div>
         <div class="footer__right">
-          <p class="footer__updated" data-i18n="footer.updated">Last updated: April 2026</p>
+          <p class="footer__updated" data-i18n="footer.updated">Last updated: October 2026</p>
           <p class="footer__copy" data-i18n="footer.copy">&copy; 2026 Ward de Groot</p>
         </div>
       </div>

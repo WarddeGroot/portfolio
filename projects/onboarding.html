@@ -22,6 +22,28 @@
     </div>
   </section>
 
+  <!-- Key stats -->
+  <section class="container">
+    <div class="case-stats reveal-stagger">
+      <div class="case-stats__item">
+        <span class="case-stats__number" data-i18n="case.onb.stat1.n">86,000</span>
+        <span class="case-stats__label" data-i18n="case.onb.stat1.l">teachers started the onboarding</span>
+      </div>
+      <div class="case-stats__item">
+        <span class="case-stats__number" data-i18n="case.onb.stat2.n">6% → 41%</span>
+        <span class="case-stats__label" data-i18n="case.onb.stat2.l">of teachers with a math method set, in six weeks</span>
+      </div>
+      <div class="case-stats__item">
+        <span class="case-stats__number" data-i18n="case.onb.stat3.n">74,000</span>
+        <span class="case-stats__label" data-i18n="case.onb.stat3.l">teachers saved their grade for this school year</span>
+      </div>
+      <div class="case-stats__item">
+        <span class="case-stats__number" data-i18n="case.onb.stat4.n">1,200+</span>
+        <span class="case-stats__label" data-i18n="case.onb.stat4.l">duplicate accounts merged</span>
+      </div>
+    </div>
+  </section>
+
   <!-- Project Meta -->
   <section class="container">
     <div class="project-meta reveal-stagger">
@@ -52,6 +74,7 @@
         <li><a href="#flow" class="toc__link" data-i18n="case.onb.toc.flow">The flow</a></li>
         <li><a href="#building" class="toc__link" data-i18n="case.onb.toc.building">Building with AI</a></li>
         <li><a href="#results" class="toc__link" data-i18n="case.onb.toc.results">Results</a></li>
+        <li><a href="#learned" class="toc__link" data-i18n="case.onb.toc.learned">What I learned</a></li>
         <li><a href="#next-steps" class="toc__link" data-i18n="case.onb.toc.next">Next steps</a></li>
       </ul>
     </nav>
@@ -63,7 +86,7 @@
         <h2 id="moment" data-i18n="case.onb.moment">Why the start of the school year matters</h2>
         <ul class="key-points">
           <li data-i18n="case.onb.moment.1">After the summer break, teachers return to a new class, sometimes a new grade, and set up Gynzy for the rest of the year. It's the one moment where almost every teacher is open to configuring things.</li>
-          <li data-i18n="case.onb.moment.2">At the same time, we knew surprisingly little about our users. We didn't reliably know which grade a teacher taught, or which math and spelling method their school used.</li>
+          <li data-i18n="case.onb.moment.2">At the same time, we knew surprisingly little about how our users teach. Only 6% of teachers had set their math method, and 5% their spelling method. And because teachers often switch grades between school years, a grade set once doesn't tell you what they teach this year.</li>
           <li data-i18n="case.onb.moment.3">That made it hard to personalize the Start page, to target new features at the right teachers, and to trust our own data.</li>
         </ul>
       </div>
@@ -76,10 +99,11 @@
       <div class="reveal">
         <h3 data-i18n="case.onb.goals.teachers">For teachers</h3>
         <ul class="key-points">
-          <li data-i18n="case.onb.goals.t1"><strong>Ready faster:</strong> at schools with a Basispoort link, their classes are already waiting for them, no manual setup needed</li>
-          <li data-i18n="case.onb.goals.t2"><strong>One account:</strong> all their lessons in one place, instead of split across two accounts</li>
-          <li data-i18n="case.onb.goals.t3"><strong>A Start page that fits:</strong> content that matches their grade and teaching methods</li>
-          <li data-i18n="case.onb.goals.t4"><strong>Light and skippable:</strong> the first weeks are busy, so every step is quick and can be skipped</li>
+          <li data-i18n="case.onb.goals.t1"><strong>A Start page that fits:</strong> by choosing their grades, teachers see content on their Start page that matches the grades they teach</li>
+          <li data-i18n="case.onb.goals.t2"><strong>Suggestions that match their method:</strong> by setting their math and spelling method, teachers get suggestions that fit the method they teach with</li>
+          <li data-i18n="case.onb.goals.t3"><strong>All students and groups at once:</strong> with Basispoort connected, teachers instantly have access to all students and groups of their school. That makes it much easier to use the other tools in Gynzy</li>
+          <li data-i18n="case.onb.goals.t4"><strong>One account:</strong> all their lessons in one place, instead of split across two accounts</li>
+          <li data-i18n="case.onb.goals.t5"><strong>Light and skippable:</strong> the first weeks are busy, so every step is quick and can be skipped</li>
         </ul>
       </div>
 
@@ -102,7 +126,7 @@
         <h3 data-i18n="case.onb.data">Starting with data</h3>
         <ul class="key-points">
           <li data-i18n="case.onb.data.1">I mapped the segments within the product and looked at which indicators best predict activity in Gynzy</li>
-          <li data-i18n="case.onb.data.2">Only very few teachers had filled in their grade and method, while we consider exactly that information essential for personalizing Gynzy, now and in the future</li>
+          <li data-i18n="case.onb.data.2">Only 6% of teachers had set their math method and 5% their spelling method, after a whole school year of slow growth. Yet exactly that information is essential for personalizing Gynzy, now and in the future</li>
           <li data-i18n="case.onb.data.3">In the weeks before the school year starts, teachers already log in to set up all their systems again, Gynzy included. They have the time for it then. If they don't do it at that moment, chances are they never will</li>
         </ul>
       </div>
@@ -132,6 +156,50 @@
         <h2 id="flow" data-i18n="case.onb.flow">The flow</h2>
         <p data-i18n="case.onb.flow.desc">Instead of a long form, I designed a series of short steps. Each one asks a single question, and the flow adapts to the teacher's situation: steps without anything to show drop out, and a school without a Basispoort link gets a different step than a school that already has one.</p>
       </div>
+
+      <div class="reveal">
+        <h3 data-i18n="case.onb.dg.title">How the flow adapts to each teacher</h3>
+        <div class="flow-diagram" role="list">
+          <div class="flow-diagram__row">
+            <div class="flow-diagram__badge flow-diagram__badge--muted">&#9654;</div>
+            <div class="flow-diagram__card"><strong data-i18n="case.onb.dg.start">Welcome back</strong><span data-i18n="case.onb.dg.start.d">A personal welcome after the summer break</span></div>
+          </div>
+          <div class="flow-diagram__connector" aria-hidden="true"></div>
+          <div class="flow-diagram__row">
+            <div class="flow-diagram__badge">1</div>
+            <div class="flow-diagram__card"><strong data-i18n="case.onb.dg.s1">Merge duplicate accounts</strong><span data-i18n="case.onb.dg.s1.d">Pick which accounts are yours and confirm via email</span><span class="flow-diagram__condition" data-i18n="case.onb.dg.s1.c">Only when possible duplicates are found</span></div>
+          </div>
+          <div class="flow-diagram__connector" aria-hidden="true"></div>
+          <div class="flow-diagram__row">
+            <div class="flow-diagram__badge">2</div>
+            <div>
+              <div class="flow-diagram__card" style="margin-bottom: var(--space-3);"><strong data-i18n="case.onb.dg.s2">Depends on the school</strong></div>
+              <div class="flow-diagram__options">
+              <div class="flow-diagram__option"><span class="flow-diagram__option-title" data-i18n="case.onb.dg.o1.t">School with Basispoort</span><strong data-i18n="case.onb.dg.o1">Check your groups</strong><span data-i18n="case.onb.dg.o1.d">Groups and students are already linked</span></div>
+              <div class="flow-diagram__option"><span class="flow-diagram__option-title" data-i18n="case.onb.dg.o2.t">School without Basispoort</span><strong data-i18n="case.onb.dg.o2">Connect Basispoort</strong><span data-i18n="case.onb.dg.o2.d">Administrators connect it, teachers send a ready-made message to their administrator</span></div>
+              <div class="flow-diagram__option flow-diagram__option--out"><span class="flow-diagram__option-title" data-i18n="case.onb.dg.o3.t">No school</span><strong data-i18n="case.onb.dg.o3">Not in this flow yet</strong><span data-i18n="case.onb.dg.o3.d">Adding a school comes in a next iteration</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="flow-diagram__connector" aria-hidden="true"></div>
+          <div class="flow-diagram__row">
+            <div class="flow-diagram__badge">3</div>
+            <div class="flow-diagram__card"><strong data-i18n="case.onb.dg.s3">Choose your grades</strong><span data-i18n="case.onb.dg.s3.d">More than one for combination classes</span><span class="flow-diagram__condition" data-i18n="case.onb.dg.s3.c">Only when there are grades to choose from</span></div>
+          </div>
+          <div class="flow-diagram__connector" aria-hidden="true"></div>
+          <div class="flow-diagram__row">
+            <div class="flow-diagram__badge">4</div>
+            <div class="flow-diagram__card"><strong data-i18n="case.onb.dg.s4">Set your methods</strong><span data-i18n="case.onb.dg.s4.d">Math and spelling</span><span class="flow-diagram__condition" data-i18n="case.onb.dg.s4.c">Only when there are methods to choose from</span></div>
+          </div>
+          <div class="flow-diagram__connector" aria-hidden="true"></div>
+          <div class="flow-diagram__row">
+            <div class="flow-diagram__badge flow-diagram__badge--muted">&#10003;</div>
+            <div class="flow-diagram__card"><strong data-i18n="case.onb.dg.end">A Start page that fits</strong><span data-i18n="case.onb.dg.end.d">Content and suggestions based on grade and method</span></div>
+          </div>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-top: calc(-1 * var(--space-4));" data-i18n="case.onb.dg.skip">Every step can be skipped. Steps without anything to show drop out automatically.</p>
+      </div>
+
 
     </div>
 
@@ -260,6 +328,7 @@
       <div class="reveal">
         <h2 id="results" data-i18n="case.onb.results">Results</h2>
         <ul class="key-points">
+          <li data-i18n="case.onb.results.method">The share of teachers with a math method set went from 6% to 41% in six weeks, and spelling from 5% to 38%. At the same moment last year, it grew by only about 3 percentage points.</li>
           <li data-i18n="case.onb.results.1">In August and September 2026, more than 86,000 teachers started the onboarding.</li>
           <li data-i18n="case.onb.results.2">86.5% saved their grade. For over 74,000 teachers, we now know which grade they teach this school year.</li>
           <li data-i18n="case.onb.results.3">More than 58,000 teachers (68%) completed the full flow, including their math and spelling method.</li>
@@ -295,6 +364,17 @@
     </div>
 
     <div class="container container--narrow">
+
+      <!-- ==================== WHAT I LEARNED ==================== -->
+      <div class="reveal">
+        <h2 id="learned" data-i18n="case.onb.learned">What I learned</h2>
+        <ul class="key-points">
+          <li data-i18n="case.onb.learned.1"><strong>Timing beats persuasion.</strong> Asking at the moment teachers are setting up anyway worked far better than a whole year of optional settings: the method jump was about ten times bigger than at the same moment last year</li>
+          <li data-i18n="case.onb.learned.2"><strong>Every extra step outside the flow costs completion.</strong> More than 2,200 merge requests are still waiting for email confirmation. Confirming in the flow itself, where possible, is worth exploring</li>
+          <li data-i18n="case.onb.learned.3"><strong>Skipping shouldn't mean missing out.</strong> About a third of the teachers didn't finish the flow in those busy first weeks. That's why the next iteration lets them finish later from their Start page</li>
+          <li data-i18n="case.onb.learned.4"><strong>With more time,</strong> I would have put more emphasis on linking teachers to their school, including the entire flow around it, and added it to this onboarding. That would have brought teachers without a school into the flow as well</li>
+        </ul>
+      </div>
 
       <!-- ==================== NEXT STEPS ==================== -->
       <div class="reveal">

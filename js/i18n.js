@@ -93,6 +93,7 @@ const translations = {
   'cv.intro':            { en: 'UX / Product Designer with a research-driven approach. I think in systems, ground decisions in psychology, and build what I design. Currently at Gynzy, an educational platform used by thousands.', nl: 'UX / Product Designer met een onderzoeksgedreven aanpak. Ik denk in systemen, onderbouw beslissingen met psychologie, en bouw wat ik ontwerp. Momenteel bij Gynzy, een educatief platform dat door duizenden wordt gebruikt.' },
 
   // ToC
+  'cv.gynzy.date':       { en: 'Jan 2021 – Present', nl: 'Jan 2021 – heden' },
   'cv.toc.experience':   { en: 'Experience', nl: 'Ervaring' },
   'cv.toc.education':    { en: 'Education', nl: 'Opleiding' },
   'cv.toc.publications': { en: 'Publications', nl: 'Publicaties' },

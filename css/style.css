@@ -1632,3 +1632,176 @@ p {
     font-size: 2rem;
   }
 }
+
+/* --- Case: key stats row --- */
+.case-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+.case-stats__item {
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+
+.case-stats__number {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  line-height: 1.1;
+  color: var(--color-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.case-stats__label {
+  display: block;
+  margin-top: var(--space-2);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+  .case-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* --- Case: flow diagram --- */
+.flow-diagram {
+  margin: var(--space-8) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.flow-diagram__row {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.flow-diagram__badge {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-full);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  background: var(--color-primary);
+  color: oklch(99% 0.003 240);
+}
+
+.flow-diagram__badge--muted {
+  background: var(--color-bg-subtle);
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+}
+
+.flow-diagram__card {
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+}
+
+.flow-diagram__card strong {
+  display: block;
+  color: var(--color-text);
+}
+
+.flow-diagram__card span {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-top: 2px;
+}
+
+.flow-diagram__condition {
+  display: inline-block;
+  margin-top: var(--space-2);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-primary);
+  background: oklch(95% 0.02 240 / 0.6);
+  border-radius: var(--radius-full);
+  padding: 2px var(--space-3);
+}
+
+.flow-diagram__options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.flow-diagram__option {
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+}
+
+.flow-diagram__option-title {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-2);
+}
+
+.flow-diagram__option strong {
+  display: block;
+  color: var(--color-text);
+}
+
+.flow-diagram__option span {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  margin-top: 2px;
+}
+
+.flow-diagram__option--out {
+  border-style: dashed;
+  background: transparent;
+}
+
+.flow-diagram__option--out strong {
+  color: var(--color-text-muted);
+}
+
+.flow-diagram__connector {
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.flow-diagram__connector::before {
+  content: "";
+  width: 2px;
+  height: var(--space-6);
+  background: var(--color-border-hover);
+}
+
+@media (max-width: 768px) {
+  .flow-diagram__options {
+    grid-template-columns: 1fr;
+  }
+}
+
+.flow-diagram__card .flow-diagram__condition {
+  display: inline-block;
+  margin-top: var(--space-2);
+  font-size: 0.75rem;
+  color: var(--color-primary);
+}

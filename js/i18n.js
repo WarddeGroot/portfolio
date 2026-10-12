@@ -379,8 +379,8 @@ const translations = {
   'case.onb.heading': { en: 'A back-to-school flow that works for teachers and Gynzy', nl: 'Een start van het schooljaar die werkt voor leerkrachten én Gynzy' },
   'case.onb.desc': { en: 'After the summer, every teacher sets up their tools again. I turned that moment into a short, adaptive onboarding that creates value on both sides. Teachers get ready for the new school year faster: their classes are linked and duplicate accounts merged. Gynzy finally learns who its users are: we now know the grade of 74,000 teachers, and over 58,000 also shared their teaching method. The foundation for a more personal product. I also built most of the UI components myself, using AI.', nl: 'Na de zomer richt elke leerkracht zijn tools opnieuw in. Ik maakte van dat moment een korte, adaptieve onboarding met waarde voor twee kanten. Leerkrachten staan sneller klaar voor het nieuwe schooljaar: hun groepen worden gekoppeld en dubbele accounts samengevoegd. Gynzy leert eindelijk wie zijn gebruikers zijn: van 74.000 leerkrachten kennen we nu het leerjaar, en ruim 58.000 vulden ook hun methode in. Basis voor een persoonlijker product. De meeste UI-componenten bouwde ik zelf, met behulp van AI.' },
   'case.onb.role':        { en: 'UX Designer, UI built with AI', nl: 'UX Designer, UI gebouwd met AI' },
-  'case.onb.team':        { en: 'Team Deep', nl: 'Team Deep' },
-  'case.onb.duration':    { en: 'Start of school year 2026', nl: 'Start schooljaar 2026' },
+  'case.onb.team':        { en: 'Product owner, 2 developers', nl: 'Product owner, 2 developers' },
+  'case.onb.duration':    { en: '&plusmn; 1.5 months', nl: '&plusmn; 1,5 maand' },
 
   'case.onb.toc.moment':   { en: 'The moment', nl: 'Het moment' },
   'case.onb.toc.goals':    { en: 'The goals', nl: 'De doelen' },
